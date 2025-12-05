@@ -78,7 +78,7 @@ func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32) uint32 {
 	reader := strings.NewReader(csvText)
 	opts := pokernow2gw.ConvertOptions{
 		HeroName:          heroName,
-		SiteName:          "GTO Wizard",
+		SiteName:          "PokerStars",
 		TimeLocation:      time.UTC,
 		PlayerCountFilter: playerCountFilter,
 	}

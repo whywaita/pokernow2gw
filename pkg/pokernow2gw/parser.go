@@ -476,7 +476,7 @@ func convertCard(card string) string {
 func ConvertEntries(entries []LogEntry, opts ConvertOptions) (*ConvertResult, error) {
 	// Set defaults
 	if opts.SiteName == "" {
-		opts.SiteName = "GTO Wizard"
+		opts.SiteName = "PokerStars"
 	}
 	if opts.TimeLocation == nil {
 		opts.TimeLocation = entries[0].At.Location()

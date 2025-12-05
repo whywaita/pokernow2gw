@@ -26,7 +26,7 @@ func main() {
 	output := flag.String("output", "", "Output file (optional, stdout if not specified)")
 	outputShort := flag.String("o", "", "Output file (shorthand)")
 	heroName := flag.String("hero-name", "", "Hero display name (required)")
-	siteName := flag.String("site-name", "GTO Wizard", "Site name for HH output")
+	siteName := flag.String("site-name", "PokerStars", "Site name for HH output")
 	timezone := flag.String("timezone", "UTC", "Timezone for output (e.g., UTC, Asia/Tokyo)")
 	tournamentName := flag.String("tournament-name", "", "Tournament name (optional)")
 	filterHU := flag.Bool("filter-hu", false, "Include heads-up hands (2 players)")
