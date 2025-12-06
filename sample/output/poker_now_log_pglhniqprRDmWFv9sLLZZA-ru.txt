@@ -1,13 +1,19 @@
 PokerStars Hand #7504090512932910326:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (200/400) - 2025/11/15 03:00:08
-Table 'PokerNow 7504090512932910326' 6-max Seat #9 is the button
-Seat 4: piyo (50000 in chips)
-Seat 5: ramune (50000 in chips)
-Seat 6: wafu (50000 in chips)
-Seat 7: ANN (50000 in chips)
-Seat 9: whywaita (50000 in chips)
-Seat 10: tanaka (50000 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
+Seat 1: piyo (50000 in chips)
+Seat 2: ramune (50000 in chips)
+Seat 3: wafu (50000 in chips)
+Seat 4: ANN (50000 in chips)
+Seat 5: whywaita (50000 in chips)
+Seat 6: tanaka (50000 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Th Td]
+piyo: posts an ante of 66
+ramune: posts an ante of 66
+wafu: posts an ante of 66
+ANN: posts an ante of 66
+whywaita: posts an ante of 66
+tanaka: posts an ante of 66
 tanaka: posts small blind 200
 piyo: posts big blind 400
 ramune: folds
@@ -21,24 +27,30 @@ Uncalled bet (2081) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 2834 | Rake 0
-Seat 4: piyo (big blind) folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) collected (2834)
-Seat 10: tanaka (small blind) folded before Flop (didn't bet)
+Seat 1: piyo (big blind) folded before Flop (didn't bet)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu folded before Flop
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita (button) collected (2834)
+Seat 6: tanaka (small blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #15800793675005486593:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (200/400) - 2025/11/15 03:00:56
-Table 'PokerNow 7504090512932910326' 6-max Seat #10 is the button
-Seat 4: piyo (49534 in chips)
-Seat 5: ramune (49934 in chips)
-Seat 6: wafu (49015 in chips)
-Seat 7: ANN (49934 in chips)
-Seat 9: whywaita (51849 in chips)
-Seat 10: tanaka (49734 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
+Seat 1: piyo (49534 in chips)
+Seat 2: ramune (49934 in chips)
+Seat 3: wafu (49015 in chips)
+Seat 4: ANN (49934 in chips)
+Seat 5: whywaita (51849 in chips)
+Seat 6: tanaka (49734 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Qd 6d]
+piyo: posts an ante of 66
+ramune: posts an ante of 66
+wafu: posts an ante of 66
+ANN: posts an ante of 66
+whywaita: posts an ante of 66
+tanaka: posts an ante of 66
 piyo: posts small blind 200
 ramune: posts big blind 400
 wafu: folds
@@ -65,24 +77,30 @@ ramune: shows [Ks Ad]
 *** SUMMARY ***
 Total pot 41396 | Rake 0
 Board [Js 3s 6h Kc Ts]
-Seat 4: piyo (small blind) showed and lost
-Seat 5: ramune (big blind) collected (41396)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka (button) folded before Flop (didn't bet)
+Seat 1: piyo (small blind) showed and lost
+Seat 2: ramune (big blind) collected (41396)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka (button) folded before Flop (didn't bet)
 
 
 PokerStars Hand #4211767959265796085:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (200/400) - 2025/11/15 03:05:10
-Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
-Seat 4: piyo (28968 in chips)
-Seat 5: ramune (70764 in chips)
-Seat 6: wafu (48949 in chips)
-Seat 7: ANN (49868 in chips)
-Seat 9: whywaita (51783 in chips)
-Seat 10: tanaka (49668 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #1 is the button
+Seat 1: piyo (28968 in chips)
+Seat 2: ramune (70764 in chips)
+Seat 3: wafu (48949 in chips)
+Seat 4: ANN (49868 in chips)
+Seat 5: whywaita (51783 in chips)
+Seat 6: tanaka (49668 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [2s 2c]
+piyo: posts an ante of 66
+ramune: posts an ante of 66
+wafu: posts an ante of 66
+ANN: posts an ante of 66
+whywaita: posts an ante of 66
+tanaka: posts an ante of 66
 ramune: posts small blind 200
 wafu: posts big blind 400
 ANN: folds
@@ -97,24 +115,30 @@ Uncalled bet (3500) returned to wafu
 wafu: doesn't show hand
 *** SUMMARY ***
 Total pot 6396 | Rake 0
-Seat 4: piyo (button) folded before Flop
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 6: wafu (big blind) collected (6396)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita folded before Flop
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo (button) folded before Flop
+Seat 2: ramune (small blind) folded before Flop (didn't bet)
+Seat 3: wafu (big blind) collected (6396)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita folded before Flop
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #17866408527159118161:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (200/400) - 2025/11/15 03:06:53
-Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
-Seat 4: piyo (26402 in chips)
-Seat 5: ramune (70498 in chips)
-Seat 6: wafu (52779 in chips)
-Seat 7: ANN (49802 in chips)
-Seat 9: whywaita (50917 in chips)
-Seat 10: tanaka (49602 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #2 is the button
+Seat 1: piyo (26402 in chips)
+Seat 2: ramune (70498 in chips)
+Seat 3: wafu (52779 in chips)
+Seat 4: ANN (49802 in chips)
+Seat 5: whywaita (50917 in chips)
+Seat 6: tanaka (49602 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [5h Jh]
+piyo: posts an ante of 66
+ramune: posts an ante of 66
+wafu: posts an ante of 66
+ANN: posts an ante of 66
+whywaita: posts an ante of 66
+tanaka: posts an ante of 66
 wafu: posts small blind 200
 ANN: posts big blind 400
 whywaita: folds
@@ -140,24 +164,30 @@ piyo: shows [Th As]
 *** SUMMARY ***
 Total pot 31196 | Rake 0
 Board [9d 8h Ah Ts 9c]
-Seat 4: piyo collected (31196)
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 6: wafu (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) 
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo collected (31196)
+Seat 2: ramune (button) folded before Flop (didn't bet)
+Seat 3: wafu (small blind) folded before Flop (didn't bet)
+Seat 4: ANN (big blind) 
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #11477554020595289685:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (200/400) - 2025/11/15 03:09:46
-Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
-Seat 4: piyo (42232 in chips)
-Seat 5: ramune (70432 in chips)
-Seat 6: wafu (52513 in chips)
-Seat 7: ANN (34436 in chips)
-Seat 9: whywaita (50851 in chips)
-Seat 10: tanaka (49536 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #3 is the button
+Seat 1: piyo (42232 in chips)
+Seat 2: ramune (70432 in chips)
+Seat 3: wafu (52513 in chips)
+Seat 4: ANN (34436 in chips)
+Seat 5: whywaita (50851 in chips)
+Seat 6: tanaka (49536 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [2h Ah]
+piyo: posts an ante of 66
+ramune: posts an ante of 66
+wafu: posts an ante of 66
+ANN: posts an ante of 66
+whywaita: posts an ante of 66
+tanaka: posts an ante of 66
 ANN: posts small blind 200
 whywaita: posts big blind 400
 tanaka: raises to 800
@@ -182,24 +212,30 @@ ANN: doesn't show hand
 *** SUMMARY ***
 Total pot 19990 | Rake 0
 Board [9c 5s Qs 2d Qc]
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) collected (19990)
-Seat 9: whywaita (big blind) folded before Flop (didn't bet)
-Seat 10: tanaka folded on the River
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu (button) folded before Flop (didn't bet)
+Seat 4: ANN (small blind) collected (19990)
+Seat 5: whywaita (big blind) folded before Flop (didn't bet)
+Seat 6: tanaka folded on the River
 
 
 PokerStars Hand #4019720101952940681:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (200/400) - 2025/11/15 03:12:03
-Table 'PokerNow 7504090512932910326' 6-max Seat #7 is the button
-Seat 4: piyo (42166 in chips)
-Seat 5: ramune (70366 in chips)
-Seat 6: wafu (52447 in chips)
-Seat 7: ANN (44763 in chips)
-Seat 9: whywaita (50385 in chips)
-Seat 10: tanaka (39873 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
+Seat 1: piyo (42166 in chips)
+Seat 2: ramune (70366 in chips)
+Seat 3: wafu (52447 in chips)
+Seat 4: ANN (44763 in chips)
+Seat 5: whywaita (50385 in chips)
+Seat 6: tanaka (39873 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [8s 9c]
+piyo: posts an ante of 66
+ramune: posts an ante of 66
+wafu: posts an ante of 66
+ANN: posts an ante of 66
+whywaita: posts an ante of 66
+tanaka: posts an ante of 66
 whywaita: posts small blind 200
 tanaka: posts big blind 400
 piyo: folds
@@ -223,24 +259,30 @@ ANN: doesn't show hand
 *** SUMMARY ***
 Total pot 5753 | Rake 0
 Board [9h 7d 4s 6h]
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune folded on the Flop
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN (button) collected (5753)
-Seat 9: whywaita (small blind) folded before Flop (didn't bet)
-Seat 10: tanaka (big blind) folded on the Turn
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune folded on the Flop
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN (button) collected (5753)
+Seat 5: whywaita (small blind) folded before Flop (didn't bet)
+Seat 6: tanaka (big blind) folded on the Turn
 
 
 PokerStars Hand #16962288450240868157:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (200/400) - 2025/11/15 03:13:19
-Table 'PokerNow 7504090512932910326' 6-max Seat #9 is the button
-Seat 4: piyo (42100 in chips)
-Seat 5: ramune (69381 in chips)
-Seat 6: wafu (52381 in chips)
-Seat 7: ANN (48331 in chips)
-Seat 9: whywaita (50119 in chips)
-Seat 10: tanaka (37688 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
+Seat 1: piyo (42100 in chips)
+Seat 2: ramune (69381 in chips)
+Seat 3: wafu (52381 in chips)
+Seat 4: ANN (48331 in chips)
+Seat 5: whywaita (50119 in chips)
+Seat 6: tanaka (37688 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Ac 4c]
+piyo: posts an ante of 66
+ramune: posts an ante of 66
+wafu: posts an ante of 66
+ANN: posts an ante of 66
+whywaita: posts an ante of 66
+tanaka: posts an ante of 66
 tanaka: posts small blind 200
 piyo: posts big blind 400
 ramune: folds
@@ -265,24 +307,30 @@ whywaita: shows [Ac 4c]
 *** SUMMARY ***
 Total pot 3876 | Rake 0
 Board [Qs Js 2d 9s Jh]
-Seat 4: piyo (big blind) collected (1938)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) collected (1938)
-Seat 10: tanaka (small blind) folded before Flop (didn't bet)
+Seat 1: piyo (big blind) collected (1938)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita (button) collected (1938)
+Seat 6: tanaka (small blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #15470832702561800274:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (200/400) - 2025/11/15 03:14:56
-Table 'PokerNow 7504090512932910326' 6-max Seat #10 is the button
-Seat 4: piyo (42332 in chips)
-Seat 5: ramune (69315 in chips)
-Seat 6: wafu (52315 in chips)
-Seat 7: ANN (48265 in chips)
-Seat 9: whywaita (50351 in chips)
-Seat 10: tanaka (37422 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
+Seat 1: piyo (42332 in chips)
+Seat 2: ramune (69315 in chips)
+Seat 3: wafu (52315 in chips)
+Seat 4: ANN (48265 in chips)
+Seat 5: whywaita (50351 in chips)
+Seat 6: tanaka (37422 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [5c 5d]
+piyo: posts an ante of 66
+ramune: posts an ante of 66
+wafu: posts an ante of 66
+ANN: posts an ante of 66
+whywaita: posts an ante of 66
+tanaka: posts an ante of 66
 piyo: posts small blind 200
 ramune: posts big blind 400
 wafu: raises to 919
@@ -307,24 +355,30 @@ ramune: doesn't show hand
 *** SUMMARY ***
 Total pot 19753 | Rake 0
 Board [2c 2h 7s Jc]
-Seat 4: piyo (small blind) folded before Flop (didn't bet)
-Seat 5: ramune (big blind) collected (19753)
-Seat 6: wafu folded on the Turn
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita folded on the Turn
-Seat 10: tanaka (button) folded before Flop (didn't bet)
+Seat 1: piyo (small blind) folded before Flop (didn't bet)
+Seat 2: ramune (big blind) collected (19753)
+Seat 3: wafu folded on the Turn
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita folded on the Turn
+Seat 6: tanaka (button) folded before Flop (didn't bet)
 
 
 PokerStars Hand #8295713837720061698:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (300/600) - 2025/11/15 03:17:12
-Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
-Seat 4: piyo (42066 in chips)
-Seat 5: ramune (80883 in chips)
-Seat 6: wafu (44130 in chips)
-Seat 7: ANN (48199 in chips)
-Seat 9: whywaita (47366 in chips)
-Seat 10: tanaka (37356 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #1 is the button
+Seat 1: piyo (42066 in chips)
+Seat 2: ramune (80883 in chips)
+Seat 3: wafu (44130 in chips)
+Seat 4: ANN (48199 in chips)
+Seat 5: whywaita (47366 in chips)
+Seat 6: tanaka (37356 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Qc Qd]
+piyo: posts an ante of 100
+ramune: posts an ante of 100
+wafu: posts an ante of 100
+ANN: posts an ante of 100
+whywaita: posts an ante of 100
+tanaka: posts an ante of 100
 ramune: posts small blind 300
 wafu: posts big blind 600
 ANN: folds
@@ -337,24 +391,30 @@ Uncalled bet (600) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 2100 | Rake 0
-Seat 4: piyo (button) folded before Flop (didn't bet)
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 6: wafu (big blind) folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita collected (2100)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo (button) folded before Flop (didn't bet)
+Seat 2: ramune (small blind) folded before Flop (didn't bet)
+Seat 3: wafu (big blind) folded before Flop (didn't bet)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita collected (2100)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #9296668756276597105:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (300/600) - 2025/11/15 03:17:32
-Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
-Seat 4: piyo (41966 in chips)
-Seat 5: ramune (80483 in chips)
-Seat 6: wafu (43430 in chips)
-Seat 7: ANN (48099 in chips)
-Seat 9: whywaita (48766 in chips)
-Seat 10: tanaka (37256 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #2 is the button
+Seat 1: piyo (41966 in chips)
+Seat 2: ramune (80483 in chips)
+Seat 3: wafu (43430 in chips)
+Seat 4: ANN (48099 in chips)
+Seat 5: whywaita (48766 in chips)
+Seat 6: tanaka (37256 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [4h Ad]
+piyo: posts an ante of 100
+ramune: posts an ante of 100
+wafu: posts an ante of 100
+ANN: posts an ante of 100
+whywaita: posts an ante of 100
+tanaka: posts an ante of 100
 wafu: posts small blind 300
 ANN: posts big blind 600
 whywaita: folds
@@ -376,24 +436,30 @@ tanaka: doesn't show hand
 *** SUMMARY ***
 Total pot 8250 | Rake 0
 Board [Tc Ac 5s Jh]
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 6: wafu (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) folded on the Turn
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka collected (8250)
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune (button) folded before Flop (didn't bet)
+Seat 3: wafu (small blind) folded before Flop (didn't bet)
+Seat 4: ANN (big blind) folded on the Turn
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka collected (8250)
 
 
 PokerStars Hand #9022107931167097577:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (300/600) - 2025/11/15 03:18:52
-Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
-Seat 4: piyo (41866 in chips)
-Seat 5: ramune (80383 in chips)
-Seat 6: wafu (43030 in chips)
-Seat 7: ANN (44324 in chips)
-Seat 9: whywaita (48666 in chips)
-Seat 10: tanaka (41731 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #3 is the button
+Seat 1: piyo (41866 in chips)
+Seat 2: ramune (80383 in chips)
+Seat 3: wafu (43030 in chips)
+Seat 4: ANN (44324 in chips)
+Seat 5: whywaita (48666 in chips)
+Seat 6: tanaka (41731 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6h 6s]
+piyo: posts an ante of 100
+ramune: posts an ante of 100
+wafu: posts an ante of 100
+ANN: posts an ante of 100
+whywaita: posts an ante of 100
+tanaka: posts an ante of 100
 ANN: posts small blind 300
 whywaita: posts big blind 600
 tanaka: folds
@@ -413,24 +479,30 @@ wafu: doesn't show hand
 *** SUMMARY ***
 Total pot 4500 | Rake 0
 Board [Ad Ah Ts]
-Seat 4: piyo folded on the Flop
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) collected (4500)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) folded on the Flop
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo folded on the Flop
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu (button) collected (4500)
+Seat 4: ANN (small blind) folded before Flop (didn't bet)
+Seat 5: whywaita (big blind) folded on the Flop
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #9557023861292155965:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (300/600) - 2025/11/15 03:19:59
-Table 'PokerNow 7504090512932910326' 6-max Seat #7 is the button
-Seat 4: piyo (40566 in chips)
-Seat 5: ramune (80283 in chips)
-Seat 6: wafu (46230 in chips)
-Seat 7: ANN (43924 in chips)
-Seat 9: whywaita (47366 in chips)
-Seat 10: tanaka (41631 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
+Seat 1: piyo (40566 in chips)
+Seat 2: ramune (80283 in chips)
+Seat 3: wafu (46230 in chips)
+Seat 4: ANN (43924 in chips)
+Seat 5: whywaita (47366 in chips)
+Seat 6: tanaka (41631 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [5h 6d]
+piyo: posts an ante of 100
+ramune: posts an ante of 100
+wafu: posts an ante of 100
+ANN: posts an ante of 100
+whywaita: posts an ante of 100
+tanaka: posts an ante of 100
 whywaita: posts small blind 300
 tanaka: posts big blind 600
 piyo: folds
@@ -456,24 +528,30 @@ wafu: shows [Qd Kd]
 *** SUMMARY ***
 Total pot 52860 | Rake 0
 Board [4d Kc Qs Kh 6s]
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu collected (52860)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) folded before Flop (didn't bet)
-Seat 10: tanaka (big blind) 
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu collected (52860)
+Seat 4: ANN (button) folded before Flop (didn't bet)
+Seat 5: whywaita (small blind) folded before Flop (didn't bet)
+Seat 6: tanaka (big blind) 
 
 
 PokerStars Hand #14288682326520567266:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (300/600) - 2025/11/15 03:23:45
-Table 'PokerNow 7504090512932910326' 6-max Seat #9 is the button
-Seat 4: piyo (40466 in chips)
-Seat 5: ramune (80183 in chips)
-Seat 6: wafu (73010 in chips)
-Seat 7: ANN (43824 in chips)
-Seat 9: whywaita (46966 in chips)
-Seat 10: tanaka (15551 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
+Seat 1: piyo (40466 in chips)
+Seat 2: ramune (80183 in chips)
+Seat 3: wafu (73010 in chips)
+Seat 4: ANN (43824 in chips)
+Seat 5: whywaita (46966 in chips)
+Seat 6: tanaka (15551 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Qh Qd]
+piyo: posts an ante of 100
+ramune: posts an ante of 100
+wafu: posts an ante of 100
+ANN: posts an ante of 100
+whywaita: posts an ante of 100
+tanaka: posts an ante of 100
 tanaka: posts small blind 300
 piyo: posts big blind 600
 ramune: raises to 1380
@@ -496,24 +574,30 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 17820 | Rake 0
 Board [9d 6c 2d Ac]
-Seat 4: piyo (big blind) folded before Flop (didn't bet)
-Seat 5: ramune folded on the Turn
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) collected (17820)
-Seat 10: tanaka (small blind) folded before Flop (didn't bet)
+Seat 1: piyo (big blind) folded before Flop (didn't bet)
+Seat 2: ramune folded on the Turn
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita (button) collected (17820)
+Seat 6: tanaka (small blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #10299607230729909591:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (300/600) - 2025/11/15 03:25:36
-Table 'PokerNow 7504090512932910326' 6-max Seat #10 is the button
-Seat 4: piyo (39766 in chips)
-Seat 5: ramune (71923 in chips)
-Seat 6: wafu (72910 in chips)
-Seat 7: ANN (43724 in chips)
-Seat 9: whywaita (56526 in chips)
-Seat 10: tanaka (15151 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
+Seat 1: piyo (39766 in chips)
+Seat 2: ramune (71923 in chips)
+Seat 3: wafu (72910 in chips)
+Seat 4: ANN (43724 in chips)
+Seat 5: whywaita (56526 in chips)
+Seat 6: tanaka (15151 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3d Ks]
+piyo: posts an ante of 100
+ramune: posts an ante of 100
+wafu: posts an ante of 100
+ANN: posts an ante of 100
+whywaita: posts an ante of 100
+tanaka: posts an ante of 100
 piyo: posts small blind 300
 ramune: posts big blind 600
 wafu: folds
@@ -531,24 +615,30 @@ tanaka: doesn't show hand
 *** SUMMARY ***
 Total pot 3300 | Rake 0
 Board [Ac 6s Tc]
-Seat 4: piyo (small blind) folded before Flop (didn't bet)
-Seat 5: ramune (big blind) folded on the Flop
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka (button) collected (3300)
+Seat 1: piyo (small blind) folded before Flop (didn't bet)
+Seat 2: ramune (big blind) folded on the Flop
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka (button) collected (3300)
 
 
 PokerStars Hand #5722975872311571509:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (300/600) - 2025/11/15 03:26:13
-Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
-Seat 4: piyo (39366 in chips)
-Seat 5: ramune (70623 in chips)
-Seat 6: wafu (72810 in chips)
-Seat 7: ANN (43624 in chips)
-Seat 9: whywaita (56426 in chips)
-Seat 10: tanaka (17151 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #1 is the button
+Seat 1: piyo (39366 in chips)
+Seat 2: ramune (70623 in chips)
+Seat 3: wafu (72810 in chips)
+Seat 4: ANN (43624 in chips)
+Seat 5: whywaita (56426 in chips)
+Seat 6: tanaka (17151 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3s 2c]
+piyo: posts an ante of 100
+ramune: posts an ante of 100
+wafu: posts an ante of 100
+ANN: posts an ante of 100
+whywaita: posts an ante of 100
+tanaka: posts an ante of 100
 ramune: posts small blind 300
 wafu: posts big blind 600
 ANN: raises to 1200
@@ -572,24 +662,30 @@ ramune: shows [6s 6d]
 *** SUMMARY ***
 Total pot 6000 | Rake 0
 Board [8s Jd 5s 7h 3c]
-Seat 4: piyo (button) folded before Flop (didn't bet)
-Seat 5: ramune (small blind) collected (6000)
-Seat 6: wafu (big blind) folded before Flop (didn't bet)
-Seat 7: ANN 
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo (button) folded before Flop (didn't bet)
+Seat 2: ramune (small blind) collected (6000)
+Seat 3: wafu (big blind) folded before Flop (didn't bet)
+Seat 4: ANN 
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #8938512512512727423:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (300/600) - 2025/11/15 03:27:27
-Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
-Seat 4: piyo (39266 in chips)
-Seat 5: ramune (74123 in chips)
-Seat 6: wafu (72110 in chips)
-Seat 7: ANN (41124 in chips)
-Seat 9: whywaita (56326 in chips)
-Seat 10: tanaka (17051 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #2 is the button
+Seat 1: piyo (39266 in chips)
+Seat 2: ramune (74123 in chips)
+Seat 3: wafu (72110 in chips)
+Seat 4: ANN (41124 in chips)
+Seat 5: whywaita (56326 in chips)
+Seat 6: tanaka (17051 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9c As]
+piyo: posts an ante of 100
+ramune: posts an ante of 100
+wafu: posts an ante of 100
+ANN: posts an ante of 100
+whywaita: posts an ante of 100
+tanaka: posts an ante of 100
 wafu: posts small blind 300
 ANN: posts big blind 600
 whywaita: folds
@@ -603,24 +699,30 @@ Uncalled bet (3600) returned to ANN
 ANN: doesn't show hand
 *** SUMMARY ***
 Total pot 3300 | Rake 0
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 6: wafu (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) collected (3300)
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka folded before Flop
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune (button) folded before Flop (didn't bet)
+Seat 3: wafu (small blind) folded before Flop (didn't bet)
+Seat 4: ANN (big blind) collected (3300)
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka folded before Flop
 
 
 PokerStars Hand #15477907518774258712:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (300/600) - 2025/11/15 03:27:53
-Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
-Seat 4: piyo (39166 in chips)
-Seat 5: ramune (74023 in chips)
-Seat 6: wafu (71710 in chips)
-Seat 7: ANN (43124 in chips)
-Seat 9: whywaita (56226 in chips)
-Seat 10: tanaka (15751 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #3 is the button
+Seat 1: piyo (39166 in chips)
+Seat 2: ramune (74023 in chips)
+Seat 3: wafu (71710 in chips)
+Seat 4: ANN (43124 in chips)
+Seat 5: whywaita (56226 in chips)
+Seat 6: tanaka (15751 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6s 8s]
+piyo: posts an ante of 100
+ramune: posts an ante of 100
+wafu: posts an ante of 100
+ANN: posts an ante of 100
+whywaita: posts an ante of 100
+tanaka: posts an ante of 100
 ANN: posts small blind 300
 whywaita: posts big blind 600
 tanaka: folds
@@ -646,24 +748,30 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 17940 | Rake 0
 Board [4d Jd 2s 7s 2c]
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) folded on the River
-Seat 7: ANN (small blind) folded on the Turn
-Seat 9: whywaita (big blind) collected (17940)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu (button) folded on the River
+Seat 4: ANN (small blind) folded on the Turn
+Seat 5: whywaita (big blind) collected (17940)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #16407447676219937066:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:30:25
-Table 'PokerNow 7504090512932910326' 6-max Seat #7 is the button
-Seat 4: piyo (39066 in chips)
-Seat 5: ramune (73923 in chips)
-Seat 6: wafu (64230 in chips)
-Seat 7: ANN (40444 in chips)
-Seat 9: whywaita (66686 in chips)
-Seat 10: tanaka (15651 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
+Seat 1: piyo (39066 in chips)
+Seat 2: ramune (73923 in chips)
+Seat 3: wafu (64230 in chips)
+Seat 4: ANN (40444 in chips)
+Seat 5: whywaita (66686 in chips)
+Seat 6: tanaka (15651 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [7c Th]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 whywaita: posts small blind 400
 tanaka: posts big blind 800
 piyo: folds
@@ -676,24 +784,30 @@ Uncalled bet (800) returned to ANN
 ANN: doesn't show hand
 *** SUMMARY ***
 Total pot 2798 | Rake 0
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN (button) collected (2798)
-Seat 9: whywaita (small blind) folded before Flop (didn't bet)
-Seat 10: tanaka (big blind) folded before Flop (didn't bet)
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN (button) collected (2798)
+Seat 5: whywaita (small blind) folded before Flop (didn't bet)
+Seat 6: tanaka (big blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #7410398333026022265:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:30:45
-Table 'PokerNow 7504090512932910326' 6-max Seat #9 is the button
-Seat 4: piyo (38933 in chips)
-Seat 5: ramune (73790 in chips)
-Seat 6: wafu (64097 in chips)
-Seat 7: ANN (42309 in chips)
-Seat 9: whywaita (66153 in chips)
-Seat 10: tanaka (14718 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
+Seat 1: piyo (38933 in chips)
+Seat 2: ramune (73790 in chips)
+Seat 3: wafu (64097 in chips)
+Seat 4: ANN (42309 in chips)
+Seat 5: whywaita (66153 in chips)
+Seat 6: tanaka (14718 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [2s 6h]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 tanaka: posts small blind 400
 piyo: posts big blind 800
 ramune: folds
@@ -712,24 +826,30 @@ piyo: doesn't show hand
 *** SUMMARY ***
 Total pot 16398 | Rake 0
 Board [6c 8d 4d]
-Seat 4: piyo (big blind) collected (16398)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded on the Flop
-Seat 9: whywaita (button) folded before Flop (didn't bet)
-Seat 10: tanaka (small blind) folded before Flop
+Seat 1: piyo (big blind) collected (16398)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN folded on the Flop
+Seat 5: whywaita (button) folded before Flop (didn't bet)
+Seat 6: tanaka (small blind) folded before Flop
 
 
 PokerStars Hand #9424647788114671281:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:31:54
-Table 'PokerNow 7504090512932910326' 6-max Seat #10 is the button
-Seat 4: piyo (48198 in chips)
-Seat 5: ramune (73657 in chips)
-Seat 6: wafu (63964 in chips)
-Seat 7: ANN (35176 in chips)
-Seat 9: whywaita (66020 in chips)
-Seat 10: tanaka (12985 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
+Seat 1: piyo (48198 in chips)
+Seat 2: ramune (73657 in chips)
+Seat 3: wafu (63964 in chips)
+Seat 4: ANN (35176 in chips)
+Seat 5: whywaita (66020 in chips)
+Seat 6: tanaka (12985 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3c 5s]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 piyo: posts small blind 400
 ramune: posts big blind 800
 wafu: raises to 1839
@@ -743,24 +863,30 @@ Uncalled bet (5361) returned to ANN
 ANN: doesn't show hand
 *** SUMMARY ***
 Total pot 5676 | Rake 0
-Seat 4: piyo (small blind) folded before Flop (didn't bet)
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop
-Seat 7: ANN collected (5676)
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka (button) folded before Flop (didn't bet)
+Seat 1: piyo (small blind) folded before Flop (didn't bet)
+Seat 2: ramune (big blind) folded before Flop (didn't bet)
+Seat 3: wafu folded before Flop
+Seat 4: ANN collected (5676)
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka (button) folded before Flop (didn't bet)
 
 
 PokerStars Hand #936017368406935611:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:32:45
-Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
-Seat 4: piyo (47665 in chips)
-Seat 5: ramune (72724 in chips)
-Seat 6: wafu (61992 in chips)
-Seat 7: ANN (38880 in chips)
-Seat 9: whywaita (65887 in chips)
-Seat 10: tanaka (12852 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #1 is the button
+Seat 1: piyo (47665 in chips)
+Seat 2: ramune (72724 in chips)
+Seat 3: wafu (61992 in chips)
+Seat 4: ANN (38880 in chips)
+Seat 5: whywaita (65887 in chips)
+Seat 6: tanaka (12852 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9c 9h]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 ramune: posts small blind 400
 wafu: posts big blind 800
 ANN: folds
@@ -787,24 +913,30 @@ whywaita: shows [9c 9h]
 *** SUMMARY ***
 Total pot 41598 | Rake 0
 Board [Ad 2c 2d 7s 7c]
-Seat 4: piyo (button) showed and lost
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 6: wafu (big blind) folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita collected (41598)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo (button) showed and lost
+Seat 2: ramune (small blind) folded before Flop (didn't bet)
+Seat 3: wafu (big blind) folded before Flop (didn't bet)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita collected (41598)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #7561789291171940748:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:35:28
-Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
-Seat 4: piyo (27732 in chips)
-Seat 5: ramune (72191 in chips)
-Seat 6: wafu (61059 in chips)
-Seat 7: ANN (38747 in chips)
-Seat 9: whywaita (87552 in chips)
-Seat 10: tanaka (12719 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #2 is the button
+Seat 1: piyo (27732 in chips)
+Seat 2: ramune (72191 in chips)
+Seat 3: wafu (61059 in chips)
+Seat 4: ANN (38747 in chips)
+Seat 5: whywaita (87552 in chips)
+Seat 6: tanaka (12719 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6h 8h]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 wafu: posts small blind 400
 ANN: posts big blind 800
 whywaita: folds
@@ -825,24 +957,30 @@ ANN: doesn't show hand
 *** SUMMARY ***
 Total pot 25198 | Rake 0
 Board [4h Kc 3h 6d]
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune (button) folded on the Turn
-Seat 6: wafu (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) collected (25198)
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune (button) folded on the Turn
+Seat 3: wafu (small blind) folded before Flop (didn't bet)
+Seat 4: ANN (big blind) collected (25198)
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #18140060327128239961:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:36:59
-Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
-Seat 4: piyo (27599 in chips)
-Seat 5: ramune (60058 in chips)
-Seat 6: wafu (60526 in chips)
-Seat 7: ANN (51812 in chips)
-Seat 9: whywaita (87419 in chips)
-Seat 10: tanaka (12586 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #3 is the button
+Seat 1: piyo (27599 in chips)
+Seat 2: ramune (60058 in chips)
+Seat 3: wafu (60526 in chips)
+Seat 4: ANN (51812 in chips)
+Seat 5: whywaita (87419 in chips)
+Seat 6: tanaka (12586 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [4c Jh]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 ANN: posts small blind 400
 whywaita: posts big blind 800
 tanaka: folds
@@ -856,24 +994,30 @@ Uncalled bet (1600) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 2398 | Rake 0
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) folded before Flop
-Seat 9: whywaita (big blind) collected (2398)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu (button) folded before Flop (didn't bet)
+Seat 4: ANN (small blind) folded before Flop
+Seat 5: whywaita (big blind) collected (2398)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #6734489990055750780:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:37:35
-Table 'PokerNow 7504090512932910326' 6-max Seat #7 is the button
-Seat 4: piyo (27466 in chips)
-Seat 5: ramune (59925 in chips)
-Seat 6: wafu (60393 in chips)
-Seat 7: ANN (50879 in chips)
-Seat 9: whywaita (88884 in chips)
-Seat 10: tanaka (12453 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
+Seat 1: piyo (27466 in chips)
+Seat 2: ramune (59925 in chips)
+Seat 3: wafu (60393 in chips)
+Seat 4: ANN (50879 in chips)
+Seat 5: whywaita (88884 in chips)
+Seat 6: tanaka (12453 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Td 2s]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 whywaita: posts small blind 400
 tanaka: posts big blind 800
 piyo: folds
@@ -891,24 +1035,30 @@ wafu: doesn't show hand
 *** SUMMARY ***
 Total pot 4398 | Rake 0
 Board [5d 5s 5h]
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu collected (4398)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) folded before Flop (didn't bet)
-Seat 10: tanaka (big blind) folded on the Flop
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu collected (4398)
+Seat 4: ANN (button) folded before Flop (didn't bet)
+Seat 5: whywaita (small blind) folded before Flop (didn't bet)
+Seat 6: tanaka (big blind) folded on the Flop
 
 
 PokerStars Hand #10255301318641437572:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:38:30
-Table 'PokerNow 7504090512932910326' 6-max Seat #9 is the button
-Seat 4: piyo (27333 in chips)
-Seat 5: ramune (59792 in chips)
-Seat 6: wafu (63058 in chips)
-Seat 7: ANN (50746 in chips)
-Seat 9: whywaita (88351 in chips)
-Seat 10: tanaka (10720 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
+Seat 1: piyo (27333 in chips)
+Seat 2: ramune (59792 in chips)
+Seat 3: wafu (63058 in chips)
+Seat 4: ANN (50746 in chips)
+Seat 5: whywaita (88351 in chips)
+Seat 6: tanaka (10720 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Td Jh]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 tanaka: posts small blind 400
 piyo: posts big blind 800
 ramune: folds
@@ -923,24 +1073,30 @@ Uncalled bet (9600) returned to ANN
 ANN: doesn't show hand
 *** SUMMARY ***
 Total pot 11598 | Rake 0
-Seat 4: piyo (big blind) folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN collected (11598)
-Seat 9: whywaita (button) folded before Flop
-Seat 10: tanaka (small blind) folded before Flop (didn't bet)
+Seat 1: piyo (big blind) folded before Flop (didn't bet)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN collected (11598)
+Seat 5: whywaita (button) folded before Flop
+Seat 6: tanaka (small blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #16551915496741986191:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:39:17
-Table 'PokerNow 7504090512932910326' 6-max Seat #10 is the button
-Seat 4: piyo (26400 in chips)
-Seat 5: ramune (59659 in chips)
-Seat 6: wafu (62925 in chips)
-Seat 7: ANN (57411 in chips)
-Seat 9: whywaita (83418 in chips)
-Seat 10: tanaka (10187 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
+Seat 1: piyo (26400 in chips)
+Seat 2: ramune (59659 in chips)
+Seat 3: wafu (62925 in chips)
+Seat 4: ANN (57411 in chips)
+Seat 5: whywaita (83418 in chips)
+Seat 6: tanaka (10187 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [4d Qh]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 piyo: posts small blind 400
 ramune: posts big blind 800
 wafu: folds
@@ -968,24 +1124,30 @@ piyo: shows [7d 9d]
 *** SUMMARY ***
 Total pot 22698 | Rake 0
 Board [5c 6c 2d Qc 8h]
-Seat 4: piyo (small blind) collected (22698)
-Seat 5: ramune (big blind) 
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN 
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka (button) folded before Flop (didn't bet)
+Seat 1: piyo (small blind) collected (22698)
+Seat 2: ramune (big blind) 
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN 
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka (button) folded before Flop (didn't bet)
 
 
 PokerStars Hand #14287935275712055352:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:40:58
-Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
-Seat 4: piyo (41665 in chips)
-Seat 5: ramune (52226 in chips)
-Seat 6: wafu (62792 in chips)
-Seat 7: ANN (49978 in chips)
-Seat 9: whywaita (83285 in chips)
-Seat 10: tanaka (10054 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #1 is the button
+Seat 1: piyo (41665 in chips)
+Seat 2: ramune (52226 in chips)
+Seat 3: wafu (62792 in chips)
+Seat 4: ANN (49978 in chips)
+Seat 5: whywaita (83285 in chips)
+Seat 6: tanaka (10054 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [2s Jh]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 ramune: posts small blind 400
 wafu: posts big blind 800
 ANN: raises to 1600
@@ -1009,24 +1171,30 @@ ANN: doesn't show hand
 *** SUMMARY ***
 Total pot 57598 | Rake 0
 Board [6d 8s 3c 3h]
-Seat 4: piyo (button) folded before Flop
-Seat 5: ramune (small blind) folded on the Turn
-Seat 6: wafu (big blind) folded before Flop (didn't bet)
-Seat 7: ANN collected (57598)
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo (button) folded before Flop
+Seat 2: ramune (small blind) folded on the Turn
+Seat 3: wafu (big blind) folded before Flop (didn't bet)
+Seat 4: ANN collected (57598)
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #13172336612803158634:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:43:33
-Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
-Seat 4: piyo (39932 in chips)
-Seat 5: ramune (24893 in chips)
-Seat 6: wafu (61859 in chips)
-Seat 7: ANN (80243 in chips)
-Seat 9: whywaita (83152 in chips)
-Seat 10: tanaka (9921 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #2 is the button
+Seat 1: piyo (39932 in chips)
+Seat 2: ramune (24893 in chips)
+Seat 3: wafu (61859 in chips)
+Seat 4: ANN (80243 in chips)
+Seat 5: whywaita (83152 in chips)
+Seat 6: tanaka (9921 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Js 3h]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 wafu: posts small blind 400
 ANN: posts big blind 800
 whywaita: folds
@@ -1039,24 +1207,30 @@ Uncalled bet (1600) returned to wafu
 wafu: doesn't show hand
 *** SUMMARY ***
 Total pot 2398 | Rake 0
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 6: wafu (small blind) collected (2398)
-Seat 7: ANN (big blind) folded before Flop (didn't bet)
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune (button) folded before Flop (didn't bet)
+Seat 3: wafu (small blind) collected (2398)
+Seat 4: ANN (big blind) folded before Flop (didn't bet)
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #1886902142393423135:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:43:59
-Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
-Seat 4: piyo (39799 in chips)
-Seat 5: ramune (24760 in chips)
-Seat 6: wafu (63324 in chips)
-Seat 7: ANN (79310 in chips)
-Seat 9: whywaita (83019 in chips)
-Seat 10: tanaka (9788 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #3 is the button
+Seat 1: piyo (39799 in chips)
+Seat 2: ramune (24760 in chips)
+Seat 3: wafu (63324 in chips)
+Seat 4: ANN (79310 in chips)
+Seat 5: whywaita (83019 in chips)
+Seat 6: tanaka (9788 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [5c 4s]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 ANN: posts small blind 400
 whywaita: posts big blind 800
 tanaka: folds
@@ -1074,24 +1248,30 @@ piyo: doesn't show hand
 *** SUMMARY ***
 Total pot 4398 | Rake 0
 Board [Jc Kc 6d]
-Seat 4: piyo collected (4398)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) folded on the Flop
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 1: piyo collected (4398)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu (button) folded before Flop (didn't bet)
+Seat 4: ANN (small blind) folded before Flop (didn't bet)
+Seat 5: whywaita (big blind) folded on the Flop
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #8055998666328565793:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (400/800) - 2025/11/15 03:45:06
-Table 'PokerNow 7504090512932910326' 6-max Seat #7 is the button
-Seat 4: piyo (42464 in chips)
-Seat 5: ramune (24627 in chips)
-Seat 6: wafu (63191 in chips)
-Seat 7: ANN (78777 in chips)
-Seat 9: whywaita (81286 in chips)
-Seat 10: tanaka (9655 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
+Seat 1: piyo (42464 in chips)
+Seat 2: ramune (24627 in chips)
+Seat 3: wafu (63191 in chips)
+Seat 4: ANN (78777 in chips)
+Seat 5: whywaita (81286 in chips)
+Seat 6: tanaka (9655 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [8d 2c]
+piyo: posts an ante of 133
+ramune: posts an ante of 133
+wafu: posts an ante of 133
+ANN: posts an ante of 133
+whywaita: posts an ante of 133
+tanaka: posts an ante of 133
 whywaita: posts small blind 400
 tanaka: posts big blind 800
 piyo: folds
@@ -1105,6 +1285,7 @@ tanaka: checks
 ramune: bets 800
 tanaka: raises to 2445
 ramune: raises to 22867 and is all-in
+tanaka: calls 20422 and is all-in
 Uncalled bet (14972) returned to ramune
 *** SHOW DOWN ***
 ramune: shows [Ah Qh]
@@ -1112,24 +1293,30 @@ tanaka: shows [Ac 7d]
 *** SUMMARY ***
 Total pot 20242 | Rake 0
 Board [7h Kc Kh 3h 7s]
-Seat 4: piyo folded before Flop (didn't bet)
-Seat 5: ramune showed and lost
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) folded before Flop (didn't bet)
-Seat 10: tanaka (big blind) collected (20242)
+Seat 1: piyo folded before Flop (didn't bet)
+Seat 2: ramune showed and lost
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN (button) folded before Flop (didn't bet)
+Seat 5: whywaita (small blind) folded before Flop (didn't bet)
+Seat 6: tanaka (big blind) collected (20242)
 
 
 PokerStars Hand #11035968512804260472:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:46:45
-Table 'PokerNow 7504090512932910326' 6-max Seat #9 is the button
-Seat 4: piyo (42331 in chips)
-Seat 5: ramune (14972 in chips)
-Seat 6: wafu (63058 in chips)
-Seat 7: ANN (78644 in chips)
-Seat 9: whywaita (80753 in chips)
-Seat 10: tanaka (20242 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
+Seat 1: piyo (42331 in chips)
+Seat 2: ramune (14972 in chips)
+Seat 3: wafu (63058 in chips)
+Seat 4: ANN (78644 in chips)
+Seat 5: whywaita (80753 in chips)
+Seat 6: tanaka (20242 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Ts 6s]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 tanaka: posts small blind 600
 piyo: posts big blind 1200
 ramune: raises to 2400
@@ -1153,24 +1340,30 @@ ANN: shows [Ad 9h]
 *** SUMMARY ***
 Total pot 32544 | Rake 0
 Board [2d 5c 3h Jd 9c]
-Seat 4: piyo (big blind) folded before Flop (didn't bet)
-Seat 5: ramune collected (32544)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN showed and lost
-Seat 9: whywaita (button) folded before Flop (didn't bet)
-Seat 10: tanaka (small blind) folded before Flop (didn't bet)
+Seat 1: piyo (big blind) folded before Flop (didn't bet)
+Seat 2: ramune collected (32544)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN showed and lost
+Seat 5: whywaita (button) folded before Flop (didn't bet)
+Seat 6: tanaka (small blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #11846478916179702050:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:48:07
-Table 'PokerNow 7504090512932910326' 6-max Seat #10 is the button
-Seat 4: piyo (40931 in chips)
-Seat 5: ramune (32544 in chips)
-Seat 6: wafu (62858 in chips)
-Seat 7: ANN (63672 in chips)
-Seat 9: whywaita (80553 in chips)
-Seat 10: tanaka (19442 in chips)
+Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
+Seat 1: piyo (40931 in chips)
+Seat 2: ramune (32544 in chips)
+Seat 3: wafu (62858 in chips)
+Seat 4: ANN (63672 in chips)
+Seat 5: whywaita (80553 in chips)
+Seat 6: tanaka (19442 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Qd Qs]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 piyo: posts small blind 600
 ramune: posts big blind 1200
 wafu: folds
@@ -1187,24 +1380,63 @@ whywaita: shows [Qd Qs]
 *** SUMMARY ***
 Total pot 86262 | Rake 0
 Board [2s 7s 9h 8s Jd]
-Seat 4: piyo (small blind) showed and lost
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop
-Seat 9: whywaita collected (86262)
-Seat 10: tanaka (button) folded before Flop (didn't bet)
+Seat 1: piyo (small blind) showed and lost
+Seat 2: ramune (big blind) folded before Flop (didn't bet)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN folded before Flop
+Seat 5: whywaita collected (86262)
+Seat 6: tanaka (button) folded before Flop (didn't bet)
+
+
+PokerStars Hand #8757494296221464324:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:49:12
+Table 'PokerNow 7504090512932910326' 5-max Seat #1 is the button
+Seat 1: ramune (31144 in chips)
+Seat 2: wafu (62658 in chips)
+Seat 3: ANN (61072 in chips)
+Seat 4: whywaita (125884 in chips)
+Seat 5: tanaka (19242 in chips)
+*** HOLE CARDS ***
+Dealt to whywaita [6d 4s]
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
+ramune: posts small blind 600
+wafu: posts big blind 1200
+ANN: folds
+whywaita: raises to 2400
+tanaka: raises to 19242 and is all-in
+ramune: folds
+wafu: folds
+whywaita: folds
+Uncalled bet (16642) returned to tanaka
+tanaka: doesn't show hand
+*** SUMMARY ***
+Total pot 7600 | Rake 0
+Seat 1: ramune (small blind) folded before Flop (didn't bet)
+Seat 2: wafu (big blind) folded before Flop (didn't bet)
+Seat 3: ANN folded before Flop (didn't bet)
+Seat 4: whywaita folded before Flop
+Seat 5: tanaka collected (7600)
 
 
 PokerStars Hand #6656534888743116049:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:49:46
-Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #2 is the button
 Seat 1: piyo (50000 in chips)
-Seat 5: ramune (30344 in chips)
-Seat 6: wafu (61258 in chips)
-Seat 7: ANN (60872 in chips)
-Seat 9: whywaita (123284 in chips)
-Seat 10: tanaka (24242 in chips)
+Seat 2: ramune (30344 in chips)
+Seat 3: wafu (61258 in chips)
+Seat 4: ANN (60872 in chips)
+Seat 5: whywaita (123284 in chips)
+Seat 6: tanaka (24242 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Th Jd]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 wafu: posts small blind 600
 ANN: posts big blind 1200
 whywaita: raises to 2400
@@ -1226,23 +1458,29 @@ whywaita: doesn't show hand
 Total pot 6600 | Rake 0
 Board [5c 4d Jh Kh]
 Seat 1: piyo folded before Flop (didn't bet)
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 6: wafu (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) folded on the Turn
-Seat 9: whywaita collected (6600)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 2: ramune (button) folded before Flop (didn't bet)
+Seat 3: wafu (small blind) folded before Flop (didn't bet)
+Seat 4: ANN (big blind) folded on the Turn
+Seat 5: whywaita collected (6600)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #2109197435655164753:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:50:56
-Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #3 is the button
 Seat 1: piyo (49800 in chips)
-Seat 5: ramune (30144 in chips)
-Seat 6: wafu (60458 in chips)
-Seat 7: ANN (58272 in chips)
-Seat 9: whywaita (127284 in chips)
-Seat 10: tanaka (24042 in chips)
+Seat 2: ramune (30144 in chips)
+Seat 3: wafu (60458 in chips)
+Seat 4: ANN (58272 in chips)
+Seat 5: whywaita (127284 in chips)
+Seat 6: tanaka (24042 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Qd 4s]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 ANN: posts small blind 600
 whywaita: posts big blind 1200
 tanaka: folds
@@ -1255,23 +1493,29 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 2400 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) collected (2400)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu (button) folded before Flop (didn't bet)
+Seat 4: ANN (small blind) folded before Flop (didn't bet)
+Seat 5: whywaita (big blind) collected (2400)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #7427260319158744216:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:51:13
-Table 'PokerNow 7504090512932910326' 6-max Seat #7 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
 Seat 1: piyo (49600 in chips)
-Seat 5: ramune (29944 in chips)
-Seat 6: wafu (60258 in chips)
-Seat 7: ANN (57472 in chips)
-Seat 9: whywaita (128884 in chips)
-Seat 10: tanaka (23842 in chips)
+Seat 2: ramune (29944 in chips)
+Seat 3: wafu (60258 in chips)
+Seat 4: ANN (57472 in chips)
+Seat 5: whywaita (128884 in chips)
+Seat 6: tanaka (23842 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [2d 4d]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 whywaita: posts small blind 600
 tanaka: posts big blind 1200
 piyo: folds
@@ -1285,23 +1529,29 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 3600 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (3600)
-Seat 10: tanaka (big blind) folded before Flop (didn't bet)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN (button) folded before Flop (didn't bet)
+Seat 5: whywaita (small blind) collected (3600)
+Seat 6: tanaka (big blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #17547034020647193946:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:51:38
-Table 'PokerNow 7504090512932910326' 6-max Seat #9 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
 Seat 1: piyo (49400 in chips)
-Seat 5: ramune (29744 in chips)
-Seat 6: wafu (60058 in chips)
-Seat 7: ANN (57272 in chips)
-Seat 9: whywaita (131084 in chips)
-Seat 10: tanaka (22442 in chips)
+Seat 2: ramune (29744 in chips)
+Seat 3: wafu (60058 in chips)
+Seat 4: ANN (57272 in chips)
+Seat 5: whywaita (131084 in chips)
+Seat 6: tanaka (22442 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6d 3d]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 tanaka: posts small blind 600
 piyo: posts big blind 1200
 ramune: folds
@@ -1319,23 +1569,29 @@ tanaka: doesn't show hand
 Total pot 3600 | Rake 0
 Board [Qs 2c Kd]
 Seat 1: piyo (big blind) folded on the Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) folded before Flop (didn't bet)
-Seat 10: tanaka (small blind) collected (3600)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita (button) folded before Flop (didn't bet)
+Seat 6: tanaka (small blind) collected (3600)
 
 
 PokerStars Hand #9906610625601032253:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:52:17
-Table 'PokerNow 7504090512932910326' 6-max Seat #10 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
 Seat 1: piyo (48000 in chips)
-Seat 5: ramune (29544 in chips)
-Seat 6: wafu (59858 in chips)
-Seat 7: ANN (57072 in chips)
-Seat 9: whywaita (130884 in chips)
-Seat 10: tanaka (24642 in chips)
+Seat 2: ramune (29544 in chips)
+Seat 3: wafu (59858 in chips)
+Seat 4: ANN (57072 in chips)
+Seat 5: whywaita (130884 in chips)
+Seat 6: tanaka (24642 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3h Qd]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 piyo: posts small blind 600
 ramune: posts big blind 1200
 wafu: folds
@@ -1360,23 +1616,29 @@ ramune: shows [Ts 4h]
 Total pot 12600 | Rake 0
 Board [8s Ac 4s 5d 7s]
 Seat 1: piyo (small blind) folded before Flop (didn't bet)
-Seat 5: ramune (big blind) collected (12600)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita 
-Seat 10: tanaka (button) folded before Flop (didn't bet)
+Seat 2: ramune (big blind) collected (12600)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita 
+Seat 6: tanaka (button) folded before Flop (didn't bet)
 
 
 PokerStars Hand #11204407085418904591:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:53:33
 Table 'PokerNow 7504090512932910326' 6-max Seat #1 is the button
 Seat 1: piyo (47200 in chips)
-Seat 5: ramune (36544 in chips)
-Seat 6: wafu (59658 in chips)
-Seat 7: ANN (56872 in chips)
-Seat 9: whywaita (125284 in chips)
-Seat 10: tanaka (24442 in chips)
+Seat 2: ramune (36544 in chips)
+Seat 3: wafu (59658 in chips)
+Seat 4: ANN (56872 in chips)
+Seat 5: whywaita (125284 in chips)
+Seat 6: tanaka (24442 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9s 5s]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 ramune: posts small blind 600
 wafu: posts big blind 1200
 ANN: folds
@@ -1389,23 +1651,29 @@ wafu: doesn't show hand
 *** SUMMARY ***
 Total pot 2400 | Rake 0
 Seat 1: piyo (button) folded before Flop (didn't bet)
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 6: wafu (big blind) collected (2400)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 2: ramune (small blind) folded before Flop (didn't bet)
+Seat 3: wafu (big blind) collected (2400)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #15667875558144177394:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:53:47
-Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #2 is the button
 Seat 1: piyo (47000 in chips)
-Seat 5: ramune (35744 in chips)
-Seat 6: wafu (61258 in chips)
-Seat 7: ANN (56672 in chips)
-Seat 9: whywaita (125084 in chips)
-Seat 10: tanaka (24242 in chips)
+Seat 2: ramune (35744 in chips)
+Seat 3: wafu (61258 in chips)
+Seat 4: ANN (56672 in chips)
+Seat 5: whywaita (125084 in chips)
+Seat 6: tanaka (24242 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [2d 4h]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 wafu: posts small blind 600
 ANN: posts big blind 1200
 whywaita: folds
@@ -1428,23 +1696,29 @@ ramune: doesn't show hand
 Total pot 12600 | Rake 0
 Board [3c 9c 8h 9h]
 Seat 1: piyo folded before Flop (didn't bet)
-Seat 5: ramune (button) collected (12600)
-Seat 6: wafu (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) folded on the Turn
-Seat 9: whywaita folded before Flop (didn't bet)
-Seat 10: tanaka folded before Flop (didn't bet)
+Seat 2: ramune (button) collected (12600)
+Seat 3: wafu (small blind) folded before Flop (didn't bet)
+Seat 4: ANN (big blind) folded on the Turn
+Seat 5: whywaita folded before Flop (didn't bet)
+Seat 6: tanaka folded before Flop (didn't bet)
 
 
 PokerStars Hand #6331700904534707126:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:54:31
-Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #3 is the button
 Seat 1: piyo (46800 in chips)
-Seat 5: ramune (42744 in chips)
-Seat 6: wafu (60458 in chips)
-Seat 7: ANN (51072 in chips)
-Seat 9: whywaita (124884 in chips)
-Seat 10: tanaka (24042 in chips)
+Seat 2: ramune (42744 in chips)
+Seat 3: wafu (60458 in chips)
+Seat 4: ANN (51072 in chips)
+Seat 5: whywaita (124884 in chips)
+Seat 6: tanaka (24042 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [4c 6c]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 ANN: posts small blind 600
 whywaita: posts big blind 1200
 tanaka: raises to 2400
@@ -1470,23 +1744,29 @@ whywaita: doesn't show hand
 Total pot 22800 | Rake 0
 Board [3s 7h 7d 5h 9c]
 Seat 1: piyo folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) collected (22800)
-Seat 10: tanaka folded on the River
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu (button) folded before Flop (didn't bet)
+Seat 4: ANN (small blind) folded before Flop (didn't bet)
+Seat 5: whywaita (big blind) collected (22800)
+Seat 6: tanaka folded on the River
 
 
 PokerStars Hand #9190920426652738995:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:56:25
-Table 'PokerNow 7504090512932910326' 6-max Seat #7 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
 Seat 1: piyo (46600 in chips)
-Seat 5: ramune (42544 in chips)
-Seat 6: wafu (60258 in chips)
-Seat 7: ANN (50272 in chips)
-Seat 9: whywaita (136984 in chips)
-Seat 10: tanaka (13342 in chips)
+Seat 2: ramune (42544 in chips)
+Seat 3: wafu (60258 in chips)
+Seat 4: ANN (50272 in chips)
+Seat 5: whywaita (136984 in chips)
+Seat 6: tanaka (13342 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Td Ac]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 whywaita: posts small blind 600
 tanaka: posts big blind 1200
 piyo: folds
@@ -1500,23 +1780,29 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 3600 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (3600)
-Seat 10: tanaka (big blind) folded before Flop (didn't bet)
+Seat 2: ramune folded before Flop (didn't bet)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN (button) folded before Flop (didn't bet)
+Seat 5: whywaita (small blind) collected (3600)
+Seat 6: tanaka (big blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #16719421834443228938:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:56:45
-Table 'PokerNow 7504090512932910326' 6-max Seat #9 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
 Seat 1: piyo (46400 in chips)
-Seat 5: ramune (42344 in chips)
-Seat 6: wafu (60058 in chips)
-Seat 7: ANN (50072 in chips)
-Seat 9: whywaita (139184 in chips)
-Seat 10: tanaka (11942 in chips)
+Seat 2: ramune (42344 in chips)
+Seat 3: wafu (60058 in chips)
+Seat 4: ANN (50072 in chips)
+Seat 5: whywaita (139184 in chips)
+Seat 6: tanaka (11942 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6c Ac]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 tanaka: posts small blind 600
 piyo: posts big blind 1200
 ramune: raises to 2640
@@ -1547,23 +1833,29 @@ wafu: shows [Th Jh]
 Total pot 16920 | Rake 0
 Board [Jd 6s Ah 3c 4d]
 Seat 1: piyo (big blind) showed and lost
-Seat 5: ramune collected (8460)
-Seat 6: wafu collected (8460)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) folded before Flop (didn't bet)
-Seat 10: tanaka (small blind) folded before Flop (didn't bet)
+Seat 2: ramune collected (8460)
+Seat 3: wafu collected (8460)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita (button) folded before Flop (didn't bet)
+Seat 6: tanaka (small blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #10883028846536607697:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (600/1200) - 2025/11/15 03:58:43
-Table 'PokerNow 7504090512932910326' 6-max Seat #10 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
 Seat 1: piyo (41160 in chips)
-Seat 5: ramune (45564 in chips)
-Seat 6: wafu (63278 in chips)
-Seat 7: ANN (49872 in chips)
-Seat 9: whywaita (138984 in chips)
-Seat 10: tanaka (11142 in chips)
+Seat 2: ramune (45564 in chips)
+Seat 3: wafu (63278 in chips)
+Seat 4: ANN (49872 in chips)
+Seat 5: whywaita (138984 in chips)
+Seat 6: tanaka (11142 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Ad 4d]
+piyo: posts an ante of 200
+ramune: posts an ante of 200
+wafu: posts an ante of 200
+ANN: posts an ante of 200
+whywaita: posts an ante of 200
+tanaka: posts an ante of 200
 piyo: posts small blind 600
 ramune: posts big blind 1200
 wafu: folds
@@ -1592,23 +1884,29 @@ whywaita: shows [Ad 4d]
 Total pot 92528 | Rake 0
 Board [6h As 6d Jc 5s]
 Seat 1: piyo (small blind) folded before Flop (didn't bet)
-Seat 5: ramune (big blind) collected (92528)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita showed and lost
-Seat 10: tanaka (button) folded before Flop (didn't bet)
+Seat 2: ramune (big blind) collected (92528)
+Seat 3: wafu folded before Flop (didn't bet)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita showed and lost
+Seat 6: tanaka (button) folded before Flop (didn't bet)
 
 
 PokerStars Hand #10788431227715207604:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:01:21
 Table 'PokerNow 7504090512932910326' 6-max Seat #1 is the button
 Seat 1: piyo (40360 in chips)
-Seat 5: ramune (92528 in chips)
-Seat 6: wafu (63078 in chips)
-Seat 7: ANN (49672 in chips)
-Seat 9: whywaita (93420 in chips)
-Seat 10: tanaka (10942 in chips)
+Seat 2: ramune (92528 in chips)
+Seat 3: wafu (63078 in chips)
+Seat 4: ANN (49672 in chips)
+Seat 5: whywaita (93420 in chips)
+Seat 6: tanaka (10942 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [7c Ah]
+piyo: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
+tanaka: posts an ante of 266
 ramune: posts small blind 800
 wafu: posts big blind 1600
 ANN: folds
@@ -1625,22 +1923,27 @@ tanaka: shows [6d Ad]
 Total pot 25348 | Rake 0
 Board [5s 9h 4s Ac 7h]
 Seat 1: piyo (button) folded before Flop (didn't bet)
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 6: wafu (big blind) folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita collected (25348)
-Seat 10: tanaka showed and lost
+Seat 2: ramune (small blind) folded before Flop (didn't bet)
+Seat 3: wafu (big blind) folded before Flop (didn't bet)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita collected (25348)
+Seat 6: tanaka showed and lost
 
 
 PokerStars Hand #13037488988688409003:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:02:12
-Table 'PokerNow 7504090512932910326' 5-max Seat #5 is the button
+Table 'PokerNow 7504090512932910326' 5-max Seat #2 is the button
 Seat 1: piyo (40094 in chips)
-Seat 5: ramune (91462 in chips)
-Seat 6: wafu (61212 in chips)
-Seat 7: ANN (49406 in chips)
-Seat 9: whywaita (107826 in chips)
+Seat 2: ramune (91462 in chips)
+Seat 3: wafu (61212 in chips)
+Seat 4: ANN (49406 in chips)
+Seat 5: whywaita (107826 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9h Kh]
+piyo: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 wafu: posts small blind 800
 ANN: posts big blind 1600
 whywaita: raises to 3200
@@ -1664,22 +1967,28 @@ ANN: doesn't show hand
 Total pot 42130 | Rake 0
 Board [6c 4h Qd 5d]
 Seat 1: piyo folded before Flop (didn't bet)
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 6: wafu (small blind) folded on the Turn
-Seat 7: ANN (big blind) collected (42130)
-Seat 9: whywaita folded on the Turn
+Seat 2: ramune (button) folded before Flop (didn't bet)
+Seat 3: wafu (small blind) folded on the Turn
+Seat 4: ANN (big blind) collected (42130)
+Seat 5: whywaita folded on the Turn
 
 
 PokerStars Hand #7228072939110148490:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:03:25
-Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
 Seat 1: piyo (39828 in chips)
 Seat 2: tanaka (50000 in chips)
-Seat 5: ramune (91196 in chips)
-Seat 6: wafu (47346 in chips)
-Seat 7: ANN (77670 in chips)
-Seat 9: whywaita (93960 in chips)
+Seat 3: ramune (91196 in chips)
+Seat 4: wafu (47346 in chips)
+Seat 5: ANN (77670 in chips)
+Seat 6: whywaita (93960 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [8h Jd]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 ANN: posts small blind 800
 whywaita: posts big blind 1600
 piyo: raises to 3200
@@ -1696,22 +2005,28 @@ wafu: doesn't show hand
 Total pot 26040 | Rake 0
 Seat 1: piyo folded before Flop
 Seat 2: tanaka folded before Flop
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) collected (26040)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) folded before Flop (didn't bet)
+Seat 3: ramune folded before Flop (didn't bet)
+Seat 4: wafu (button) collected (26040)
+Seat 5: ANN (small blind) folded before Flop (didn't bet)
+Seat 6: whywaita (big blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #17320643188838095576:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:04:31
-Table 'PokerNow 7504090512932910326' 6-max Seat #7 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
 Seat 1: piyo (36362 in chips)
 Seat 2: tanaka (40312 in chips)
-Seat 5: ramune (90930 in chips)
-Seat 6: wafu (63698 in chips)
-Seat 7: ANN (76604 in chips)
-Seat 9: whywaita (92094 in chips)
+Seat 3: ramune (90930 in chips)
+Seat 4: wafu (63698 in chips)
+Seat 5: ANN (76604 in chips)
+Seat 6: whywaita (92094 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [8c 2h]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 whywaita: posts small blind 800
 piyo: posts big blind 1600
 tanaka: folds
@@ -1726,22 +2041,28 @@ ramune: doesn't show hand
 Total pot 5596 | Rake 0
 Seat 1: piyo (big blind) folded before Flop (didn't bet)
 Seat 2: tanaka folded before Flop (didn't bet)
-Seat 5: ramune collected (5596)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) folded before Flop (didn't bet)
+Seat 3: ramune collected (5596)
+Seat 4: wafu folded before Flop (didn't bet)
+Seat 5: ANN (button) folded before Flop (didn't bet)
+Seat 6: whywaita (small blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #11838622267162419704:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:05:03
-Table 'PokerNow 7504090512932910326' 6-max Seat #9 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
 Seat 1: piyo (34496 in chips)
 Seat 2: tanaka (40046 in chips)
-Seat 5: ramune (94660 in chips)
-Seat 6: wafu (63432 in chips)
-Seat 7: ANN (76338 in chips)
-Seat 9: whywaita (91028 in chips)
+Seat 3: ramune (94660 in chips)
+Seat 4: wafu (63432 in chips)
+Seat 5: ANN (76338 in chips)
+Seat 6: whywaita (91028 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9c Ad]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 piyo: posts small blind 800
 tanaka: posts big blind 1600
 ramune: folds
@@ -1767,22 +2088,28 @@ Total pot 8796 | Rake 0
 Board [9d Jc 3c Qc Jd]
 Seat 1: piyo (small blind) folded before Flop (didn't bet)
 Seat 2: tanaka (big blind) showed and lost
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) collected (8796)
+Seat 3: ramune folded before Flop (didn't bet)
+Seat 4: wafu folded before Flop (didn't bet)
+Seat 5: ANN folded before Flop (didn't bet)
+Seat 6: whywaita (button) collected (8796)
 
 
 PokerStars Hand #11603789583056586002:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:06:05
 Table 'PokerNow 7504090512932910326' 6-max Seat #1 is the button
 Seat 1: piyo (33430 in chips)
 Seat 2: tanaka (36580 in chips)
-Seat 5: ramune (94394 in chips)
-Seat 6: wafu (63166 in chips)
-Seat 7: ANN (76072 in chips)
-Seat 9: whywaita (96358 in chips)
+Seat 3: ramune (94394 in chips)
+Seat 4: wafu (63166 in chips)
+Seat 5: ANN (76072 in chips)
+Seat 6: whywaita (96358 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [8s Qs]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 tanaka: posts small blind 800
 ramune: posts big blind 1600
 wafu: folds
@@ -1804,22 +2131,28 @@ Total pot 8796 | Rake 0
 Board [7h 3h 5s 4h]
 Seat 1: piyo (button) folded before Flop (didn't bet)
 Seat 2: tanaka (small blind) folded before Flop (didn't bet)
-Seat 5: ramune (big blind) collected (8796)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita folded on the Turn
+Seat 3: ramune (big blind) collected (8796)
+Seat 4: wafu folded before Flop (didn't bet)
+Seat 5: ANN folded before Flop (didn't bet)
+Seat 6: whywaita folded on the Turn
 
 
 PokerStars Hand #6877679481423922876:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:07:02
 Table 'PokerNow 7504090512932910326' 6-max Seat #2 is the button
 Seat 1: piyo (33164 in chips)
 Seat 2: tanaka (35514 in chips)
-Seat 5: ramune (99724 in chips)
-Seat 6: wafu (62900 in chips)
-Seat 7: ANN (75806 in chips)
-Seat 9: whywaita (92892 in chips)
+Seat 3: ramune (99724 in chips)
+Seat 4: wafu (62900 in chips)
+Seat 5: ANN (75806 in chips)
+Seat 6: whywaita (92892 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Ts Qc]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 ramune: posts small blind 800
 wafu: posts big blind 1600
 ANN: folds
@@ -1839,22 +2172,28 @@ Total pot 9596 | Rake 0
 Board [8d Ad As]
 Seat 1: piyo folded before Flop (didn't bet)
 Seat 2: tanaka (button) collected (9596)
-Seat 5: ramune (small blind) folded on the Flop
-Seat 6: wafu (big blind) folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita folded before Flop (didn't bet)
+Seat 3: ramune (small blind) folded on the Flop
+Seat 4: wafu (big blind) folded before Flop (didn't bet)
+Seat 5: ANN folded before Flop (didn't bet)
+Seat 6: whywaita folded before Flop (didn't bet)
 
 
 PokerStars Hand #14016073190500374939:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:08:08
-Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #3 is the button
 Seat 1: piyo (32898 in chips)
 Seat 2: tanaka (41644 in chips)
-Seat 5: ramune (96258 in chips)
-Seat 6: wafu (61034 in chips)
-Seat 7: ANN (75540 in chips)
-Seat 9: whywaita (92626 in chips)
+Seat 3: ramune (96258 in chips)
+Seat 4: wafu (61034 in chips)
+Seat 5: ANN (75540 in chips)
+Seat 6: whywaita (92626 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [4s 2c]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 wafu: posts small blind 800
 ANN: posts big blind 1600
 whywaita: folds
@@ -1874,22 +2213,28 @@ Total pot 8796 | Rake 0
 Board [2h Jc Js]
 Seat 1: piyo collected (8796)
 Seat 2: tanaka folded before Flop (didn't bet)
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 6: wafu (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) folded on the Flop
-Seat 9: whywaita folded before Flop (didn't bet)
+Seat 3: ramune (button) folded before Flop (didn't bet)
+Seat 4: wafu (small blind) folded before Flop (didn't bet)
+Seat 5: ANN (big blind) folded on the Flop
+Seat 6: whywaita folded before Flop (didn't bet)
 
 
 PokerStars Hand #5616010508403805820:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:08:58
-Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
 Seat 1: piyo (38228 in chips)
 Seat 2: tanaka (41378 in chips)
-Seat 5: ramune (95992 in chips)
-Seat 6: wafu (59968 in chips)
-Seat 7: ANN (72074 in chips)
-Seat 9: whywaita (92360 in chips)
+Seat 3: ramune (95992 in chips)
+Seat 4: wafu (59968 in chips)
+Seat 5: ANN (72074 in chips)
+Seat 6: whywaita (92360 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Qh Jh]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 ANN: posts small blind 800
 whywaita: posts big blind 1600
 piyo: folds
@@ -1905,22 +2250,28 @@ whywaita: doesn't show hand
 Total pot 9754 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
 Seat 2: tanaka folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) folded before Flop
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) collected (9754)
+Seat 3: ramune folded before Flop (didn't bet)
+Seat 4: wafu (button) folded before Flop
+Seat 5: ANN (small blind) folded before Flop (didn't bet)
+Seat 6: whywaita (big blind) collected (9754)
 
 
 PokerStars Hand #1892082307342981268:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:09:33
-Table 'PokerNow 7504090512932910326' 6-max Seat #7 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
 Seat 1: piyo (37962 in chips)
 Seat 2: tanaka (41112 in chips)
-Seat 5: ramune (95726 in chips)
-Seat 6: wafu (56023 in chips)
-Seat 7: ANN (71008 in chips)
-Seat 9: whywaita (98169 in chips)
+Seat 3: ramune (95726 in chips)
+Seat 4: wafu (56023 in chips)
+Seat 5: ANN (71008 in chips)
+Seat 6: whywaita (98169 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3s Ts]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 whywaita: posts small blind 800
 piyo: posts big blind 1600
 tanaka: folds
@@ -1936,22 +2287,28 @@ piyo: doesn't show hand
 Total pot 4796 | Rake 0
 Seat 1: piyo (big blind) collected (4796)
 Seat 2: tanaka folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) folded before Flop
+Seat 3: ramune folded before Flop (didn't bet)
+Seat 4: wafu folded before Flop (didn't bet)
+Seat 5: ANN (button) folded before Flop (didn't bet)
+Seat 6: whywaita (small blind) folded before Flop
 
 
 PokerStars Hand #86761657590823844:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:10:08
-Table 'PokerNow 7504090512932910326' 6-max Seat #9 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
 Seat 1: piyo (40892 in chips)
 Seat 2: tanaka (40846 in chips)
-Seat 5: ramune (95460 in chips)
-Seat 6: wafu (55757 in chips)
-Seat 7: ANN (70742 in chips)
-Seat 9: whywaita (96303 in chips)
+Seat 3: ramune (95460 in chips)
+Seat 4: wafu (55757 in chips)
+Seat 5: ANN (70742 in chips)
+Seat 6: whywaita (96303 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Js 3d]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 piyo: posts small blind 800
 tanaka: posts big blind 1600
 ramune: folds
@@ -1965,22 +2322,28 @@ tanaka: doesn't show hand
 Total pot 3196 | Rake 0
 Seat 1: piyo (small blind) folded before Flop (didn't bet)
 Seat 2: tanaka (big blind) collected (3196)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) folded before Flop (didn't bet)
+Seat 3: ramune folded before Flop (didn't bet)
+Seat 4: wafu folded before Flop (didn't bet)
+Seat 5: ANN folded before Flop (didn't bet)
+Seat 6: whywaita (button) folded before Flop (didn't bet)
 
 
 PokerStars Hand #12238181241759432524:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:10:27
 Table 'PokerNow 7504090512932910326' 6-max Seat #1 is the button
 Seat 1: piyo (39826 in chips)
 Seat 2: tanaka (42976 in chips)
-Seat 5: ramune (95194 in chips)
-Seat 6: wafu (55491 in chips)
-Seat 7: ANN (70476 in chips)
-Seat 9: whywaita (96037 in chips)
+Seat 3: ramune (95194 in chips)
+Seat 4: wafu (55491 in chips)
+Seat 5: ANN (70476 in chips)
+Seat 6: whywaita (96037 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6c 5c]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 tanaka: posts small blind 800
 ramune: posts big blind 1600
 wafu: folds
@@ -2007,22 +2370,28 @@ Total pot 35996 | Rake 0
 Board [Qc Qh Kc 6d 4h]
 Seat 1: piyo (button) folded before Flop (didn't bet)
 Seat 2: tanaka (small blind) folded before Flop (didn't bet)
-Seat 5: ramune (big blind) showed and lost
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita collected (35996)
+Seat 3: ramune (big blind) showed and lost
+Seat 4: wafu folded before Flop (didn't bet)
+Seat 5: ANN folded before Flop (didn't bet)
+Seat 6: whywaita collected (35996)
 
 
 PokerStars Hand #16181457989714453425:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:11:56
 Table 'PokerNow 7504090512932910326' 6-max Seat #2 is the button
 Seat 1: piyo (39560 in chips)
 Seat 2: tanaka (41910 in chips)
-Seat 5: ramune (78128 in chips)
-Seat 6: wafu (55225 in chips)
-Seat 7: ANN (70210 in chips)
-Seat 9: whywaita (114967 in chips)
+Seat 3: ramune (78128 in chips)
+Seat 4: wafu (55225 in chips)
+Seat 5: ANN (70210 in chips)
+Seat 6: whywaita (114967 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Jc Qh]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 ramune: posts small blind 800
 wafu: posts big blind 1600
 ANN: folds
@@ -2038,22 +2407,28 @@ ramune: doesn't show hand
 Total pot 9596 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
 Seat 2: tanaka (button) folded before Flop
-Seat 5: ramune (small blind) collected (9596)
-Seat 6: wafu (big blind) folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita folded before Flop (didn't bet)
+Seat 3: ramune (small blind) collected (9596)
+Seat 4: wafu (big blind) folded before Flop (didn't bet)
+Seat 5: ANN folded before Flop (didn't bet)
+Seat 6: whywaita folded before Flop (didn't bet)
 
 
 PokerStars Hand #3413983582605987335:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:12:32
-Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #3 is the button
 Seat 1: piyo (39294 in chips)
 Seat 2: tanaka (38444 in chips)
-Seat 5: ramune (84258 in chips)
-Seat 6: wafu (53359 in chips)
-Seat 7: ANN (69944 in chips)
-Seat 9: whywaita (114701 in chips)
+Seat 3: ramune (84258 in chips)
+Seat 4: wafu (53359 in chips)
+Seat 5: ANN (69944 in chips)
+Seat 6: whywaita (114701 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3s 4s]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 wafu: posts small blind 800
 ANN: posts big blind 1600
 whywaita: raises to 3200
@@ -2077,22 +2452,28 @@ Total pot 15196 | Rake 0
 Board [Qd Jc 6d 5c]
 Seat 1: piyo folded before Flop (didn't bet)
 Seat 2: tanaka folded before Flop (didn't bet)
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 6: wafu (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) folded on the Turn
-Seat 9: whywaita collected (15196)
+Seat 3: ramune (button) folded before Flop (didn't bet)
+Seat 4: wafu (small blind) folded before Flop (didn't bet)
+Seat 5: ANN (big blind) folded on the Turn
+Seat 6: whywaita collected (15196)
 
 
 PokerStars Hand #16326682767072818071:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:13:38
-Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #4 is the button
 Seat 1: piyo (39028 in chips)
 Seat 2: tanaka (38178 in chips)
-Seat 5: ramune (83992 in chips)
-Seat 6: wafu (52293 in chips)
-Seat 7: ANN (63278 in chips)
-Seat 9: whywaita (123231 in chips)
+Seat 3: ramune (83992 in chips)
+Seat 4: wafu (52293 in chips)
+Seat 5: ANN (63278 in chips)
+Seat 6: whywaita (123231 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9s 3d]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 ANN: posts small blind 800
 whywaita: posts big blind 1600
 piyo: folds
@@ -2108,22 +2489,28 @@ wafu: doesn't show hand
 Total pot 10396 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
 Seat 2: tanaka folded before Flop
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) collected (10396)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) folded before Flop (didn't bet)
+Seat 3: ramune folded before Flop (didn't bet)
+Seat 4: wafu (button) collected (10396)
+Seat 5: ANN (small blind) folded before Flop (didn't bet)
+Seat 6: whywaita (big blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #8939064812347637188:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (800/1600) - 2025/11/15 04:14:14
-Table 'PokerNow 7504090512932910326' 6-max Seat #7 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #5 is the button
 Seat 1: piyo (38762 in chips)
 Seat 2: tanaka (34712 in chips)
-Seat 5: ramune (83726 in chips)
-Seat 6: wafu (59223 in chips)
-Seat 7: ANN (62212 in chips)
-Seat 9: whywaita (121365 in chips)
+Seat 3: ramune (83726 in chips)
+Seat 4: wafu (59223 in chips)
+Seat 5: ANN (62212 in chips)
+Seat 6: whywaita (121365 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [2d 9h]
+piyo: posts an ante of 266
+tanaka: posts an ante of 266
+ramune: posts an ante of 266
+wafu: posts an ante of 266
+ANN: posts an ante of 266
+whywaita: posts an ante of 266
 whywaita: posts small blind 800
 piyo: posts big blind 1600
 tanaka: folds
@@ -2143,22 +2530,28 @@ Total pot 9436 | Rake 0
 Board [Th 7h As]
 Seat 1: piyo (big blind) folded on the Flop
 Seat 2: tanaka folded before Flop (didn't bet)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu collected (9436)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) folded before Flop (didn't bet)
+Seat 3: ramune folded before Flop (didn't bet)
+Seat 4: wafu collected (9436)
+Seat 5: ANN (button) folded before Flop (didn't bet)
+Seat 6: whywaita (small blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #127321341102128093:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:15:24
-Table 'PokerNow 7504090512932910326' 6-max Seat #9 is the button
+Table 'PokerNow 7504090512932910326' 6-max Seat #6 is the button
 Seat 1: piyo (34976 in chips)
 Seat 2: tanaka (34446 in chips)
-Seat 5: ramune (83460 in chips)
-Seat 6: wafu (64873 in chips)
-Seat 7: ANN (61946 in chips)
-Seat 9: whywaita (120299 in chips)
+Seat 3: ramune (83460 in chips)
+Seat 4: wafu (64873 in chips)
+Seat 5: ANN (61946 in chips)
+Seat 6: whywaita (120299 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Qs 8c]
+piyo: posts an ante of 333
+tanaka: posts an ante of 333
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 piyo: posts small blind 1000
 tanaka: posts big blind 2000
 ramune: folds
@@ -2179,22 +2572,28 @@ Total pot 16198 | Rake 0
 Board [4h 4s 7d]
 Seat 1: piyo (small blind) folded before Flop (didn't bet)
 Seat 2: tanaka (big blind) collected (16198)
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu folded on the Flop
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) folded before Flop (didn't bet)
+Seat 3: ramune folded before Flop (didn't bet)
+Seat 4: wafu folded on the Flop
+Seat 5: ANN folded before Flop (didn't bet)
+Seat 6: whywaita (button) folded before Flop (didn't bet)
 
 
 PokerStars Hand #242440296383001138:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:16:40
 Table 'PokerNow 7504090512932910326' 6-max Seat #1 is the button
 Seat 1: piyo (33643 in chips)
 Seat 2: tanaka (43711 in chips)
-Seat 5: ramune (83127 in chips)
-Seat 6: wafu (57940 in chips)
-Seat 7: ANN (61613 in chips)
-Seat 9: whywaita (119966 in chips)
+Seat 3: ramune (83127 in chips)
+Seat 4: wafu (57940 in chips)
+Seat 5: ANN (61613 in chips)
+Seat 6: whywaita (119966 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [7s 9d]
+piyo: posts an ante of 333
+tanaka: posts an ante of 333
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 tanaka: posts small blind 1000
 ramune: posts big blind 2000
 wafu: folds
@@ -2212,21 +2611,26 @@ Total pot 73618 | Rake 0
 Board [5c Td 5s Ac 8c]
 Seat 1: piyo (button) showed and lost
 Seat 2: tanaka (small blind) folded before Flop (didn't bet)
-Seat 5: ramune (big blind) collected (73618)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop
-Seat 9: whywaita folded before Flop (didn't bet)
+Seat 3: ramune (big blind) collected (73618)
+Seat 4: wafu folded before Flop (didn't bet)
+Seat 5: ANN folded before Flop
+Seat 6: whywaita folded before Flop (didn't bet)
 
 
 PokerStars Hand #3877065875013984803:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:17:48
-Table 'PokerNow 7504090512932910326' 5-max Seat #2 is the button
-Seat 2: tanaka (42378 in chips)
-Seat 5: ramune (123102 in chips)
-Seat 6: wafu (57607 in chips)
-Seat 7: ANN (57280 in chips)
-Seat 9: whywaita (119633 in chips)
+Table 'PokerNow 7504090512932910326' 5-max Seat #1 is the button
+Seat 1: tanaka (42378 in chips)
+Seat 2: ramune (123102 in chips)
+Seat 3: wafu (57607 in chips)
+Seat 4: ANN (57280 in chips)
+Seat 5: whywaita (119633 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Jh 3s]
+tanaka: posts an ante of 333
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 ramune: posts small blind 1000
 wafu: posts big blind 2000
 ANN: folds
@@ -2239,22 +2643,27 @@ Uncalled bet (10000) returned to wafu
 wafu: doesn't show hand
 *** SUMMARY ***
 Total pot 5665 | Rake 0
-Seat 2: tanaka (button) folded before Flop (didn't bet)
-Seat 5: ramune (small blind) folded before Flop
-Seat 6: wafu (big blind) collected (5665)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita folded before Flop (didn't bet)
+Seat 1: tanaka (button) folded before Flop (didn't bet)
+Seat 2: ramune (small blind) folded before Flop
+Seat 3: wafu (big blind) collected (5665)
+Seat 4: ANN folded before Flop (didn't bet)
+Seat 5: whywaita folded before Flop (didn't bet)
 
 
 PokerStars Hand #13403101251419591540:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:18:32
-Table 'PokerNow 7504090512932910326' 5-max Seat #5 is the button
-Seat 2: tanaka (42045 in chips)
-Seat 5: ramune (120769 in chips)
-Seat 6: wafu (60939 in chips)
-Seat 7: ANN (56947 in chips)
-Seat 9: whywaita (119300 in chips)
+Table 'PokerNow 7504090512932910326' 5-max Seat #2 is the button
+Seat 1: tanaka (42045 in chips)
+Seat 2: ramune (120769 in chips)
+Seat 3: wafu (60939 in chips)
+Seat 4: ANN (56947 in chips)
+Seat 5: whywaita (119300 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Td Qh]
+tanaka: posts an ante of 333
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 wafu: posts small blind 1000
 ANN: posts big blind 2000
 whywaita: raises to 4000
@@ -2266,22 +2675,27 @@ Uncalled bet (2000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 6665 | Rake 0
-Seat 2: tanaka folded before Flop (didn't bet)
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 6: wafu (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) folded before Flop (didn't bet)
-Seat 9: whywaita collected (6665)
+Seat 1: tanaka folded before Flop (didn't bet)
+Seat 2: ramune (button) folded before Flop (didn't bet)
+Seat 3: wafu (small blind) folded before Flop (didn't bet)
+Seat 4: ANN (big blind) folded before Flop (didn't bet)
+Seat 5: whywaita collected (6665)
 
 
 PokerStars Hand #6288258420147629191:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:18:49
-Table 'PokerNow 7504090512932910326' 5-max Seat #6 is the button
-Seat 2: tanaka (41712 in chips)
-Seat 5: ramune (120436 in chips)
-Seat 6: wafu (59606 in chips)
-Seat 7: ANN (54614 in chips)
-Seat 9: whywaita (123632 in chips)
+Table 'PokerNow 7504090512932910326' 5-max Seat #3 is the button
+Seat 1: tanaka (41712 in chips)
+Seat 2: ramune (120436 in chips)
+Seat 3: wafu (59606 in chips)
+Seat 4: ANN (54614 in chips)
+Seat 5: whywaita (123632 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9h 8h]
+tanaka: posts an ante of 333
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 ANN: posts small blind 1000
 whywaita: posts big blind 2000
 tanaka: raises to 4000
@@ -2306,21 +2720,25 @@ ramune: shows [5d 5s]
 *** SUMMARY ***
 Total pot 89423 | Rake 0
 Board [Ks Ad 5c Td 6s]
-Seat 2: tanaka showed and lost
-Seat 5: ramune collected (89423)
-Seat 6: wafu (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) folded on the Turn
+Seat 1: tanaka showed and lost
+Seat 2: ramune collected (89423)
+Seat 3: wafu (button) folded before Flop (didn't bet)
+Seat 4: ANN (small blind) folded before Flop (didn't bet)
+Seat 5: whywaita (big blind) folded on the Turn
 
 
 PokerStars Hand #12071163491966129551:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:20:39
-Table 'PokerNow 7504090512932910326' 4-max Seat #7 is the button
-Seat 5: ramune (168147 in chips)
-Seat 6: wafu (59273 in chips)
-Seat 7: ANN (53281 in chips)
-Seat 9: whywaita (119299 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #3 is the button
+Seat 1: ramune (168147 in chips)
+Seat 2: wafu (59273 in chips)
+Seat 3: ANN (53281 in chips)
+Seat 4: whywaita (119299 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Kh 9h]
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 whywaita: posts small blind 1000
 ramune: posts big blind 2000
 wafu: raises to 4400
@@ -2333,20 +2751,24 @@ Uncalled bet (15600) returned to ramune
 ramune: doesn't show hand
 *** SUMMARY ***
 Total pot 14532 | Rake 0
-Seat 5: ramune (big blind) collected (14532)
-Seat 6: wafu folded before Flop
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) folded before Flop
+Seat 1: ramune (big blind) collected (14532)
+Seat 2: wafu folded before Flop
+Seat 3: ANN (button) folded before Flop (didn't bet)
+Seat 4: whywaita (small blind) folded before Flop
 
 
 PokerStars Hand #1029547127670784342:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:21:36
-Table 'PokerNow 7504090512932910326' 4-max Seat #9 is the button
-Seat 5: ramune (177946 in chips)
-Seat 6: wafu (54540 in chips)
-Seat 7: ANN (52948 in chips)
-Seat 9: whywaita (114566 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #4 is the button
+Seat 1: ramune (177946 in chips)
+Seat 2: wafu (54540 in chips)
+Seat 3: ANN (52948 in chips)
+Seat 4: whywaita (114566 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [8d 6d]
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 ramune: posts small blind 1000
 wafu: posts big blind 2000
 ANN: folds
@@ -2366,19 +2788,22 @@ whywaita: shows [8d 6d]
 *** SUMMARY ***
 Total pot 113746 | Rake 0
 Board [2h 6c 2c 4c 8s]
-Seat 5: ramune (small blind) folded before Flop
-Seat 6: wafu (big blind) showed and lost
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) collected (113746)
+Seat 1: ramune (small blind) folded before Flop
+Seat 2: wafu (big blind) showed and lost
+Seat 3: ANN folded before Flop (didn't bet)
+Seat 4: whywaita (button) collected (113746)
 
 
 PokerStars Hand #2923436822580410412:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (0/2000) - 2025/11/15 04:23:18
-Table 'PokerNow 7504090512932910326' 3-max Seat #5 is the button
-Seat 5: ramune (173613 in chips)
-Seat 7: ANN (52615 in chips)
-Seat 9: whywaita (173772 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #1 is the button
+Seat 1: ramune (173613 in chips)
+Seat 2: ANN (52615 in chips)
+Seat 3: whywaita (173772 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3h Qs]
+ramune: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 ANN: posts big blind 2000
 whywaita: raises to 4000
 ramune: calls 4000
@@ -2397,19 +2822,53 @@ whywaita: shows [3h Qs]
 *** SUMMARY ***
 Total pot 92999 | Rake 0
 Board [Qd 2s 5c 8c 4d]
-Seat 5: ramune (button) 
-Seat 7: ANN (big blind) folded before Flop (didn't bet)
-Seat 9: whywaita collected (92999)
+Seat 1: ramune (button) 
+Seat 2: ANN (big blind) folded before Flop (didn't bet)
+Seat 3: whywaita collected (92999)
+
+
+PokerStars Hand #13494999505472485903:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:24:57
+Table 'PokerNow 7504090512932910326' 4-max Seat #1 is the button
+Seat 1: ramune (128280 in chips)
+Seat 2: wafu (50000 in chips)
+Seat 3: ANN (50282 in chips)
+Seat 4: whywaita (221438 in chips)
+*** HOLE CARDS ***
+Dealt to whywaita [Ac Jd]
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
+ANN: posts small blind 1000
+whywaita: posts big blind 2000
+ramune: folds
+wafu: raises to 4400
+ANN: folds
+whywaita: raises to 16000
+wafu: raises to 50000 and is all-in
+whywaita: folds
+Uncalled bet (33667) returned to wafu
+wafu: doesn't show hand
+*** SUMMARY ***
+Total pot 34332 | Rake 0
+Seat 1: ramune (button) folded before Flop (didn't bet)
+Seat 2: wafu collected (34332)
+Seat 3: ANN (small blind) folded before Flop (didn't bet)
+Seat 4: whywaita (big blind) folded before Flop
 
 
 PokerStars Hand #6290887101645436239:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:25:36
-Table 'PokerNow 7504090512932910326' 4-max Seat #7 is the button
-Seat 5: ramune (127947 in chips)
-Seat 6: wafu (67999 in chips)
-Seat 7: ANN (48949 in chips)
-Seat 9: whywaita (205105 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #3 is the button
+Seat 1: ramune (127947 in chips)
+Seat 2: wafu (67999 in chips)
+Seat 3: ANN (48949 in chips)
+Seat 4: whywaita (205105 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3s 6d]
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 whywaita: posts small blind 1000
 ramune: posts big blind 2000
 wafu: folds
@@ -2429,20 +2888,24 @@ ramune: doesn't show hand
 *** SUMMARY ***
 Total pot 13332 | Rake 0
 Board [3h Qh Th 5c]
-Seat 5: ramune (big blind) collected (13332)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) folded on the Turn
+Seat 1: ramune (big blind) collected (13332)
+Seat 2: wafu folded before Flop (didn't bet)
+Seat 3: ANN (button) folded before Flop (didn't bet)
+Seat 4: whywaita (small blind) folded on the Turn
 
 
 PokerStars Hand #7804546713379757002:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:26:35
-Table 'PokerNow 7504090512932910326' 4-max Seat #9 is the button
-Seat 5: ramune (134946 in chips)
-Seat 6: wafu (67666 in chips)
-Seat 7: ANN (48616 in chips)
-Seat 9: whywaita (198772 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #4 is the button
+Seat 1: ramune (134946 in chips)
+Seat 2: wafu (67666 in chips)
+Seat 3: ANN (48616 in chips)
+Seat 4: whywaita (198772 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [7s 3s]
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 ramune: posts small blind 1000
 wafu: posts big blind 2000
 ANN: folds
@@ -2458,20 +2921,24 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 11332 | Rake 0
 Board [Jh 5d 4h]
-Seat 5: ramune (small blind) folded on the Flop
-Seat 6: wafu (big blind) folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) collected (11332)
+Seat 1: ramune (small blind) folded on the Flop
+Seat 2: wafu (big blind) folded before Flop (didn't bet)
+Seat 3: ANN folded before Flop (didn't bet)
+Seat 4: whywaita (button) collected (11332)
 
 
 PokerStars Hand #10266532165924418113:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:27:59
-Table 'PokerNow 7504090512932910326' 4-max Seat #5 is the button
-Seat 5: ramune (130613 in chips)
-Seat 6: wafu (65333 in chips)
-Seat 7: ANN (48283 in chips)
-Seat 9: whywaita (205771 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #1 is the button
+Seat 1: ramune (130613 in chips)
+Seat 2: wafu (65333 in chips)
+Seat 3: ANN (48283 in chips)
+Seat 4: whywaita (205771 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Ks 7s]
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 wafu: posts small blind 1000
 ANN: posts big blind 2000
 whywaita: raises to 4000
@@ -2487,20 +2954,24 @@ wafu: doesn't show hand
 *** SUMMARY ***
 Total pot 27332 | Rake 0
 Board [Ac 2d Td]
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 6: wafu (small blind) collected (27332)
-Seat 7: ANN (big blind) folded before Flop (didn't bet)
-Seat 9: whywaita folded on the Flop
+Seat 1: ramune (button) folded before Flop (didn't bet)
+Seat 2: wafu (small blind) collected (27332)
+Seat 3: ANN (big blind) folded before Flop (didn't bet)
+Seat 4: whywaita folded on the Flop
 
 
 PokerStars Hand #12472709250533994529:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:28:46
-Table 'PokerNow 7504090512932910326' 4-max Seat #6 is the button
-Seat 5: ramune (130280 in chips)
-Seat 6: wafu (80332 in chips)
-Seat 7: ANN (45950 in chips)
-Seat 9: whywaita (193438 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #2 is the button
+Seat 1: ramune (130280 in chips)
+Seat 2: wafu (80332 in chips)
+Seat 3: ANN (45950 in chips)
+Seat 4: whywaita (193438 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [7d 9s]
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 ANN: posts small blind 1000
 whywaita: posts big blind 2000
 ramune: folds
@@ -2516,20 +2987,24 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 5332 | Rake 0
 Board [9h 7s 6c]
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) folded on the Flop
-Seat 9: whywaita (big blind) collected (5332)
+Seat 1: ramune folded before Flop (didn't bet)
+Seat 2: wafu (button) folded before Flop (didn't bet)
+Seat 3: ANN (small blind) folded on the Flop
+Seat 4: whywaita (big blind) collected (5332)
 
 
 PokerStars Hand #14488312381673678660:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:29:10
-Table 'PokerNow 7504090512932910326' 4-max Seat #7 is the button
-Seat 5: ramune (129947 in chips)
-Seat 6: wafu (79999 in chips)
-Seat 7: ANN (43617 in chips)
-Seat 9: whywaita (196437 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #3 is the button
+Seat 1: ramune (129947 in chips)
+Seat 2: wafu (79999 in chips)
+Seat 3: ANN (43617 in chips)
+Seat 4: whywaita (196437 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [8c 7h]
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 whywaita: posts small blind 1000
 ramune: posts big blind 2000
 wafu: folds
@@ -2540,20 +3015,24 @@ Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 5332 | Rake 0
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (5332)
+Seat 1: ramune (big blind) folded before Flop (didn't bet)
+Seat 2: wafu folded before Flop (didn't bet)
+Seat 3: ANN (button) folded before Flop (didn't bet)
+Seat 4: whywaita (small blind) collected (5332)
 
 
 PokerStars Hand #12296790099997384139:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1000/2000) - 2025/11/15 04:29:27
-Table 'PokerNow 7504090512932910326' 4-max Seat #9 is the button
-Seat 5: ramune (127614 in chips)
-Seat 6: wafu (79666 in chips)
-Seat 7: ANN (43284 in chips)
-Seat 9: whywaita (199436 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #4 is the button
+Seat 1: ramune (127614 in chips)
+Seat 2: wafu (79666 in chips)
+Seat 3: ANN (43284 in chips)
+Seat 4: whywaita (199436 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [4c Ac]
+ramune: posts an ante of 333
+wafu: posts an ante of 333
+ANN: posts an ante of 333
+whywaita: posts an ante of 333
 ramune: posts small blind 1000
 wafu: posts big blind 2000
 ANN: folds
@@ -2577,20 +3056,24 @@ whywaita: shows [4c Ac]
 *** SUMMARY ***
 Total pot 49332 | Rake 0
 Board [6c Ad Th 5h 5d]
-Seat 5: ramune (small blind) showed and lost
-Seat 6: wafu (big blind) folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) collected (49332)
+Seat 1: ramune (small blind) showed and lost
+Seat 2: wafu (big blind) folded before Flop (didn't bet)
+Seat 3: ANN folded before Flop (didn't bet)
+Seat 4: whywaita (button) collected (49332)
 
 
 PokerStars Hand #4505216905130451234:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:41:24
-Table 'PokerNow 7504090512932910326' 4-max Seat #5 is the button
-Seat 5: ramune (104281 in chips)
-Seat 6: wafu (77333 in chips)
-Seat 7: ANN (42951 in chips)
-Seat 9: whywaita (225435 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #1 is the button
+Seat 1: ramune (104281 in chips)
+Seat 2: wafu (77333 in chips)
+Seat 3: ANN (42951 in chips)
+Seat 4: whywaita (225435 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [8d 3c]
+ramune: posts an ante of 500
+wafu: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 wafu: posts small blind 1500
 ANN: posts big blind 3000
 whywaita: raises to 6000
@@ -2603,20 +3086,24 @@ Uncalled bet (70833) returned to wafu
 wafu: doesn't show hand
 *** SUMMARY ***
 Total pot 23000 | Rake 0
-Seat 5: ramune (button) folded before Flop
-Seat 6: wafu (small blind) collected (23000)
-Seat 7: ANN (big blind) folded before Flop (didn't bet)
-Seat 9: whywaita folded before Flop
+Seat 1: ramune (button) folded before Flop
+Seat 2: wafu (small blind) collected (23000)
+Seat 3: ANN (big blind) folded before Flop (didn't bet)
+Seat 4: whywaita folded before Flop
 
 
 PokerStars Hand #14900647645220168971:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:41:59
-Table 'PokerNow 7504090512932910326' 4-max Seat #6 is the button
-Seat 5: ramune (97781 in chips)
-Seat 6: wafu (93833 in chips)
-Seat 7: ANN (39451 in chips)
-Seat 9: whywaita (218935 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #2 is the button
+Seat 1: ramune (97781 in chips)
+Seat 2: wafu (93833 in chips)
+Seat 3: ANN (39451 in chips)
+Seat 4: whywaita (218935 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [2c 6d]
+ramune: posts an ante of 500
+wafu: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ANN: posts small blind 1500
 whywaita: posts big blind 3000
 ramune: folds
@@ -2638,20 +3125,24 @@ wafu: doesn't show hand
 *** SUMMARY ***
 Total pot 15500 | Rake 0
 Board [8h 6c 7c 4s 5h]
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) collected (15500)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) folded on the River
+Seat 1: ramune folded before Flop (didn't bet)
+Seat 2: wafu (button) collected (15500)
+Seat 3: ANN (small blind) folded before Flop (didn't bet)
+Seat 4: whywaita (big blind) folded on the River
 
 
 PokerStars Hand #18108323842108066466:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:43:27
-Table 'PokerNow 7504090512932910326' 4-max Seat #7 is the button
-Seat 5: ramune (97281 in chips)
-Seat 6: wafu (102833 in chips)
-Seat 7: ANN (37451 in chips)
-Seat 9: whywaita (212435 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #3 is the button
+Seat 1: ramune (97281 in chips)
+Seat 2: wafu (102833 in chips)
+Seat 3: ANN (37451 in chips)
+Seat 4: whywaita (212435 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3d 6h]
+ramune: posts an ante of 500
+wafu: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 whywaita: posts small blind 1500
 ramune: posts big blind 3000
 wafu: folds
@@ -2662,20 +3153,24 @@ Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 8000 | Rake 0
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 6: wafu folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (8000)
+Seat 1: ramune (big blind) folded before Flop (didn't bet)
+Seat 2: wafu folded before Flop (didn't bet)
+Seat 3: ANN (button) folded before Flop (didn't bet)
+Seat 4: whywaita (small blind) collected (8000)
 
 
 PokerStars Hand #13874734345020032257:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:43:43
-Table 'PokerNow 7504090512932910326' 4-max Seat #9 is the button
-Seat 5: ramune (93781 in chips)
-Seat 6: wafu (102333 in chips)
-Seat 7: ANN (36951 in chips)
-Seat 9: whywaita (216935 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #4 is the button
+Seat 1: ramune (93781 in chips)
+Seat 2: wafu (102333 in chips)
+Seat 3: ANN (36951 in chips)
+Seat 4: whywaita (216935 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6d 5s]
+ramune: posts an ante of 500
+wafu: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ramune: posts small blind 1500
 wafu: posts big blind 3000
 ANN: folds
@@ -2687,20 +3182,24 @@ Uncalled bet (15000) returned to ramune
 ramune: doesn't show hand
 *** SUMMARY ***
 Total pot 17000 | Rake 0
-Seat 5: ramune (small blind) collected (17000)
-Seat 6: wafu (big blind) folded before Flop (didn't bet)
-Seat 7: ANN folded before Flop (didn't bet)
-Seat 9: whywaita (button) folded before Flop
+Seat 1: ramune (small blind) collected (17000)
+Seat 2: wafu (big blind) folded before Flop (didn't bet)
+Seat 3: ANN folded before Flop (didn't bet)
+Seat 4: whywaita (button) folded before Flop
 
 
 PokerStars Hand #3784145008908366828:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:44:10
-Table 'PokerNow 7504090512932910326' 4-max Seat #5 is the button
-Seat 5: ramune (104281 in chips)
-Seat 6: wafu (98833 in chips)
-Seat 7: ANN (36451 in chips)
-Seat 9: whywaita (210435 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #1 is the button
+Seat 1: ramune (104281 in chips)
+Seat 2: wafu (98833 in chips)
+Seat 3: ANN (36451 in chips)
+Seat 4: whywaita (210435 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [2c 4s]
+ramune: posts an ante of 500
+wafu: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 wafu: posts small blind 1500
 ANN: posts big blind 3000
 whywaita: folds
@@ -2711,20 +3210,24 @@ Uncalled bet (95333) returned to wafu
 wafu: doesn't show hand
 *** SUMMARY ***
 Total pot 8000 | Rake 0
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 6: wafu (small blind) collected (8000)
-Seat 7: ANN (big blind) folded before Flop (didn't bet)
-Seat 9: whywaita folded before Flop (didn't bet)
+Seat 1: ramune (button) folded before Flop (didn't bet)
+Seat 2: wafu (small blind) collected (8000)
+Seat 3: ANN (big blind) folded before Flop (didn't bet)
+Seat 4: whywaita folded before Flop (didn't bet)
 
 
 PokerStars Hand #15358326295155683338:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:44:25
-Table 'PokerNow 7504090512932910326' 4-max Seat #6 is the button
-Seat 5: ramune (103781 in chips)
-Seat 6: wafu (103333 in chips)
-Seat 7: ANN (32951 in chips)
-Seat 9: whywaita (209935 in chips)
+Table 'PokerNow 7504090512932910326' 4-max Seat #2 is the button
+Seat 1: ramune (103781 in chips)
+Seat 2: wafu (103333 in chips)
+Seat 3: ANN (32951 in chips)
+Seat 4: whywaita (209935 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9d 7c]
+ramune: posts an ante of 500
+wafu: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ANN: posts small blind 1500
 whywaita: posts big blind 3000
 ramune: folds
@@ -2745,19 +3248,22 @@ whywaita: shows [9d 7c]
 *** SUMMARY ***
 Total pot 209166 | Rake 0
 Board [4h 8c 6d Td Jd]
-Seat 5: ramune folded before Flop (didn't bet)
-Seat 6: wafu (button) showed and lost
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) collected (209166)
+Seat 1: ramune folded before Flop (didn't bet)
+Seat 2: wafu (button) showed and lost
+Seat 3: ANN (small blind) folded before Flop (didn't bet)
+Seat 4: whywaita (big blind) collected (209166)
 
 
 PokerStars Hand #4626149258116439949:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:46:46
-Table 'PokerNow 7504090512932910326' 3-max Seat #7 is the button
-Seat 5: ramune (103281 in chips)
-Seat 7: ANN (30951 in chips)
-Seat 9: whywaita (315768 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #2 is the button
+Seat 1: ramune (103281 in chips)
+Seat 2: ANN (30951 in chips)
+Seat 3: whywaita (315768 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9c 8c]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 whywaita: posts small blind 1500
 ramune: posts big blind 3000
 ANN: folds
@@ -2767,18 +3273,21 @@ Uncalled bet (312268) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 7500 | Rake 0
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (7500)
+Seat 1: ramune (big blind) folded before Flop (didn't bet)
+Seat 2: ANN (button) folded before Flop (didn't bet)
+Seat 3: whywaita (small blind) collected (7500)
 
 
 PokerStars Hand #16824378977005662107:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:47:04
-Table 'PokerNow 7504090512932910326' 3-max Seat #9 is the button
-Seat 5: ramune (99781 in chips)
-Seat 7: ANN (30451 in chips)
-Seat 9: whywaita (319768 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #3 is the button
+Seat 1: ramune (99781 in chips)
+Seat 2: ANN (30451 in chips)
+Seat 3: whywaita (319768 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Jc As]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ramune: posts small blind 1500
 ANN: posts big blind 3000
 whywaita: raises to 30000
@@ -2788,18 +3297,21 @@ Uncalled bet (27000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 9000 | Rake 0
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) folded before Flop (didn't bet)
-Seat 9: whywaita (button) collected (9000)
+Seat 1: ramune (small blind) folded before Flop (didn't bet)
+Seat 2: ANN (big blind) folded before Flop (didn't bet)
+Seat 3: whywaita (button) collected (9000)
 
 
 PokerStars Hand #8426128256398600869:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:47:26
-Table 'PokerNow 7504090512932910326' 3-max Seat #5 is the button
-Seat 5: ramune (97781 in chips)
-Seat 7: ANN (26951 in chips)
-Seat 9: whywaita (325268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #1 is the button
+Seat 1: ramune (97781 in chips)
+Seat 2: ANN (26951 in chips)
+Seat 3: whywaita (325268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6s 6c]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ANN: posts small blind 1500
 whywaita: posts big blind 3000
 ramune: folds
@@ -2808,18 +3320,21 @@ Uncalled bet (1500) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 4500 | Rake 0
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) collected (4500)
+Seat 1: ramune (button) folded before Flop (didn't bet)
+Seat 2: ANN (small blind) folded before Flop (didn't bet)
+Seat 3: whywaita (big blind) collected (4500)
 
 
 PokerStars Hand #4403824663190295055:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:47:33
-Table 'PokerNow 7504090512932910326' 3-max Seat #7 is the button
-Seat 5: ramune (97281 in chips)
-Seat 7: ANN (24951 in chips)
-Seat 9: whywaita (327768 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #2 is the button
+Seat 1: ramune (97281 in chips)
+Seat 2: ANN (24951 in chips)
+Seat 3: whywaita (327768 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6c Qs]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 whywaita: posts small blind 1500
 ramune: posts big blind 3000
 ANN: calls 3000
@@ -2834,6 +3349,7 @@ ramune: checks
 ANN: checks
 *** RIVER *** [Ad 5c 4h 8h] [3c]
 ramune: bets 90781 and is all-in
+ANN: calls 90781 and is all-in
 Uncalled bet (72330) returned to ramune
 *** SHOW DOWN ***
 ramune: shows [4c 3d]
@@ -2841,18 +3357,21 @@ ANN: shows [6s 7s]
 *** SUMMARY ***
 Total pot 51902 | Rake 0
 Board [Ad 5c 4h 8h 3c]
-Seat 5: ramune (big blind) showed and lost
-Seat 7: ANN (button) collected (51902)
-Seat 9: whywaita (small blind) folded before Flop (didn't bet)
+Seat 1: ramune (big blind) showed and lost
+Seat 2: ANN (button) collected (51902)
+Seat 3: whywaita (small blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #6868713318599482824:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:48:37
-Table 'PokerNow 7504090512932910326' 3-max Seat #9 is the button
-Seat 5: ramune (72330 in chips)
-Seat 7: ANN (51902 in chips)
-Seat 9: whywaita (325768 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #3 is the button
+Seat 1: ramune (72330 in chips)
+Seat 2: ANN (51902 in chips)
+Seat 3: whywaita (325768 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6h 9s]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ramune: posts small blind 1500
 ANN: posts big blind 3000
 whywaita: raises to 9000
@@ -2869,18 +3388,21 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 28500 | Rake 0
 Board [9d 4s 2d]
-Seat 5: ramune (small blind) folded on the Flop
-Seat 7: ANN (big blind) folded on the Flop
-Seat 9: whywaita (button) collected (28500)
+Seat 1: ramune (small blind) folded on the Flop
+Seat 2: ANN (big blind) folded on the Flop
+Seat 3: whywaita (button) collected (28500)
 
 
 PokerStars Hand #12252250519895646837:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:49:41
-Table 'PokerNow 7504090512932910326' 3-max Seat #5 is the button
-Seat 5: ramune (62830 in chips)
-Seat 7: ANN (42402 in chips)
-Seat 9: whywaita (344768 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #1 is the button
+Seat 1: ramune (62830 in chips)
+Seat 2: ANN (42402 in chips)
+Seat 3: whywaita (344768 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9c 8c]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ANN: posts small blind 1500
 whywaita: posts big blind 3000
 ramune: folds
@@ -2889,18 +3411,21 @@ Uncalled bet (1500) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 4500 | Rake 0
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) collected (4500)
+Seat 1: ramune (button) folded before Flop (didn't bet)
+Seat 2: ANN (small blind) folded before Flop (didn't bet)
+Seat 3: whywaita (big blind) collected (4500)
 
 
 PokerStars Hand #10581846846274228448:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:49:48
-Table 'PokerNow 7504090512932910326' 3-max Seat #7 is the button
-Seat 5: ramune (62330 in chips)
-Seat 7: ANN (40402 in chips)
-Seat 9: whywaita (347268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #2 is the button
+Seat 1: ramune (62330 in chips)
+Seat 2: ANN (40402 in chips)
+Seat 3: whywaita (347268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3h 8h]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 whywaita: posts small blind 1500
 ramune: posts big blind 3000
 ANN: folds
@@ -2910,18 +3435,21 @@ Uncalled bet (343768) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 7500 | Rake 0
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (7500)
+Seat 1: ramune (big blind) folded before Flop (didn't bet)
+Seat 2: ANN (button) folded before Flop (didn't bet)
+Seat 3: whywaita (small blind) collected (7500)
 
 
 PokerStars Hand #11508200016770265769:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:49:59
-Table 'PokerNow 7504090512932910326' 3-max Seat #9 is the button
-Seat 5: ramune (58830 in chips)
-Seat 7: ANN (39902 in chips)
-Seat 9: whywaita (351268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #3 is the button
+Seat 1: ramune (58830 in chips)
+Seat 2: ANN (39902 in chips)
+Seat 3: whywaita (351268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [8s 7c]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ramune: posts small blind 1500
 ANN: posts big blind 3000
 whywaita: raises to 9000
@@ -2936,18 +3464,21 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 21000 | Rake 0
 Board [5d Th Qd]
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) folded on the Flop
-Seat 9: whywaita (button) collected (21000)
+Seat 1: ramune (small blind) folded before Flop (didn't bet)
+Seat 2: ANN (big blind) folded on the Flop
+Seat 3: whywaita (button) collected (21000)
 
 
 PokerStars Hand #11413489384149725195:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:50:31
-Table 'PokerNow 7504090512932910326' 3-max Seat #5 is the button
-Seat 5: ramune (56830 in chips)
-Seat 7: ANN (30402 in chips)
-Seat 9: whywaita (362768 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #1 is the button
+Seat 1: ramune (56830 in chips)
+Seat 2: ANN (30402 in chips)
+Seat 3: whywaita (362768 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9d 3d]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ANN: posts small blind 1500
 whywaita: posts big blind 3000
 ramune: folds
@@ -2956,18 +3487,21 @@ Uncalled bet (1500) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 4500 | Rake 0
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) collected (4500)
+Seat 1: ramune (button) folded before Flop (didn't bet)
+Seat 2: ANN (small blind) folded before Flop (didn't bet)
+Seat 3: whywaita (big blind) collected (4500)
 
 
 PokerStars Hand #15912345819414619394:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:50:38
-Table 'PokerNow 7504090512932910326' 3-max Seat #7 is the button
-Seat 5: ramune (56330 in chips)
-Seat 7: ANN (28402 in chips)
-Seat 9: whywaita (365268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #2 is the button
+Seat 1: ramune (56330 in chips)
+Seat 2: ANN (28402 in chips)
+Seat 3: whywaita (365268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [4d 3s]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 whywaita: posts small blind 1500
 ramune: posts big blind 3000
 ANN: folds
@@ -2977,18 +3511,21 @@ Uncalled bet (361768) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 7500 | Rake 0
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (7500)
+Seat 1: ramune (big blind) folded before Flop (didn't bet)
+Seat 2: ANN (button) folded before Flop (didn't bet)
+Seat 3: whywaita (small blind) collected (7500)
 
 
 PokerStars Hand #1280777360174736565:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:50:49
-Table 'PokerNow 7504090512932910326' 3-max Seat #9 is the button
-Seat 5: ramune (52830 in chips)
-Seat 7: ANN (27902 in chips)
-Seat 9: whywaita (369268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #3 is the button
+Seat 1: ramune (52830 in chips)
+Seat 2: ANN (27902 in chips)
+Seat 3: whywaita (369268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Ac 4c]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ramune: posts small blind 1500
 ANN: posts big blind 3000
 whywaita: raises to 6000
@@ -2999,18 +3536,21 @@ Uncalled bet (46330) returned to ramune
 ramune: doesn't show hand
 *** SUMMARY ***
 Total pot 16500 | Rake 0
-Seat 5: ramune (small blind) collected (16500)
-Seat 7: ANN (big blind) folded before Flop (didn't bet)
-Seat 9: whywaita (button) folded before Flop
+Seat 1: ramune (small blind) collected (16500)
+Seat 2: ANN (big blind) folded before Flop (didn't bet)
+Seat 3: whywaita (button) folded before Flop
 
 
 PokerStars Hand #9151609803605006887:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:51:13
-Table 'PokerNow 7504090512932910326' 3-max Seat #5 is the button
-Seat 5: ramune (62830 in chips)
-Seat 7: ANN (24402 in chips)
-Seat 9: whywaita (362768 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #1 is the button
+Seat 1: ramune (62830 in chips)
+Seat 2: ANN (24402 in chips)
+Seat 3: whywaita (362768 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [7c 4h]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ANN: posts small blind 1500
 whywaita: posts big blind 3000
 ramune: folds
@@ -3020,18 +3560,21 @@ Uncalled bet (20902) returned to ANN
 ANN: doesn't show hand
 *** SUMMARY ***
 Total pot 7500 | Rake 0
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) collected (7500)
-Seat 9: whywaita (big blind) folded before Flop (didn't bet)
+Seat 1: ramune (button) folded before Flop (didn't bet)
+Seat 2: ANN (small blind) collected (7500)
+Seat 3: whywaita (big blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #6508693913125966956:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:51:28
-Table 'PokerNow 7504090512932910326' 3-max Seat #7 is the button
-Seat 5: ramune (62330 in chips)
-Seat 7: ANN (28402 in chips)
-Seat 9: whywaita (359268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #2 is the button
+Seat 1: ramune (62330 in chips)
+Seat 2: ANN (28402 in chips)
+Seat 3: whywaita (359268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [2d 5c]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 whywaita: posts small blind 1500
 ramune: posts big blind 3000
 ANN: folds
@@ -3041,18 +3584,21 @@ Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 7500 | Rake 0
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (7500)
+Seat 1: ramune (big blind) folded before Flop (didn't bet)
+Seat 2: ANN (button) folded before Flop (didn't bet)
+Seat 3: whywaita (small blind) collected (7500)
 
 
 PokerStars Hand #7619977680676422189:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:51:44
-Table 'PokerNow 7504090512932910326' 3-max Seat #9 is the button
-Seat 5: ramune (58830 in chips)
-Seat 7: ANN (27902 in chips)
-Seat 9: whywaita (363268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #3 is the button
+Seat 1: ramune (58830 in chips)
+Seat 2: ANN (27902 in chips)
+Seat 3: whywaita (363268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Qc 4c]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ramune: posts small blind 1500
 ANN: posts big blind 3000
 whywaita: raises to 9000
@@ -3062,18 +3608,21 @@ Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 9000 | Rake 0
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) folded before Flop (didn't bet)
-Seat 9: whywaita (button) collected (9000)
+Seat 1: ramune (small blind) folded before Flop (didn't bet)
+Seat 2: ANN (big blind) folded before Flop (didn't bet)
+Seat 3: whywaita (button) collected (9000)
 
 
 PokerStars Hand #1232061527819772372:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:52:01
-Table 'PokerNow 7504090512932910326' 3-max Seat #5 is the button
-Seat 5: ramune (56830 in chips)
-Seat 7: ANN (24402 in chips)
-Seat 9: whywaita (368768 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #1 is the button
+Seat 1: ramune (56830 in chips)
+Seat 2: ANN (24402 in chips)
+Seat 3: whywaita (368768 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9h Js]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ANN: posts small blind 1500
 whywaita: posts big blind 3000
 ramune: folds
@@ -3082,18 +3631,21 @@ Uncalled bet (1500) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 4500 | Rake 0
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) collected (4500)
+Seat 1: ramune (button) folded before Flop (didn't bet)
+Seat 2: ANN (small blind) folded before Flop (didn't bet)
+Seat 3: whywaita (big blind) collected (4500)
 
 
 PokerStars Hand #9213363660387784703:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:52:08
-Table 'PokerNow 7504090512932910326' 3-max Seat #7 is the button
-Seat 5: ramune (56330 in chips)
-Seat 7: ANN (22402 in chips)
-Seat 9: whywaita (371268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #2 is the button
+Seat 1: ramune (56330 in chips)
+Seat 2: ANN (22402 in chips)
+Seat 3: whywaita (371268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [4c Qc]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 whywaita: posts small blind 1500
 ramune: posts big blind 3000
 ANN: folds
@@ -3103,18 +3655,21 @@ Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 7500 | Rake 0
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (7500)
+Seat 1: ramune (big blind) folded before Flop (didn't bet)
+Seat 2: ANN (button) folded before Flop (didn't bet)
+Seat 3: whywaita (small blind) collected (7500)
 
 
 PokerStars Hand #16100211136313749905:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:52:21
-Table 'PokerNow 7504090512932910326' 3-max Seat #9 is the button
-Seat 5: ramune (52830 in chips)
-Seat 7: ANN (21902 in chips)
-Seat 9: whywaita (375268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #3 is the button
+Seat 1: ramune (52830 in chips)
+Seat 2: ANN (21902 in chips)
+Seat 3: whywaita (375268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9s 3c]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ramune: posts small blind 1500
 ANN: posts big blind 3000
 whywaita: raises to 9000
@@ -3125,18 +3680,21 @@ Uncalled bet (12402) returned to ANN
 ANN: doesn't show hand
 *** SUMMARY ***
 Total pot 21000 | Rake 0
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) collected (21000)
-Seat 9: whywaita (button) folded before Flop
+Seat 1: ramune (small blind) folded before Flop (didn't bet)
+Seat 2: ANN (big blind) collected (21000)
+Seat 3: whywaita (button) folded before Flop
 
 
 PokerStars Hand #14534605682757681954:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:52:46
-Table 'PokerNow 7504090512932910326' 3-max Seat #5 is the button
-Seat 5: ramune (50830 in chips)
-Seat 7: ANN (33402 in chips)
-Seat 9: whywaita (365768 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #1 is the button
+Seat 1: ramune (50830 in chips)
+Seat 2: ANN (33402 in chips)
+Seat 3: whywaita (365768 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9c Js]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ANN: posts small blind 1500
 whywaita: posts big blind 3000
 ramune: folds
@@ -3146,18 +3704,21 @@ Uncalled bet (29902) returned to ANN
 ANN: doesn't show hand
 *** SUMMARY ***
 Total pot 7500 | Rake 0
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) collected (7500)
-Seat 9: whywaita (big blind) folded before Flop (didn't bet)
+Seat 1: ramune (button) folded before Flop (didn't bet)
+Seat 2: ANN (small blind) collected (7500)
+Seat 3: whywaita (big blind) folded before Flop (didn't bet)
 
 
 PokerStars Hand #1509340631447665709:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:52:57
-Table 'PokerNow 7504090512932910326' 3-max Seat #7 is the button
-Seat 5: ramune (50330 in chips)
-Seat 7: ANN (37402 in chips)
-Seat 9: whywaita (362268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #2 is the button
+Seat 1: ramune (50330 in chips)
+Seat 2: ANN (37402 in chips)
+Seat 3: whywaita (362268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Kc 9d]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 whywaita: posts small blind 1500
 ramune: posts big blind 3000
 ANN: folds
@@ -3168,18 +3729,21 @@ Uncalled bet (40830) returned to ramune
 ramune: doesn't show hand
 *** SUMMARY ***
 Total pot 19500 | Rake 0
-Seat 5: ramune (big blind) collected (19500)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) folded before Flop
+Seat 1: ramune (big blind) collected (19500)
+Seat 2: ANN (button) folded before Flop (didn't bet)
+Seat 3: whywaita (small blind) folded before Flop
 
 
 PokerStars Hand #10680726352886298234:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:53:16
-Table 'PokerNow 7504090512932910326' 3-max Seat #9 is the button
-Seat 5: ramune (60330 in chips)
-Seat 7: ANN (36902 in chips)
-Seat 9: whywaita (352768 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #3 is the button
+Seat 1: ramune (60330 in chips)
+Seat 2: ANN (36902 in chips)
+Seat 3: whywaita (352768 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Js Qd]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ramune: posts small blind 1500
 ANN: posts big blind 3000
 whywaita: raises to 9000
@@ -3189,18 +3753,21 @@ Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 9000 | Rake 0
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) folded before Flop (didn't bet)
-Seat 9: whywaita (button) collected (9000)
+Seat 1: ramune (small blind) folded before Flop (didn't bet)
+Seat 2: ANN (big blind) folded before Flop (didn't bet)
+Seat 3: whywaita (button) collected (9000)
 
 
 PokerStars Hand #538373067952329778:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:53:30
-Table 'PokerNow 7504090512932910326' 3-max Seat #5 is the button
-Seat 5: ramune (58330 in chips)
-Seat 7: ANN (33402 in chips)
-Seat 9: whywaita (358268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #1 is the button
+Seat 1: ramune (58330 in chips)
+Seat 2: ANN (33402 in chips)
+Seat 3: whywaita (358268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3c 2s]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ANN: posts small blind 1500
 whywaita: posts big blind 3000
 ramune: calls 3000
@@ -3223,18 +3790,21 @@ ramune: doesn't show hand
 *** SUMMARY ***
 Total pot 54000 | Rake 0
 Board [Kh 3d Jh Ks 6d]
-Seat 5: ramune (button) collected (54000)
-Seat 7: ANN (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) folded on the River
+Seat 1: ramune (button) collected (54000)
+Seat 2: ANN (small blind) folded before Flop (didn't bet)
+Seat 3: whywaita (big blind) folded on the River
 
 
 PokerStars Hand #1365035936038147914:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:54:49
-Table 'PokerNow 7504090512932910326' 3-max Seat #7 is the button
-Seat 5: ramune (86330 in chips)
-Seat 7: ANN (31402 in chips)
-Seat 9: whywaita (332268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #2 is the button
+Seat 1: ramune (86330 in chips)
+Seat 2: ANN (31402 in chips)
+Seat 3: whywaita (332268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [7d 5d]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 whywaita: posts small blind 1500
 ramune: posts big blind 3000
 ANN: folds
@@ -3244,18 +3814,21 @@ Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 7500 | Rake 0
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (7500)
+Seat 1: ramune (big blind) folded before Flop (didn't bet)
+Seat 2: ANN (button) folded before Flop (didn't bet)
+Seat 3: whywaita (small blind) collected (7500)
 
 
 PokerStars Hand #12024317182552873325:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (1500/3000) - 2025/11/15 04:55:02
-Table 'PokerNow 7504090512932910326' 3-max Seat #9 is the button
-Seat 5: ramune (82830 in chips)
-Seat 7: ANN (30902 in chips)
-Seat 9: whywaita (336268 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #3 is the button
+Seat 1: ramune (82830 in chips)
+Seat 2: ANN (30902 in chips)
+Seat 3: whywaita (336268 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Ah 4c]
+ramune: posts an ante of 500
+ANN: posts an ante of 500
+whywaita: posts an ante of 500
 ramune: posts small blind 1500
 ANN: posts big blind 3000
 whywaita: raises to 6000
@@ -3276,18 +3849,21 @@ whywaita: shows [Ah 4c]
 *** SUMMARY ***
 Total pot 27000 | Rake 0
 Board [4s 3s Ad 6s 7d]
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) showed and lost
-Seat 9: whywaita (button) collected (27000)
+Seat 1: ramune (small blind) folded before Flop (didn't bet)
+Seat 2: ANN (big blind) showed and lost
+Seat 3: whywaita (button) collected (27000)
 
 
 PokerStars Hand #1739223350176133622:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 04:56:14
-Table 'PokerNow 7504090512932910326' 3-max Seat #5 is the button
-Seat 5: ramune (80830 in chips)
-Seat 7: ANN (18402 in chips)
-Seat 9: whywaita (350768 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #1 is the button
+Seat 1: ramune (80830 in chips)
+Seat 2: ANN (18402 in chips)
+Seat 3: whywaita (350768 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9h Kd]
+ramune: posts an ante of 666
+ANN: posts an ante of 666
+whywaita: posts an ante of 666
 ANN: posts small blind 2000
 whywaita: posts big blind 4000
 ramune: folds
@@ -3299,18 +3875,21 @@ whywaita: shows [9h Kd]
 *** SUMMARY ***
 Total pot 37470 | Rake 0
 Board [Qc 6c 6s 5d 5s]
-Seat 5: ramune (button) folded before Flop (didn't bet)
-Seat 7: ANN (small blind) collected (37470)
-Seat 9: whywaita (big blind) showed and lost
+Seat 1: ramune (button) folded before Flop (didn't bet)
+Seat 2: ANN (small blind) collected (37470)
+Seat 3: whywaita (big blind) showed and lost
 
 
 PokerStars Hand #18346578163886165993:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 04:56:44
-Table 'PokerNow 7504090512932910326' 3-max Seat #7 is the button
-Seat 5: ramune (80164 in chips)
-Seat 7: ANN (37470 in chips)
-Seat 9: whywaita (332366 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #2 is the button
+Seat 1: ramune (80164 in chips)
+Seat 2: ANN (37470 in chips)
+Seat 3: whywaita (332366 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6h 8d]
+ramune: posts an ante of 666
+ANN: posts an ante of 666
+whywaita: posts an ante of 666
 whywaita: posts small blind 2000
 ramune: posts big blind 4000
 ANN: folds
@@ -3320,18 +3899,21 @@ Uncalled bet (8000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 9998 | Rake 0
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 7: ANN (button) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (9998)
+Seat 1: ramune (big blind) folded before Flop (didn't bet)
+Seat 2: ANN (button) folded before Flop (didn't bet)
+Seat 3: whywaita (small blind) collected (9998)
 
 
 PokerStars Hand #5979193200291770153:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 04:56:57
-Table 'PokerNow 7504090512932910326' 3-max Seat #9 is the button
-Seat 5: ramune (75498 in chips)
-Seat 7: ANN (36804 in chips)
-Seat 9: whywaita (337698 in chips)
+Table 'PokerNow 7504090512932910326' 3-max Seat #3 is the button
+Seat 1: ramune (75498 in chips)
+Seat 2: ANN (36804 in chips)
+Seat 3: whywaita (337698 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Qc 7c]
+ramune: posts an ante of 666
+ANN: posts an ante of 666
+whywaita: posts an ante of 666
 ramune: posts small blind 2000
 ANN: posts big blind 4000
 whywaita: raises to 8000
@@ -3348,17 +3930,19 @@ whywaita: shows [Qc 7c]
 *** SUMMARY ***
 Total pot 76274 | Rake 0
 Board [Ac 4h Qh 4s 7d]
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 7: ANN (big blind) showed and lost
-Seat 9: whywaita (button) collected (76274)
+Seat 1: ramune (small blind) folded before Flop (didn't bet)
+Seat 2: ANN (big blind) showed and lost
+Seat 3: whywaita (button) collected (76274)
 
 
 PokerStars Hand #9510916713581398200:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 04:57:51
-Table 'PokerNow 7504090512932910326' 2-max Seat #5 is the button
-Seat 5: ramune (72832 in chips)
-Seat 9: whywaita (377168 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #1 is the button
+Seat 1: ramune (72832 in chips)
+Seat 2: whywaita (377168 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3h 5c]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 ramune: posts small blind 2000
 whywaita: posts big blind 4000
 ramune: calls 2000
@@ -3378,16 +3962,18 @@ ramune: doesn't show hand
 *** SUMMARY ***
 Total pot 17332 | Rake 0
 Board [Qh Kc 4s 8c Ts]
-Seat 5: ramune (small blind) collected (17332)
-Seat 9: whywaita (big blind) folded on the River
+Seat 1: ramune (small blind) collected (17332)
+Seat 2: whywaita (big blind) folded on the River
 
 
 PokerStars Hand #18216894264658306942:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 04:59:52
-Table 'PokerNow 7504090512932910326' 2-max Seat #9 is the button
-Seat 5: ramune (81498 in chips)
-Seat 9: whywaita (368502 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #2 is the button
+Seat 1: ramune (81498 in chips)
+Seat 2: whywaita (368502 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [6d 4c]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 whywaita: posts small blind 2000
 ramune: posts big blind 4000
 whywaita: raises to 8000
@@ -3397,16 +3983,18 @@ Uncalled bet (18000) returned to ramune
 ramune: doesn't show hand
 *** SUMMARY ***
 Total pot 17332 | Rake 0
-Seat 5: ramune (big blind) collected (17332)
-Seat 9: whywaita (small blind) folded before Flop
+Seat 1: ramune (big blind) collected (17332)
+Seat 2: whywaita (small blind) folded before Flop
 
 
 PokerStars Hand #15751742231375874270:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:00:28
-Table 'PokerNow 7504090512932910326' 2-max Seat #5 is the button
-Seat 5: ramune (90164 in chips)
-Seat 9: whywaita (359836 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #1 is the button
+Seat 1: ramune (90164 in chips)
+Seat 2: whywaita (359836 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Ks 5d]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 ramune: posts small blind 2000
 whywaita: posts big blind 4000
 ramune: folds
@@ -3414,16 +4002,18 @@ Uncalled bet (2000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 5332 | Rake 0
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) collected (5332)
+Seat 1: ramune (small blind) folded before Flop (didn't bet)
+Seat 2: whywaita (big blind) collected (5332)
 
 
 PokerStars Hand #11148434813188409422:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:00:37
-Table 'PokerNow 7504090512932910326' 2-max Seat #9 is the button
-Seat 5: ramune (87498 in chips)
-Seat 9: whywaita (362502 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #2 is the button
+Seat 1: ramune (87498 in chips)
+Seat 2: whywaita (362502 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Ad 7s]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 whywaita: posts small blind 2000
 ramune: posts big blind 4000
 whywaita: raises to 8000
@@ -3442,16 +4032,18 @@ ramune: shows [Ks 7c]
 *** SUMMARY ***
 Total pot 45332 | Rake 0
 Board [9c 4c Ts 7h Kc]
-Seat 5: ramune (big blind) collected (45332)
-Seat 9: whywaita (small blind) 
+Seat 1: ramune (big blind) collected (45332)
+Seat 2: whywaita (small blind) 
 
 
 PokerStars Hand #9377357431533665957:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:01:59
-Table 'PokerNow 7504090512932910326' 2-max Seat #5 is the button
-Seat 5: ramune (110164 in chips)
-Seat 9: whywaita (339836 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #1 is the button
+Seat 1: ramune (110164 in chips)
+Seat 2: whywaita (339836 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Kd Ad]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 ramune: posts small blind 2000
 whywaita: posts big blind 4000
 ramune: folds
@@ -3459,16 +4051,18 @@ Uncalled bet (2000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 5332 | Rake 0
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) collected (5332)
+Seat 1: ramune (small blind) folded before Flop (didn't bet)
+Seat 2: whywaita (big blind) collected (5332)
 
 
 PokerStars Hand #14980426965218776355:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:02:07
-Table 'PokerNow 7504090512932910326' 2-max Seat #9 is the button
-Seat 5: ramune (107498 in chips)
-Seat 9: whywaita (342502 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #2 is the button
+Seat 1: ramune (107498 in chips)
+Seat 2: whywaita (342502 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [7s 3d]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 whywaita: posts small blind 2000
 ramune: posts big blind 4000
 whywaita: raises to 8000
@@ -3489,16 +4083,18 @@ ramune: doesn't show hand
 *** SUMMARY ***
 Total pot 49332 | Rake 0
 Board [Qh 9d 7h 5s Jh]
-Seat 5: ramune (big blind) collected (49332)
-Seat 9: whywaita (small blind) folded on the River
+Seat 1: ramune (big blind) collected (49332)
+Seat 2: whywaita (small blind) folded on the River
 
 
 PokerStars Hand #9842601501963906982:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:03:57
-Table 'PokerNow 7504090512932910326' 2-max Seat #5 is the button
-Seat 5: ramune (132164 in chips)
-Seat 9: whywaita (317836 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #1 is the button
+Seat 1: ramune (132164 in chips)
+Seat 2: whywaita (317836 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Qh 2s]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 ramune: posts small blind 2000
 whywaita: posts big blind 4000
 ramune: calls 2000
@@ -3518,16 +4114,18 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 185332 | Rake 0
 Board [Th 7h Jh 8c 4h]
-Seat 5: ramune (small blind) folded on the River
-Seat 9: whywaita (big blind) collected (185332)
+Seat 1: ramune (small blind) folded on the River
+Seat 2: whywaita (big blind) collected (185332)
 
 
 PokerStars Hand #18042041291023191502:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:06:18
-Table 'PokerNow 7504090512932910326' 2-max Seat #9 is the button
-Seat 5: ramune (39498 in chips)
-Seat 9: whywaita (410502 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #2 is the button
+Seat 1: ramune (39498 in chips)
+Seat 2: whywaita (410502 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Kh 8c]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 whywaita: posts small blind 2000
 ramune: posts big blind 4000
 whywaita: raises to 8000
@@ -3536,16 +4134,18 @@ Uncalled bet (4000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 9332 | Rake 0
-Seat 5: ramune (big blind) folded before Flop (didn't bet)
-Seat 9: whywaita (small blind) collected (9332)
+Seat 1: ramune (big blind) folded before Flop (didn't bet)
+Seat 2: whywaita (small blind) collected (9332)
 
 
 PokerStars Hand #16795005280355472393:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:06:35
-Table 'PokerNow 7504090512932910326' 2-max Seat #5 is the button
-Seat 5: ramune (34832 in chips)
-Seat 9: whywaita (415168 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #1 is the button
+Seat 1: ramune (34832 in chips)
+Seat 2: whywaita (415168 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Kh As]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 ramune: posts small blind 2000
 whywaita: posts big blind 4000
 ramune: raises to 34832 and is all-in
@@ -3556,16 +4156,18 @@ whywaita: shows [Kh As]
 *** SUMMARY ***
 Total pot 69664 | Rake 0
 Board [8c 5c Qs Jc 2d]
-Seat 5: ramune (small blind) collected (69664)
-Seat 9: whywaita (big blind) showed and lost
+Seat 1: ramune (small blind) collected (69664)
+Seat 2: whywaita (big blind) showed and lost
 
 
 PokerStars Hand #2371100084045146115:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:07:04
-Table 'PokerNow 7504090512932910326' 2-max Seat #9 is the button
-Seat 5: ramune (69664 in chips)
-Seat 9: whywaita (380336 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #2 is the button
+Seat 1: ramune (69664 in chips)
+Seat 2: whywaita (380336 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Ks 4c]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 whywaita: posts small blind 2000
 ramune: posts big blind 4000
 whywaita: raises to 8000
@@ -3579,16 +4181,18 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 17332 | Rake 0
 Board [Qc 5s 9h]
-Seat 5: ramune (big blind) folded on the Flop
-Seat 9: whywaita (small blind) collected (17332)
+Seat 1: ramune (big blind) folded on the Flop
+Seat 2: whywaita (small blind) collected (17332)
 
 
 PokerStars Hand #2170043220754630157:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:07:40
-Table 'PokerNow 7504090512932910326' 2-max Seat #5 is the button
-Seat 5: ramune (60998 in chips)
-Seat 9: whywaita (389002 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #1 is the button
+Seat 1: ramune (60998 in chips)
+Seat 2: whywaita (389002 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [5h 3c]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 ramune: posts small blind 2000
 whywaita: posts big blind 4000
 ramune: folds
@@ -3596,16 +4200,18 @@ Uncalled bet (2000) returned to whywaita
 whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 5332 | Rake 0
-Seat 5: ramune (small blind) folded before Flop (didn't bet)
-Seat 9: whywaita (big blind) collected (5332)
+Seat 1: ramune (small blind) folded before Flop (didn't bet)
+Seat 2: whywaita (big blind) collected (5332)
 
 
 PokerStars Hand #5400242360223141571:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:07:49
-Table 'PokerNow 7504090512932910326' 2-max Seat #9 is the button
-Seat 5: ramune (58332 in chips)
-Seat 9: whywaita (391668 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #2 is the button
+Seat 1: ramune (58332 in chips)
+Seat 2: whywaita (391668 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [3s 6s]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 whywaita: posts small blind 2000
 ramune: posts big blind 4000
 whywaita: raises to 8000
@@ -3621,16 +4227,18 @@ ramune: doesn't show hand
 *** SUMMARY ***
 Total pot 17332 | Rake 0
 Board [5c 9d Th Js]
-Seat 5: ramune (big blind) collected (17332)
-Seat 9: whywaita (small blind) folded on the Turn
+Seat 1: ramune (big blind) collected (17332)
+Seat 2: whywaita (small blind) folded on the Turn
 
 
 PokerStars Hand #17127788637264748749:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:08:29
-Table 'PokerNow 7504090512932910326' 2-max Seat #5 is the button
-Seat 5: ramune (66998 in chips)
-Seat 9: whywaita (383002 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #1 is the button
+Seat 1: ramune (66998 in chips)
+Seat 2: whywaita (383002 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [9c Js]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 ramune: posts small blind 2000
 whywaita: posts big blind 4000
 ramune: raises to 8000
@@ -3646,16 +4254,18 @@ whywaita: doesn't show hand
 *** SUMMARY ***
 Total pot 41332 | Rake 0
 Board [5h 9h 7s Td]
-Seat 5: ramune (small blind) folded on the Turn
-Seat 9: whywaita (big blind) collected (41332)
+Seat 1: ramune (small blind) folded on the Turn
+Seat 2: whywaita (big blind) collected (41332)
 
 
 PokerStars Hand #13387478865272526868:  Tournament #7504090512932910326, $0+$0 Hold'em No Limit - Level 1 (2000/4000) - 2025/11/15 05:09:14
-Table 'PokerNow 7504090512932910326' 2-max Seat #9 is the button
-Seat 5: ramune (46332 in chips)
-Seat 9: whywaita (403668 in chips)
+Table 'PokerNow 7504090512932910326' 2-max Seat #2 is the button
+Seat 1: ramune (46332 in chips)
+Seat 2: whywaita (403668 in chips)
 *** HOLE CARDS ***
 Dealt to whywaita [Ah 4d]
+ramune: posts an ante of 666
+whywaita: posts an ante of 666
 whywaita: posts small blind 2000
 ramune: posts big blind 4000
 whywaita: raises to 8000
@@ -3667,5 +4277,5 @@ whywaita: shows [Ah 4d]
 *** SUMMARY ***
 Total pot 92664 | Rake 0
 Board [4h 6d 9h Qh Th]
-Seat 5: ramune (big blind) showed and lost
-Seat 9: whywaita (small blind) collected (92664)
+Seat 1: ramune (big blind) showed and lost
+Seat 2: whywaita (small blind) collected (92664)

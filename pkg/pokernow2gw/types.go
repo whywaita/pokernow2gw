@@ -1,6 +1,12 @@
 package pokernow2gw
 
-import "time"
+import (
+	"errors"
+	"time"
+)
+
+// ErrSpectatorLog is returned when the log is from a spectator (no "Your hand is" entries)
+var ErrSpectatorLog = errors.New("spectator log detected: no hero cards found in any hand")
 
 // LogEntry represents a single row from the PokerNow CSV log
 type LogEntry struct {

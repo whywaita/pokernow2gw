@@ -196,45 +196,49 @@ func TestParseHands_WithPlayerCountFilter(t *testing.T) {
 	entries2Players := []LogEntry{
 		{Entry: `-- starting hand #1 (id: h2p) (No Limit Texas Hold'em) (dealer: "p1 @ id1") --`, At: baseTime, Order: 1},
 		{Entry: `Player stacks: #1 "p1 @ id1" (1000) | #2 "p2 @ id2" (1000)`, At: baseTime, Order: 2},
-		{Entry: `"p1 @ id1" posts a small blind of 10`, At: baseTime, Order: 3},
-		{Entry: `"p2 @ id2" posts a big blind of 20`, At: baseTime, Order: 4},
-		{Entry: `"p1 @ id1" folds`, At: baseTime, Order: 5},
-		{Entry: `"p2 @ id2" collected 10 from pot`, At: baseTime, Order: 6},
-		{Entry: `-- ending hand #1 --`, At: baseTime, Order: 7},
+		{Entry: `Your hand is A♥, K♥`, At: baseTime, Order: 3},
+		{Entry: `"p1 @ id1" posts a small blind of 10`, At: baseTime, Order: 4},
+		{Entry: `"p2 @ id2" posts a big blind of 20`, At: baseTime, Order: 5},
+		{Entry: `"p1 @ id1" folds`, At: baseTime, Order: 6},
+		{Entry: `"p2 @ id2" collected 10 from pot`, At: baseTime, Order: 7},
+		{Entry: `-- ending hand #1 --`, At: baseTime, Order: 8},
 	}
 
 	entries3Players := []LogEntry{
 		{Entry: `-- starting hand #2 (id: h3p) (No Limit Texas Hold'em) (dealer: "p1 @ id1") --`, At: baseTime, Order: 1},
 		{Entry: `Player stacks: #1 "p1 @ id1" (1000) | #2 "p2 @ id2" (1000) | #3 "p3 @ id3" (1000)`, At: baseTime, Order: 2},
-		{Entry: `"p1 @ id1" posts a small blind of 10`, At: baseTime, Order: 3},
-		{Entry: `"p2 @ id2" posts a big blind of 20`, At: baseTime, Order: 4},
-		{Entry: `"p3 @ id3" folds`, At: baseTime, Order: 5},
-		{Entry: `"p1 @ id1" folds`, At: baseTime, Order: 6},
-		{Entry: `"p2 @ id2" collected 20 from pot`, At: baseTime, Order: 7},
-		{Entry: `-- ending hand #2 --`, At: baseTime, Order: 8},
+		{Entry: `Your hand is A♥, K♥`, At: baseTime, Order: 3},
+		{Entry: `"p1 @ id1" posts a small blind of 10`, At: baseTime, Order: 4},
+		{Entry: `"p2 @ id2" posts a big blind of 20`, At: baseTime, Order: 5},
+		{Entry: `"p3 @ id3" folds`, At: baseTime, Order: 6},
+		{Entry: `"p1 @ id1" folds`, At: baseTime, Order: 7},
+		{Entry: `"p2 @ id2" collected 20 from pot`, At: baseTime, Order: 8},
+		{Entry: `-- ending hand #2 --`, At: baseTime, Order: 9},
 	}
 
 	entries5Players := []LogEntry{
 		{Entry: `-- starting hand #3 (id: h5p) (No Limit Texas Hold'em) (dealer: "p1 @ id1") --`, At: baseTime, Order: 1},
 		{Entry: `Player stacks: #1 "p1 @ id1" (1000) | #2 "p2 @ id2" (1000) | #3 "p3 @ id3" (1000) | #4 "p4 @ id4" (1000) | #5 "p5 @ id5" (1000)`, At: baseTime, Order: 2},
-		{Entry: `"p1 @ id1" posts a small blind of 10`, At: baseTime, Order: 3},
-		{Entry: `"p2 @ id2" posts a big blind of 20`, At: baseTime, Order: 4},
-		{Entry: `"p3 @ id3" folds`, At: baseTime, Order: 5},
-		{Entry: `"p4 @ id4" folds`, At: baseTime, Order: 6},
-		{Entry: `"p5 @ id5" folds`, At: baseTime, Order: 7},
-		{Entry: `"p1 @ id1" folds`, At: baseTime, Order: 8},
-		{Entry: `"p2 @ id2" collected 30 from pot`, At: baseTime, Order: 9},
-		{Entry: `-- ending hand #3 --`, At: baseTime, Order: 10},
+		{Entry: `Your hand is A♥, K♥`, At: baseTime, Order: 3},
+		{Entry: `"p1 @ id1" posts a small blind of 10`, At: baseTime, Order: 4},
+		{Entry: `"p2 @ id2" posts a big blind of 20`, At: baseTime, Order: 5},
+		{Entry: `"p3 @ id3" folds`, At: baseTime, Order: 6},
+		{Entry: `"p4 @ id4" folds`, At: baseTime, Order: 7},
+		{Entry: `"p5 @ id5" folds`, At: baseTime, Order: 8},
+		{Entry: `"p1 @ id1" folds`, At: baseTime, Order: 9},
+		{Entry: `"p2 @ id2" collected 30 from pot`, At: baseTime, Order: 10},
+		{Entry: `-- ending hand #3 --`, At: baseTime, Order: 11},
 	}
 
 	entries10Players := []LogEntry{
 		{Entry: `-- starting hand #4 (id: h10p) (No Limit Texas Hold'em) (dealer: "p1 @ id1") --`, At: baseTime, Order: 1},
 		{Entry: `Player stacks: #1 "p1 @ id1" (1000) | #2 "p2 @ id2" (1000) | #3 "p3 @ id3" (1000) | #4 "p4 @ id4" (1000) | #5 "p5 @ id5" (1000) | #6 "p6 @ id6" (1000) | #7 "p7 @ id7" (1000) | #8 "p8 @ id8" (1000) | #9 "p9 @ id9" (1000) | #10 "p10 @ id10" (1000)`, At: baseTime, Order: 2},
-		{Entry: `"p1 @ id1" posts a small blind of 10`, At: baseTime, Order: 3},
-		{Entry: `"p2 @ id2" posts a big blind of 20`, At: baseTime, Order: 4},
-		{Entry: `"p1 @ id1" folds`, At: baseTime, Order: 5},
-		{Entry: `"p2 @ id2" collected 10 from pot`, At: baseTime, Order: 6},
-		{Entry: `-- ending hand #4 --`, At: baseTime, Order: 7},
+		{Entry: `Your hand is A♥, K♥`, At: baseTime, Order: 3},
+		{Entry: `"p1 @ id1" posts a small blind of 10`, At: baseTime, Order: 4},
+		{Entry: `"p2 @ id2" posts a big blind of 20`, At: baseTime, Order: 5},
+		{Entry: `"p1 @ id1" folds`, At: baseTime, Order: 6},
+		{Entry: `"p2 @ id2" collected 10 from pot`, At: baseTime, Order: 7},
+		{Entry: `-- ending hand #4 --`, At: baseTime, Order: 8},
 	}
 
 	tests := []struct {
@@ -429,7 +433,11 @@ func TestParseHands_WithPlayerCountFilter(t *testing.T) {
 				PlayerCountFilter: tt.filter,
 			}
 
-			gotHands, gotSkip := ParseHands(tt.entries, opts)
+			gotHands, gotSkip, err := ParseHands(tt.entries, opts)
+			if err != nil {
+				t.Errorf("ParseHands() unexpected error: %v", err)
+				return
+			}
 
 			if len(gotHands) != tt.wantHandsCount {
 				t.Errorf("ParseHands() returned %d hands, want %d", len(gotHands), tt.wantHandsCount)
