@@ -192,25 +192,26 @@ func TestParseHands(t *testing.T) {
 			entries: []LogEntry{
 				{Entry: `-- starting hand #3 (id: xyz789) (No Limit Texas Hold'em) (dealer: "charlie @ ghi") --`, At: baseTime, Order: 1},
 				{Entry: `Player stacks: #1 "charlie @ ghi" (1000) | #2 "dave @ jkl" (1000)`, At: baseTime, Order: 2},
-				{Entry: `"charlie @ ghi" posts a small blind of 10`, At: baseTime, Order: 3},
-				{Entry: `"dave @ jkl" posts a big blind of 20`, At: baseTime, Order: 4},
-				{Entry: `"charlie @ ghi" calls 10`, At: baseTime, Order: 5},
-				{Entry: `"dave @ jkl" checks`, At: baseTime, Order: 6},
-				{Entry: `Flop: [2♥, 3♦, 4♠]`, At: baseTime, Order: 7},
-				{Entry: `"charlie @ ghi" checks`, At: baseTime, Order: 8},
-				{Entry: `"dave @ jkl" bets 50`, At: baseTime, Order: 9},
-				{Entry: `"charlie @ ghi" calls 50`, At: baseTime, Order: 10},
-				{Entry: `Turn: 2♥, 3♦, 4♠ [5♣]`, At: baseTime, Order: 11},
-				{Entry: `"charlie @ ghi" checks`, At: baseTime, Order: 12},
-				{Entry: `"dave @ jkl" checks`, At: baseTime, Order: 13},
-				{Entry: `River: 2♥, 3♦, 4♠, 5♣ [6♥]`, At: baseTime, Order: 14},
-				{Entry: `"charlie @ ghi" bets 100`, At: baseTime, Order: 15},
-				{Entry: `"dave @ jkl" calls 100`, At: baseTime, Order: 16},
-				{Entry: `"charlie @ ghi" shows a A♠, 7♥.`, At: baseTime, Order: 17},
-				{Entry: `"dave @ jkl" shows a A♣, 8♦.`, At: baseTime, Order: 18},
-				{Entry: `"charlie @ ghi" collected 170 from pot`, At: baseTime, Order: 19},
-				{Entry: `"dave @ jkl" collected 170 from pot`, At: baseTime, Order: 20},
-				{Entry: `-- ending hand #3 --`, At: baseTime, Order: 21},
+				{Entry: `Your hand is A♠, 7♥`, At: baseTime, Order: 3},
+				{Entry: `"charlie @ ghi" posts a small blind of 10`, At: baseTime, Order: 4},
+				{Entry: `"dave @ jkl" posts a big blind of 20`, At: baseTime, Order: 5},
+				{Entry: `"charlie @ ghi" calls 10`, At: baseTime, Order: 6},
+				{Entry: `"dave @ jkl" checks`, At: baseTime, Order: 7},
+				{Entry: `Flop: [2♥, 3♦, 4♠]`, At: baseTime, Order: 8},
+				{Entry: `"charlie @ ghi" checks`, At: baseTime, Order: 9},
+				{Entry: `"dave @ jkl" bets 50`, At: baseTime, Order: 10},
+				{Entry: `"charlie @ ghi" calls 50`, At: baseTime, Order: 11},
+				{Entry: `Turn: 2♥, 3♦, 4♠ [5♣]`, At: baseTime, Order: 12},
+				{Entry: `"charlie @ ghi" checks`, At: baseTime, Order: 13},
+				{Entry: `"dave @ jkl" checks`, At: baseTime, Order: 14},
+				{Entry: `River: 2♥, 3♦, 4♠, 5♣ [6♥]`, At: baseTime, Order: 15},
+				{Entry: `"charlie @ ghi" bets 100`, At: baseTime, Order: 16},
+				{Entry: `"dave @ jkl" calls 100`, At: baseTime, Order: 17},
+				{Entry: `"charlie @ ghi" shows a A♠, 7♥.`, At: baseTime, Order: 18},
+				{Entry: `"dave @ jkl" shows a A♣, 8♦.`, At: baseTime, Order: 19},
+				{Entry: `"charlie @ ghi" collected 170 from pot`, At: baseTime, Order: 20},
+				{Entry: `"dave @ jkl" collected 170 from pot`, At: baseTime, Order: 21},
+				{Entry: `-- ending hand #3 --`, At: baseTime, Order: 22},
 			},
 			wantHands: []Hand{
 				{
@@ -224,6 +225,7 @@ func TestParseHands(t *testing.T) {
 						{SeatNumber: 1, Name: "charlie @ ghi", DisplayName: "charlie", Stack: 1000},
 						{SeatNumber: 2, Name: "dave @ jkl", DisplayName: "dave", Stack: 1000},
 					},
+					HeroCards: []string{"As", "7h"},
 					Board: Board{
 						Flop:  []string{"2h", "3d", "4s"},
 						Turn:  "5c",
@@ -259,15 +261,16 @@ func TestParseHands(t *testing.T) {
 			entries: []LogEntry{
 				{Entry: `-- starting hand #4 (No Limit Texas Hold'em) (dealer: "eve @ mno") --`, At: baseTime, Order: 1},
 				{Entry: `Player stacks: #1 "eve @ mno" (100) | #2 "frank @ pqr" (200)`, At: baseTime, Order: 2},
-				{Entry: `"eve @ mno" posts a small blind of 10`, At: baseTime, Order: 3},
-				{Entry: `"frank @ pqr" posts a big blind of 20`, At: baseTime, Order: 4},
-				{Entry: `"eve @ mno" raises to 100 and go all in`, At: baseTime, Order: 5},
-				{Entry: `"frank @ pqr" calls 80`, At: baseTime, Order: 6},
-				{Entry: `Flop: [J♥, Q♦, K♠]`, At: baseTime, Order: 7},
-				{Entry: `"eve @ mno" shows a J♣, J♦.`, At: baseTime, Order: 8},
-				{Entry: `"frank @ pqr" shows a A♠, 10♠.`, At: baseTime, Order: 9},
-				{Entry: `"frank @ pqr" collected 200 from pot`, At: baseTime, Order: 10},
-				{Entry: `-- ending hand #4 --`, At: baseTime, Order: 11},
+				{Entry: `Your hand is J♣, J♦`, At: baseTime, Order: 3},
+				{Entry: `"eve @ mno" posts a small blind of 10`, At: baseTime, Order: 4},
+				{Entry: `"frank @ pqr" posts a big blind of 20`, At: baseTime, Order: 5},
+				{Entry: `"eve @ mno" raises to 100 and go all in`, At: baseTime, Order: 6},
+				{Entry: `"frank @ pqr" calls 80`, At: baseTime, Order: 7},
+				{Entry: `Flop: [J♥, Q♦, K♠]`, At: baseTime, Order: 8},
+				{Entry: `"eve @ mno" shows a J♣, J♦.`, At: baseTime, Order: 9},
+				{Entry: `"frank @ pqr" shows a A♠, 10♠.`, At: baseTime, Order: 10},
+				{Entry: `"frank @ pqr" collected 200 from pot`, At: baseTime, Order: 11},
+				{Entry: `-- ending hand #4 --`, At: baseTime, Order: 12},
 			},
 			wantHands: []Hand{
 				{
@@ -281,6 +284,7 @@ func TestParseHands(t *testing.T) {
 						{SeatNumber: 1, Name: "eve @ mno", DisplayName: "eve", Stack: 100},
 						{SeatNumber: 2, Name: "frank @ pqr", DisplayName: "frank", Stack: 200},
 					},
+					HeroCards: []string{"Jc", "Jd"},
 					Board: Board{
 						Flop: []string{"Jh", "Qd", "Ks"},
 					},
@@ -403,17 +407,18 @@ func TestParseHands(t *testing.T) {
 			entries: []LogEntry{
 				{Entry: `-- starting hand #7 (id: noncons01) (No Limit Texas Hold'em) (dealer: "kate @ efg") --`, At: baseTime, Order: 1},
 				{Entry: `Player stacks: #3 "kate @ efg" (500) | #7 "leo @ hij" (600) | #10 "mike @ klm" (700)`, At: baseTime, Order: 2},
-				{Entry: `"kate @ efg" posts a small blind of 10`, At: baseTime, Order: 3},
-				{Entry: `"leo @ hij" posts a big blind of 20`, At: baseTime, Order: 4},
-				{Entry: `"mike @ klm" folds`, At: baseTime, Order: 5},
-				{Entry: `"kate @ efg" calls 10`, At: baseTime, Order: 6},
-				{Entry: `"leo @ hij" checks`, At: baseTime, Order: 7},
-				{Entry: `Flop: [5♥, 6♦, 7♠]`, At: baseTime, Order: 8},
-				{Entry: `"kate @ efg" checks`, At: baseTime, Order: 9},
-				{Entry: `"leo @ hij" bets 40`, At: baseTime, Order: 10},
-				{Entry: `"kate @ efg" folds`, At: baseTime, Order: 11},
-				{Entry: `"leo @ hij" collected 40 from pot`, At: baseTime, Order: 12},
-				{Entry: `-- ending hand #7 --`, At: baseTime, Order: 13},
+				{Entry: `Your hand is 5♥, 6♦`, At: baseTime, Order: 3},
+				{Entry: `"kate @ efg" posts a small blind of 10`, At: baseTime, Order: 4},
+				{Entry: `"leo @ hij" posts a big blind of 20`, At: baseTime, Order: 5},
+				{Entry: `"mike @ klm" folds`, At: baseTime, Order: 6},
+				{Entry: `"kate @ efg" calls 10`, At: baseTime, Order: 7},
+				{Entry: `"leo @ hij" checks`, At: baseTime, Order: 8},
+				{Entry: `Flop: [5♥, 6♦, 7♠]`, At: baseTime, Order: 9},
+				{Entry: `"kate @ efg" checks`, At: baseTime, Order: 10},
+				{Entry: `"leo @ hij" bets 40`, At: baseTime, Order: 11},
+				{Entry: `"kate @ efg" folds`, At: baseTime, Order: 12},
+				{Entry: `"leo @ hij" collected 40 from pot`, At: baseTime, Order: 13},
+				{Entry: `-- ending hand #7 --`, At: baseTime, Order: 14},
 			},
 			wantHands: []Hand{
 				{
@@ -428,6 +433,7 @@ func TestParseHands(t *testing.T) {
 						{SeatNumber: 2, Name: "leo @ hij", DisplayName: "leo", Stack: 600},
 						{SeatNumber: 3, Name: "mike @ klm", DisplayName: "mike", Stack: 700},
 					},
+					HeroCards: []string{"5h", "6d"},
 					Board: Board{
 						Flop: []string{"5h", "6d", "7s"},
 					},
@@ -469,7 +475,11 @@ func TestParseHands(t *testing.T) {
 			opts := ConvertOptions{
 				PlayerCountFilter: PlayerCountAll,
 			}
-			gotHands, gotSkip := ParseHands(tt.entries, opts)
+			gotHands, gotSkip, err := ParseHands(tt.entries, opts)
+			if err != nil {
+				t.Errorf("ParseHands() unexpected error: %v", err)
+				return
+			}
 
 			if gotSkip != tt.wantSkip {
 				t.Errorf("ParseHands() skipped hands = %d, want %d", gotSkip, tt.wantSkip)
@@ -477,6 +487,90 @@ func TestParseHands(t *testing.T) {
 
 			if diff := cmp.Diff(tt.wantHands, gotHands); diff != "" {
 				t.Errorf("ParseHands() mismatch (-want +got):\n%s", diff)
+			}
+		})
+	}
+}
+
+func TestParseHands_SpectatorLog(t *testing.T) {
+	baseTime := time.Date(2025, 11, 15, 5, 9, 14, 567000000, time.UTC)
+
+	tests := []struct {
+		name    string
+		entries []LogEntry
+		wantErr error
+	}{
+		{
+			name: "spectator log (no Your hand is entries)",
+			entries: []LogEntry{
+				{Entry: `-- starting hand #1 (id: spec123) (No Limit Texas Hold'em) (dealer: "player1 @ id1") --`, At: baseTime, Order: 1},
+				{Entry: `Player stacks: #1 "player1 @ id1" (1000) | #2 "player2 @ id2" (1000)`, At: baseTime, Order: 2},
+				{Entry: `"player1 @ id1" posts a small blind of 10`, At: baseTime, Order: 3},
+				{Entry: `"player2 @ id2" posts a big blind of 20`, At: baseTime, Order: 4},
+				{Entry: `"player1 @ id1" folds`, At: baseTime, Order: 5},
+				{Entry: `"player2 @ id2" collected 10 from pot`, At: baseTime, Order: 6},
+				{Entry: `-- ending hand #1 --`, At: baseTime, Order: 7},
+			},
+			wantErr: ErrSpectatorLog,
+		},
+		{
+			name: "spectator log with multiple hands (none have hero cards)",
+			entries: []LogEntry{
+				{Entry: `-- starting hand #1 (id: spec1) (No Limit Texas Hold'em) (dealer: "player1 @ id1") --`, At: baseTime, Order: 1},
+				{Entry: `Player stacks: #1 "player1 @ id1" (1000) | #2 "player2 @ id2" (1000)`, At: baseTime, Order: 2},
+				{Entry: `"player1 @ id1" posts a small blind of 10`, At: baseTime, Order: 3},
+				{Entry: `"player2 @ id2" posts a big blind of 20`, At: baseTime, Order: 4},
+				{Entry: `"player1 @ id1" folds`, At: baseTime, Order: 5},
+				{Entry: `"player2 @ id2" collected 10 from pot`, At: baseTime, Order: 6},
+				{Entry: `-- ending hand #1 --`, At: baseTime, Order: 7},
+				{Entry: `-- starting hand #2 (id: spec2) (No Limit Texas Hold'em) (dealer: "player2 @ id2") --`, At: baseTime, Order: 8},
+				{Entry: `Player stacks: #1 "player1 @ id1" (990) | #2 "player2 @ id2" (1010)`, At: baseTime, Order: 9},
+				{Entry: `"player2 @ id2" posts a small blind of 10`, At: baseTime, Order: 10},
+				{Entry: `"player1 @ id1" posts a big blind of 20`, At: baseTime, Order: 11},
+				{Entry: `"player2 @ id2" folds`, At: baseTime, Order: 12},
+				{Entry: `"player1 @ id1" collected 10 from pot`, At: baseTime, Order: 13},
+				{Entry: `-- ending hand #2 --`, At: baseTime, Order: 14},
+			},
+			wantErr: ErrSpectatorLog,
+		},
+		{
+			name: "player log (has Your hand is entry)",
+			entries: []LogEntry{
+				{Entry: `-- starting hand #1 (id: player123) (No Limit Texas Hold'em) (dealer: "player1 @ id1") --`, At: baseTime, Order: 1},
+				{Entry: `Player stacks: #1 "player1 @ id1" (1000) | #2 "player2 @ id2" (1000)`, At: baseTime, Order: 2},
+				{Entry: `Your hand is A♥, K♥`, At: baseTime, Order: 3},
+				{Entry: `"player1 @ id1" posts a small blind of 10`, At: baseTime, Order: 4},
+				{Entry: `"player2 @ id2" posts a big blind of 20`, At: baseTime, Order: 5},
+				{Entry: `"player1 @ id1" folds`, At: baseTime, Order: 6},
+				{Entry: `"player2 @ id2" collected 10 from pot`, At: baseTime, Order: 7},
+				{Entry: `-- ending hand #1 --`, At: baseTime, Order: 8},
+			},
+			wantErr: nil,
+		},
+		{
+			name:    "empty log (no hands)",
+			entries: []LogEntry{},
+			wantErr: nil,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			opts := ConvertOptions{
+				PlayerCountFilter: PlayerCountAll,
+			}
+			_, _, err := ParseHands(tt.entries, opts)
+
+			if tt.wantErr != nil {
+				if err == nil {
+					t.Errorf("ParseHands() expected error %v, got nil", tt.wantErr)
+				} else if err != tt.wantErr {
+					t.Errorf("ParseHands() error = %v, want %v", err, tt.wantErr)
+				}
+			} else {
+				if err != nil {
+					t.Errorf("ParseHands() unexpected error: %v", err)
+				}
 			}
 		})
 	}

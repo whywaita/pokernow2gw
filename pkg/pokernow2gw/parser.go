@@ -39,7 +39,8 @@ var (
 )
 
 // ParseHands parses LogEntry slice into Hand slice
-func ParseHands(entries []LogEntry, opts ConvertOptions) ([]Hand, int) {
+// Returns ErrSpectatorLog if no hero cards are found in any hand (spectator log)
+func ParseHands(entries []LogEntry, opts ConvertOptions) ([]Hand, int, error) {
 	var hands []Hand
 	var currentHand *Hand
 	var currentStreet Street
@@ -358,7 +359,21 @@ func ParseHands(entries []LogEntry, opts ConvertOptions) ([]Hand, int) {
 		}
 	}
 
-	return hands, skippedHands
+	// Check if this is a spectator log (no hero cards in any hand)
+	if len(hands) > 0 {
+		hasAnyHeroCards := false
+		for _, hand := range hands {
+			if len(hand.HeroCards) > 0 {
+				hasAnyHeroCards = true
+				break
+			}
+		}
+		if !hasAnyHeroCards {
+			return nil, 0, ErrSpectatorLog
+		}
+	}
+
+	return hands, skippedHands, nil
 }
 
 // extractDisplayName extracts display name from PokerNow player string
@@ -483,7 +498,10 @@ func ConvertEntries(entries []LogEntry, opts ConvertOptions) (*ConvertResult, er
 	}
 
 	// Parse hands
-	hands, skippedHands := ParseHands(entries, opts)
+	hands, skippedHands, err := ParseHands(entries, opts)
+	if err != nil {
+		return nil, err
+	}
 
 	// Convert to HH format
 	hh := convertHandsToHH(hands, opts)
