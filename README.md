@@ -63,7 +63,6 @@ No installation required - just open the link and start converting!
    - `-i, --input`: Input CSV file (or use stdin)
    - `-o, --output`: Output file (or use stdout)
    - `--hero-name`: Your display name in the game (required)
-   - `--site-name`: Site name for HH output (default: "GTO Wizard")
    - `--timezone`: Timezone for output (default: "UTC")
    - `--tournament-name`: Tournament name (optional)
 
