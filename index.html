@@ -352,11 +352,35 @@ Example:
 
         function downloadResult() {
             const hhOutput = document.getElementById('hhOutput').value;
+            const heroName = document.getElementById('heroName').value.trim();
 
-            // Generate filename with timestamp
-            const now = new Date();
-            const timestamp = now.toISOString().replace(/[:.]/g, '-').slice(0, 19);
-            const filename = `gtowizard_hh_${timestamp}.txt`;
+            // Extract day and time played from the hand history (format: YYYY/MM/DD HH:MM:SS)
+            const dateMatch = hhOutput.match(/(\d{4})\/(\d{2})\/(\d{2}) (\d{2}):(\d{2}):(\d{2})/);
+            let dayPlayed;
+            if (dateMatch) {
+                dayPlayed = `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}_${dateMatch[4]}-${dateMatch[5]}-${dateMatch[6]}`;
+            } else {
+                // Fallback to current date/time if not found
+                const now = new Date();
+                dayPlayed = now.toISOString().slice(0, 19).replace(/[T:]/g, '-').replace(/-/g, (m, i) => i < 10 ? '-' : '-');
+                dayPlayed = now.toISOString().slice(0, 10) + '_' + now.toISOString().slice(11, 19).replace(/:/g, '-');
+            }
+
+            // Build filter suffix from selected checkboxes
+            const filters = [];
+            if (document.getElementById('filterHU').checked) {
+                filters.push('HU');
+            }
+            if (document.getElementById('filterSpinAndGo').checked) {
+                filters.push('SnG');
+            }
+            if (document.getElementById('filterMTT').checked) {
+                filters.push('MTT');
+            }
+            const filterSuffix = filters.length > 0 ? filters.join('-') : 'All';
+
+            // Generate filename: gtowizard_hh_<Day played>_<hero name>_<filter>.txt
+            const filename = `gtowizard_hh_${dayPlayed}_${heroName}_${filterSuffix}.txt`;
 
             // Create blob and download
             const blob = new Blob([hhOutput], { type: 'text/plain' });
