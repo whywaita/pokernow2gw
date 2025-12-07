@@ -607,6 +607,13 @@ func convertHandToHH(hand Hand, opts ConvertOptions, tournamentID string) string
 		}
 	}
 
+	// Output "collected from pot" line before SUMMARY
+	for _, winner := range hand.Winners {
+		if winner.Amount > 0 {
+			sb.WriteString(fmt.Sprintf("%s collected %d from pot\n", winner.Player, winner.Amount))
+		}
+	}
+
 	// Summary
 	sb.WriteString("*** SUMMARY ***\n")
 	sb.WriteString(fmt.Sprintf("Total pot %d | Rake 0\n", calculateTotalPot(hand)))
