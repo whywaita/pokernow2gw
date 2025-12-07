@@ -19,6 +19,8 @@ func isStdinPiped() bool {
 	return (stat.Mode() & os.ModeCharDevice) == 0
 }
 
+var siteName = "PokerStars"
+
 func main() {
 	// Define flags
 	input := flag.String("input", "", "Input CSV file (optional, stdin if not specified)")
@@ -26,7 +28,6 @@ func main() {
 	output := flag.String("output", "", "Output file (optional, stdout if not specified)")
 	outputShort := flag.String("o", "", "Output file (shorthand)")
 	heroName := flag.String("hero-name", "", "Hero display name (required)")
-	siteName := flag.String("site-name", "PokerStars", "Site name for HH output")
 	timezone := flag.String("timezone", "UTC", "Timezone for output (e.g., UTC, Asia/Tokyo)")
 	tournamentName := flag.String("tournament-name", "", "Tournament name (optional)")
 	filterHU := flag.Bool("filter-hu", false, "Include heads-up hands (2 players)")
@@ -103,7 +104,7 @@ func main() {
 	// Convert
 	opts := pokernow2gw.ConvertOptions{
 		HeroName:          *heroName,
-		SiteName:          *siteName,
+		SiteName:          siteName,
 		TimeLocation:      loc,
 		TournamentName:    *tournamentName,
 		PlayerCountFilter: playerCountFilter,
