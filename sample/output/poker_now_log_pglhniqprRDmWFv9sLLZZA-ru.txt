@@ -25,6 +25,7 @@ piyo: folds
 wafu: folds
 Uncalled bet (2081) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 2834 from pot
 *** SUMMARY ***
 Total pot 2834 | Rake 0
 Seat 1: piyo (big blind) folded before Flop (didn't bet)
@@ -74,6 +75,7 @@ ramune: calls 8500
 *** SHOW DOWN ***
 piyo: shows [Kh 8h]
 ramune: shows [Ks Ad]
+ramune collected 41396 from pot
 *** SUMMARY ***
 Total pot 41396 | Rake 0
 Board [Js 3s 6h Kc Ts]
@@ -113,6 +115,7 @@ whywaita: folds
 piyo: folds
 Uncalled bet (3500) returned to wafu
 wafu: doesn't show hand
+wafu collected 6396 from pot
 *** SUMMARY ***
 Total pot 6396 | Rake 0
 Seat 1: piyo (button) folded before Flop
@@ -161,6 +164,7 @@ piyo: bets 10000
 ANN: calls 10000
 *** SHOW DOWN ***
 piyo: shows [Th As]
+piyo collected 31196 from pot
 *** SUMMARY ***
 Total pot 31196 | Rake 0
 Board [9d 8h Ah Ts 9c]
@@ -209,6 +213,7 @@ ANN: bets 4800
 tanaka: folds
 Uncalled bet (4800) returned to ANN
 ANN: doesn't show hand
+ANN collected 19990 from pot
 *** SUMMARY ***
 Total pot 19990 | Rake 0
 Board [9c 5s Qs 2d Qc]
@@ -256,6 +261,7 @@ ANN: bets 2400
 tanaka: folds
 Uncalled bet (2400) returned to ANN
 ANN: doesn't show hand
+ANN collected 5753 from pot
 *** SUMMARY ***
 Total pot 5753 | Rake 0
 Board [9h 7d 4s 6h]
@@ -304,6 +310,8 @@ whywaita: checks
 *** SHOW DOWN ***
 piyo: shows [Ah 3h]
 whywaita: shows [Ac 4c]
+piyo collected 1938 from pot
+whywaita collected 1938 from pot
 *** SUMMARY ***
 Total pot 3876 | Rake 0
 Board [Qs Js 2d 9s Jh]
@@ -352,6 +360,7 @@ ramune: raises to 14000
 wafu: folds
 Uncalled bet (8800) returned to ramune
 ramune: doesn't show hand
+ramune collected 19753 from pot
 *** SUMMARY ***
 Total pot 19753 | Rake 0
 Board [2c 2h 7s Jc]
@@ -389,6 +398,7 @@ ramune: folds
 wafu: folds
 Uncalled bet (600) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 2100 from pot
 *** SUMMARY ***
 Total pot 2100 | Rake 0
 Seat 1: piyo (button) folded before Flop (didn't bet)
@@ -433,6 +443,7 @@ tanaka: bets 9000
 ANN: folds
 Uncalled bet (9000) returned to tanaka
 tanaka: doesn't show hand
+tanaka collected 8250 from pot
 *** SUMMARY ***
 Total pot 8250 | Rake 0
 Board [Tc Ac 5s Jh]
@@ -476,6 +487,7 @@ whywaita: folds
 piyo: folds
 Uncalled bet (1650) returned to wafu
 wafu: doesn't show hand
+wafu collected 4500 from pot
 *** SUMMARY ***
 Total pot 4500 | Rake 0
 Board [Ad Ah Ts]
@@ -525,6 +537,7 @@ wafu: bets 18000
 tanaka: calls 18000
 *** SHOW DOWN ***
 wafu: shows [Qd Kd]
+wafu collected 52860 from pot
 *** SUMMARY ***
 Total pot 52860 | Rake 0
 Board [4d Kc Qs Kh 6s]
@@ -571,6 +584,7 @@ whywaita: bets 12000
 ramune: folds
 Uncalled bet (12000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 17820 from pot
 *** SUMMARY ***
 Total pot 17820 | Rake 0
 Board [9d 6c 2d Ac]
@@ -612,6 +626,7 @@ tanaka: bets 600
 ramune: folds
 Uncalled bet (600) returned to tanaka
 tanaka: doesn't show hand
+tanaka collected 3300 from pot
 *** SUMMARY ***
 Total pot 3300 | Rake 0
 Board [Ac 6s Tc]
@@ -659,6 +674,7 @@ ramune: checks
 ANN: checks
 *** SHOW DOWN ***
 ramune: shows [6s 6d]
+ramune collected 6000 from pot
 *** SUMMARY ***
 Total pot 6000 | Rake 0
 Board [8s Jd 5s 7h 3c]
@@ -697,6 +713,7 @@ ANN: raises to 4800
 tanaka: folds
 Uncalled bet (3600) returned to ANN
 ANN: doesn't show hand
+ANN collected 3300 from pot
 *** SUMMARY ***
 Total pot 3300 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
@@ -745,6 +762,7 @@ whywaita: bets 27000
 wafu: folds
 Uncalled bet (27000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 17940 from pot
 *** SUMMARY ***
 Total pot 17940 | Rake 0
 Board [4d Jd 2s 7s 2c]
@@ -782,6 +800,7 @@ whywaita: folds
 tanaka: folds
 Uncalled bet (800) returned to ANN
 ANN: doesn't show hand
+ANN collected 2798 from pot
 *** SUMMARY ***
 Total pot 2798 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
@@ -823,6 +842,7 @@ piyo: bets 8500
 ANN: folds
 Uncalled bet (8500) returned to piyo
 piyo: doesn't show hand
+piyo collected 16398 from pot
 *** SUMMARY ***
 Total pot 16398 | Rake 0
 Board [6c 8d 4d]
@@ -861,6 +881,7 @@ ramune: folds
 wafu: folds
 Uncalled bet (5361) returned to ANN
 ANN: doesn't show hand
+ANN collected 5676 from pot
 *** SUMMARY ***
 Total pot 5676 | Rake 0
 Seat 1: piyo (small blind) folded before Flop (didn't bet)
@@ -910,6 +931,7 @@ whywaita: calls 12000
 *** SHOW DOWN ***
 piyo: shows [Kc 5c]
 whywaita: shows [9c 9h]
+whywaita collected 41598 from pot
 *** SUMMARY ***
 Total pot 41598 | Rake 0
 Board [Ad 2c 2d 7s 7c]
@@ -954,6 +976,7 @@ ANN: bets 8800
 ramune: folds
 Uncalled bet (8800) returned to ANN
 ANN: doesn't show hand
+ANN collected 25198 from pot
 *** SUMMARY ***
 Total pot 25198 | Rake 0
 Board [4h Kc 3h 6d]
@@ -992,6 +1015,7 @@ whywaita: raises to 2400
 ANN: folds
 Uncalled bet (1600) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 2398 from pot
 *** SUMMARY ***
 Total pot 2398 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
@@ -1032,6 +1056,7 @@ wafu: bets 2199
 tanaka: folds
 Uncalled bet (2199) returned to wafu
 wafu: doesn't show hand
+wafu collected 4398 from pot
 *** SUMMARY ***
 Total pot 4398 | Rake 0
 Board [5d 5s 5h]
@@ -1071,6 +1096,7 @@ ANN: raises to 14400
 whywaita: folds
 Uncalled bet (9600) returned to ANN
 ANN: doesn't show hand
+ANN collected 11598 from pot
 *** SUMMARY ***
 Total pot 11598 | Rake 0
 Seat 1: piyo (big blind) folded before Flop (didn't bet)
@@ -1121,6 +1147,7 @@ ramune: calls 4500
 ANN: calls 4500
 *** SHOW DOWN ***
 piyo: shows [7d 9d]
+piyo collected 22698 from pot
 *** SUMMARY ***
 Total pot 22698 | Rake 0
 Board [5c 6c 2d Qc 8h]
@@ -1168,6 +1195,7 @@ ANN: bets 22645 and is all-in
 ramune: folds
 Uncalled bet (22645) returned to ANN
 ANN: doesn't show hand
+ANN collected 57598 from pot
 *** SUMMARY ***
 Total pot 57598 | Rake 0
 Board [6d 8s 3c 3h]
@@ -1205,6 +1233,7 @@ wafu: raises to 2400
 ANN: folds
 Uncalled bet (1600) returned to wafu
 wafu: doesn't show hand
+wafu collected 2398 from pot
 *** SUMMARY ***
 Total pot 2398 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
@@ -1245,6 +1274,7 @@ piyo: bets 5500
 whywaita: folds
 Uncalled bet (5500) returned to piyo
 piyo: doesn't show hand
+piyo collected 4398 from pot
 *** SUMMARY ***
 Total pot 4398 | Rake 0
 Board [Jc Kc 6d]
@@ -1290,6 +1320,7 @@ Uncalled bet (14972) returned to ramune
 *** SHOW DOWN ***
 ramune: shows [Ah Qh]
 tanaka: shows [Ac 7d]
+tanaka collected 20242 from pot
 *** SUMMARY ***
 Total pot 20242 | Rake 0
 Board [7h Kc Kh 3h 7s]
@@ -1337,6 +1368,7 @@ ANN: calls 9972
 *** SHOW DOWN ***
 ramune: shows [Js Ac]
 ANN: shows [Ad 9h]
+ramune collected 32544 from pot
 *** SUMMARY ***
 Total pot 32544 | Rake 0
 Board [2d 5c 3h Jd 9c]
@@ -1377,6 +1409,7 @@ whywaita: calls 31331
 *** SHOW DOWN ***
 piyo: shows [Kh Ad]
 whywaita: shows [Qd Qs]
+whywaita collected 86262 from pot
 *** SUMMARY ***
 Total pot 86262 | Rake 0
 Board [2s 7s 9h 8s Jd]
@@ -1412,6 +1445,7 @@ wafu: folds
 whywaita: folds
 Uncalled bet (16642) returned to tanaka
 tanaka: doesn't show hand
+tanaka collected 7600 from pot
 *** SUMMARY ***
 Total pot 7600 | Rake 0
 Seat 1: ramune (small blind) folded before Flop (didn't bet)
@@ -1454,6 +1488,7 @@ whywaita: bets 3000
 ANN: folds
 Uncalled bet (3000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 6600 from pot
 *** SUMMARY ***
 Total pot 6600 | Rake 0
 Board [5c 4d Jh Kh]
@@ -1490,6 +1525,7 @@ wafu: folds
 ANN: folds
 Uncalled bet (600) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 2400 from pot
 *** SUMMARY ***
 Total pot 2400 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
@@ -1526,6 +1562,7 @@ whywaita: raises to 128884 and is all-in
 tanaka: folds
 Uncalled bet (127484) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 3600 from pot
 *** SUMMARY ***
 Total pot 3600 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
@@ -1565,6 +1602,7 @@ tanaka: bets 1200
 piyo: folds
 Uncalled bet (1200) returned to tanaka
 tanaka: doesn't show hand
+tanaka collected 3600 from pot
 *** SUMMARY ***
 Total pot 3600 | Rake 0
 Board [Qs 2c Kd]
@@ -1612,6 +1650,7 @@ ramune: checks
 whywaita: checks
 *** SHOW DOWN ***
 ramune: shows [Ts 4h]
+ramune collected 12600 from pot
 *** SUMMARY ***
 Total pot 12600 | Rake 0
 Board [8s Ac 4s 5d 7s]
@@ -1648,6 +1687,7 @@ piyo: folds
 ramune: folds
 Uncalled bet (600) returned to wafu
 wafu: doesn't show hand
+wafu collected 2400 from pot
 *** SUMMARY ***
 Total pot 2400 | Rake 0
 Seat 1: piyo (button) folded before Flop (didn't bet)
@@ -1692,6 +1732,7 @@ ramune: bets 6000
 ANN: folds
 Uncalled bet (6000) returned to ramune
 ramune: doesn't show hand
+ramune collected 12600 from pot
 *** SUMMARY ***
 Total pot 12600 | Rake 0
 Board [3c 9c 8h 9h]
@@ -1740,6 +1781,7 @@ whywaita: bets 114184 and is all-in
 tanaka: folds
 Uncalled bet (114184) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 22800 from pot
 *** SUMMARY ***
 Total pot 22800 | Rake 0
 Board [3s 7h 7d 5h 9c]
@@ -1777,6 +1819,7 @@ whywaita: raises to 136984 and is all-in
 tanaka: folds
 Uncalled bet (135584) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 3600 from pot
 *** SUMMARY ***
 Total pot 3600 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
@@ -1829,6 +1872,8 @@ wafu: checks
 piyo: shows [Js 9h]
 ramune: shows [Tc Jc]
 wafu: shows [Th Jh]
+ramune collected 8460 from pot
+wafu collected 8460 from pot
 *** SUMMARY ***
 Total pot 16920 | Rake 0
 Board [Jd 6s Ah 3c 4d]
@@ -1880,6 +1925,7 @@ whywaita: calls 18564
 *** SHOW DOWN ***
 ramune: shows [Td 6c]
 whywaita: shows [Ad 4d]
+ramune collected 92528 from pot
 *** SUMMARY ***
 Total pot 92528 | Rake 0
 Board [6h As 6d Jc 5s]
@@ -1919,6 +1965,7 @@ whywaita: calls 7742
 *** SHOW DOWN ***
 whywaita: shows [7c Ah]
 tanaka: shows [6d Ad]
+whywaita collected 25348 from pot
 *** SUMMARY ***
 Total pot 25348 | Rake 0
 Board [5s 9h 4s Ac 7h]
@@ -1963,6 +2010,7 @@ whywaita: folds
 wafu: folds
 Uncalled bet (14400) returned to ANN
 ANN: doesn't show hand
+ANN collected 42130 from pot
 *** SUMMARY ***
 Total pot 42130 | Rake 0
 Board [6c 4h Qd 5d]
@@ -2001,6 +2049,7 @@ piyo: folds
 tanaka: folds
 Uncalled bet (37658) returned to wafu
 wafu: doesn't show hand
+wafu collected 26040 from pot
 *** SUMMARY ***
 Total pot 26040 | Rake 0
 Seat 1: piyo folded before Flop
@@ -2037,6 +2086,7 @@ whywaita: folds
 piyo: folds
 Uncalled bet (1920) returned to ramune
 ramune: doesn't show hand
+ramune collected 5596 from pot
 *** SUMMARY ***
 Total pot 5596 | Rake 0
 Seat 1: piyo (big blind) folded before Flop (didn't bet)
@@ -2083,6 +2133,7 @@ whywaita: checks
 *** SHOW DOWN ***
 tanaka: shows [Kd 4c]
 whywaita: shows [9c Ad]
+whywaita collected 8796 from pot
 *** SUMMARY ***
 Total pot 8796 | Rake 0
 Board [9d Jc 3c Qc Jd]
@@ -2126,6 +2177,7 @@ ramune: bets 5600
 whywaita: folds
 Uncalled bet (5600) returned to ramune
 ramune: doesn't show hand
+ramune collected 8796 from pot
 *** SUMMARY ***
 Total pot 8796 | Rake 0
 Board [7h 3h 5s 4h]
@@ -2167,6 +2219,7 @@ tanaka: bets 1600
 ramune: folds
 Uncalled bet (1600) returned to tanaka
 tanaka: doesn't show hand
+tanaka collected 9596 from pot
 *** SUMMARY ***
 Total pot 9596 | Rake 0
 Board [8d Ad As]
@@ -2208,6 +2261,7 @@ piyo: bets 2500
 ANN: folds
 Uncalled bet (2500) returned to piyo
 piyo: doesn't show hand
+piyo collected 8796 from pot
 *** SUMMARY ***
 Total pot 8796 | Rake 0
 Board [2h Jc Js]
@@ -2246,6 +2300,7 @@ whywaita: raises to 14240
 wafu: folds
 Uncalled bet (10561) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 9754 from pot
 *** SUMMARY ***
 Total pot 9754 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
@@ -2283,6 +2338,7 @@ piyo: raises to 4800
 whywaita: folds
 Uncalled bet (3200) returned to piyo
 piyo: doesn't show hand
+piyo collected 4796 from pot
 *** SUMMARY ***
 Total pot 4796 | Rake 0
 Seat 1: piyo (big blind) collected (4796)
@@ -2318,6 +2374,7 @@ whywaita: folds
 piyo: folds
 Uncalled bet (800) returned to tanaka
 tanaka: doesn't show hand
+tanaka collected 3196 from pot
 *** SUMMARY ***
 Total pot 3196 | Rake 0
 Seat 1: piyo (small blind) folded before Flop (didn't bet)
@@ -2365,6 +2422,7 @@ whywaita: calls 9600
 *** SHOW DOWN ***
 ramune: shows [Ac 3c]
 whywaita: shows [6c 5c]
+whywaita collected 35996 from pot
 *** SUMMARY ***
 Total pot 35996 | Rake 0
 Board [Qc Qh Kc 6d 4h]
@@ -2403,6 +2461,7 @@ wafu: folds
 tanaka: folds
 Uncalled bet (8000) returned to ramune
 ramune: doesn't show hand
+ramune collected 9596 from pot
 *** SUMMARY ***
 Total pot 9596 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
@@ -2447,6 +2506,7 @@ whywaita: bets 4800
 ANN: folds
 Uncalled bet (4800) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 15196 from pot
 *** SUMMARY ***
 Total pot 15196 | Rake 0
 Board [Qd Jc 6d 5c]
@@ -2485,6 +2545,7 @@ whywaita: folds
 tanaka: folds
 Uncalled bet (5600) returned to wafu
 wafu: doesn't show hand
+wafu collected 10396 from pot
 *** SUMMARY ***
 Total pot 10396 | Rake 0
 Seat 1: piyo folded before Flop (didn't bet)
@@ -2525,6 +2586,7 @@ wafu: bets 7077
 piyo: folds
 Uncalled bet (7077) returned to wafu
 wafu: doesn't show hand
+wafu collected 9436 from pot
 *** SUMMARY ***
 Total pot 9436 | Rake 0
 Board [Th 7h As]
@@ -2567,6 +2629,7 @@ tanaka: raises to 9700
 wafu: folds
 Uncalled bet (7300) returned to tanaka
 tanaka: doesn't show hand
+tanaka collected 16198 from pot
 *** SUMMARY ***
 Total pot 16198 | Rake 0
 Board [4h 4s 7d]
@@ -2606,6 +2669,7 @@ ANN: folds
 *** SHOW DOWN ***
 piyo: shows [6s 6h]
 ramune: shows [Kc Kd]
+ramune collected 73618 from pot
 *** SUMMARY ***
 Total pot 73618 | Rake 0
 Board [5c Td 5s Ac 8c]
@@ -2641,6 +2705,7 @@ wafu: raises to 12000
 ramune: folds
 Uncalled bet (10000) returned to wafu
 wafu: doesn't show hand
+wafu collected 5665 from pot
 *** SUMMARY ***
 Total pot 5665 | Rake 0
 Seat 1: tanaka (button) folded before Flop (didn't bet)
@@ -2673,6 +2738,7 @@ wafu: folds
 ANN: folds
 Uncalled bet (2000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 6665 from pot
 *** SUMMARY ***
 Total pot 6665 | Rake 0
 Seat 1: tanaka folded before Flop (didn't bet)
@@ -2717,6 +2783,7 @@ ramune: calls 30712
 *** SHOW DOWN ***
 tanaka: shows [As 9d]
 ramune: shows [5d 5s]
+ramune collected 89423 from pot
 *** SUMMARY ***
 Total pot 89423 | Rake 0
 Board [Ks Ad 5c Td 6s]
@@ -2749,6 +2816,7 @@ wafu: folds
 whywaita: folds
 Uncalled bet (15600) returned to ramune
 ramune: doesn't show hand
+ramune collected 14532 from pot
 *** SUMMARY ***
 Total pot 14532 | Rake 0
 Seat 1: ramune (big blind) collected (14532)
@@ -2785,6 +2853,7 @@ whywaita: calls 32541
 *** SHOW DOWN ***
 wafu: shows [6s Ac]
 whywaita: shows [8d 6d]
+whywaita collected 113746 from pot
 *** SUMMARY ***
 Total pot 113746 | Rake 0
 Board [2h 6c 2c 4c 8s]
@@ -2819,6 +2888,7 @@ whywaita: bets 30000
 ramune: calls 30000
 *** SHOW DOWN ***
 whywaita: shows [3h Qs]
+whywaita collected 92999 from pot
 *** SUMMARY ***
 Total pot 92999 | Rake 0
 Board [Qd 2s 5c 8c 4d]
@@ -2849,6 +2919,7 @@ wafu: raises to 50000 and is all-in
 whywaita: folds
 Uncalled bet (33667) returned to wafu
 wafu: doesn't show hand
+wafu collected 34332 from pot
 *** SUMMARY ***
 Total pot 34332 | Rake 0
 Seat 1: ramune (button) folded before Flop (didn't bet)
@@ -2885,6 +2956,7 @@ ramune: bets 7000
 whywaita: folds
 Uncalled bet (7000) returned to ramune
 ramune: doesn't show hand
+ramune collected 13332 from pot
 *** SUMMARY ***
 Total pot 13332 | Rake 0
 Board [3h Qh Th 5c]
@@ -2918,6 +2990,7 @@ whywaita: bets 5000
 ramune: folds
 Uncalled bet (5000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 11332 from pot
 *** SUMMARY ***
 Total pot 11332 | Rake 0
 Board [Jh 5d 4h]
@@ -2951,6 +3024,7 @@ wafu: bets 5000
 whywaita: folds
 Uncalled bet (5000) returned to wafu
 wafu: doesn't show hand
+wafu collected 27332 from pot
 *** SUMMARY ***
 Total pot 27332 | Rake 0
 Board [Ac 2d Td]
@@ -2984,6 +3058,7 @@ whywaita: bets 2000
 ANN: folds
 Uncalled bet (2000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 5332 from pot
 *** SUMMARY ***
 Total pot 5332 | Rake 0
 Board [9h 7s 6c]
@@ -3013,6 +3088,7 @@ whywaita: raises to 8000
 ramune: folds
 Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 5332 from pot
 *** SUMMARY ***
 Total pot 5332 | Rake 0
 Seat 1: ramune (big blind) folded before Flop (didn't bet)
@@ -3053,6 +3129,7 @@ whywaita: checks
 *** SHOW DOWN ***
 ramune: shows [6d Jd]
 whywaita: shows [4c Ac]
+whywaita collected 49332 from pot
 *** SUMMARY ***
 Total pot 49332 | Rake 0
 Board [6c Ad Th 5h 5d]
@@ -3084,6 +3161,7 @@ whywaita: folds
 ramune: folds
 Uncalled bet (70833) returned to wafu
 wafu: doesn't show hand
+wafu collected 23000 from pot
 *** SUMMARY ***
 Total pot 23000 | Rake 0
 Seat 1: ramune (button) folded before Flop
@@ -3122,6 +3200,7 @@ wafu: bets 36000
 whywaita: folds
 Uncalled bet (36000) returned to wafu
 wafu: doesn't show hand
+wafu collected 15500 from pot
 *** SUMMARY ***
 Total pot 15500 | Rake 0
 Board [8h 6c 7c 4s 5h]
@@ -3151,6 +3230,7 @@ whywaita: raises to 9000
 ramune: folds
 Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 8000 from pot
 *** SUMMARY ***
 Total pot 8000 | Rake 0
 Seat 1: ramune (big blind) folded before Flop (didn't bet)
@@ -3180,6 +3260,7 @@ wafu: folds
 whywaita: folds
 Uncalled bet (15000) returned to ramune
 ramune: doesn't show hand
+ramune collected 17000 from pot
 *** SUMMARY ***
 Total pot 17000 | Rake 0
 Seat 1: ramune (small blind) collected (17000)
@@ -3208,6 +3289,7 @@ wafu: raises to 98833 and is all-in
 ANN: folds
 Uncalled bet (95333) returned to wafu
 wafu: doesn't show hand
+wafu collected 8000 from pot
 *** SUMMARY ***
 Total pot 8000 | Rake 0
 Seat 1: ramune (button) folded before Flop (didn't bet)
@@ -3245,6 +3327,7 @@ whywaita: calls 66833
 *** SHOW DOWN ***
 wafu: shows [8h 8s]
 whywaita: shows [9d 7c]
+whywaita collected 209166 from pot
 *** SUMMARY ***
 Total pot 209166 | Rake 0
 Board [4h 8c 6d Td Jd]
@@ -3271,6 +3354,7 @@ whywaita: raises to 315768 and is all-in
 ramune: folds
 Uncalled bet (312268) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 7500 from pot
 *** SUMMARY ***
 Total pot 7500 | Rake 0
 Seat 1: ramune (big blind) folded before Flop (didn't bet)
@@ -3295,6 +3379,7 @@ ramune: folds
 ANN: folds
 Uncalled bet (27000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 9000 from pot
 *** SUMMARY ***
 Total pot 9000 | Rake 0
 Seat 1: ramune (small blind) folded before Flop (didn't bet)
@@ -3318,6 +3403,7 @@ ramune: folds
 ANN: folds
 Uncalled bet (1500) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 4500 from pot
 *** SUMMARY ***
 Total pot 4500 | Rake 0
 Seat 1: ramune (button) folded before Flop (didn't bet)
@@ -3354,6 +3440,7 @@ Uncalled bet (72330) returned to ramune
 *** SHOW DOWN ***
 ramune: shows [4c 3d]
 ANN: shows [6s 7s]
+ANN collected 51902 from pot
 *** SUMMARY ***
 Total pot 51902 | Rake 0
 Board [Ad 5c 4h 8h 3c]
@@ -3385,6 +3472,7 @@ ramune: folds
 ANN: folds
 Uncalled bet (13500) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 28500 from pot
 *** SUMMARY ***
 Total pot 28500 | Rake 0
 Board [9d 4s 2d]
@@ -3409,6 +3497,7 @@ ramune: folds
 ANN: folds
 Uncalled bet (1500) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 4500 from pot
 *** SUMMARY ***
 Total pot 4500 | Rake 0
 Seat 1: ramune (button) folded before Flop (didn't bet)
@@ -3433,6 +3522,7 @@ whywaita: raises to 347268 and is all-in
 ramune: folds
 Uncalled bet (343768) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 7500 from pot
 *** SUMMARY ***
 Total pot 7500 | Rake 0
 Seat 1: ramune (big blind) folded before Flop (didn't bet)
@@ -3461,6 +3551,7 @@ whywaita: bets 9000
 ANN: folds
 Uncalled bet (9000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 21000 from pot
 *** SUMMARY ***
 Total pot 21000 | Rake 0
 Board [5d Th Qd]
@@ -3485,6 +3576,7 @@ ramune: folds
 ANN: folds
 Uncalled bet (1500) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 4500 from pot
 *** SUMMARY ***
 Total pot 4500 | Rake 0
 Seat 1: ramune (button) folded before Flop (didn't bet)
@@ -3509,6 +3601,7 @@ whywaita: raises to 365268 and is all-in
 ramune: folds
 Uncalled bet (361768) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 7500 from pot
 *** SUMMARY ***
 Total pot 7500 | Rake 0
 Seat 1: ramune (big blind) folded before Flop (didn't bet)
@@ -3534,6 +3627,7 @@ ANN: folds
 whywaita: folds
 Uncalled bet (46330) returned to ramune
 ramune: doesn't show hand
+ramune collected 16500 from pot
 *** SUMMARY ***
 Total pot 16500 | Rake 0
 Seat 1: ramune (small blind) collected (16500)
@@ -3558,6 +3652,7 @@ ANN: raises to 24402 and is all-in
 whywaita: folds
 Uncalled bet (20902) returned to ANN
 ANN: doesn't show hand
+ANN collected 7500 from pot
 *** SUMMARY ***
 Total pot 7500 | Rake 0
 Seat 1: ramune (button) folded before Flop (didn't bet)
@@ -3582,6 +3677,7 @@ whywaita: raises to 9000
 ramune: folds
 Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 7500 from pot
 *** SUMMARY ***
 Total pot 7500 | Rake 0
 Seat 1: ramune (big blind) folded before Flop (didn't bet)
@@ -3606,6 +3702,7 @@ ramune: folds
 ANN: folds
 Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 9000 from pot
 *** SUMMARY ***
 Total pot 9000 | Rake 0
 Seat 1: ramune (small blind) folded before Flop (didn't bet)
@@ -3629,6 +3726,7 @@ ramune: folds
 ANN: folds
 Uncalled bet (1500) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 4500 from pot
 *** SUMMARY ***
 Total pot 4500 | Rake 0
 Seat 1: ramune (button) folded before Flop (didn't bet)
@@ -3653,6 +3751,7 @@ whywaita: raises to 9000
 ramune: folds
 Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 7500 from pot
 *** SUMMARY ***
 Total pot 7500 | Rake 0
 Seat 1: ramune (big blind) folded before Flop (didn't bet)
@@ -3678,6 +3777,7 @@ ANN: raises to 21902 and is all-in
 whywaita: folds
 Uncalled bet (12402) returned to ANN
 ANN: doesn't show hand
+ANN collected 21000 from pot
 *** SUMMARY ***
 Total pot 21000 | Rake 0
 Seat 1: ramune (small blind) folded before Flop (didn't bet)
@@ -3702,6 +3802,7 @@ ANN: raises to 33402 and is all-in
 whywaita: folds
 Uncalled bet (29902) returned to ANN
 ANN: doesn't show hand
+ANN collected 7500 from pot
 *** SUMMARY ***
 Total pot 7500 | Rake 0
 Seat 1: ramune (button) folded before Flop (didn't bet)
@@ -3727,6 +3828,7 @@ ramune: raises to 50330 and is all-in
 whywaita: folds
 Uncalled bet (40830) returned to ramune
 ramune: doesn't show hand
+ramune collected 19500 from pot
 *** SUMMARY ***
 Total pot 19500 | Rake 0
 Seat 1: ramune (big blind) collected (19500)
@@ -3751,6 +3853,7 @@ ramune: folds
 ANN: folds
 Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 9000 from pot
 *** SUMMARY ***
 Total pot 9000 | Rake 0
 Seat 1: ramune (small blind) folded before Flop (didn't bet)
@@ -3787,6 +3890,7 @@ ramune: bets 32330 and is all-in
 whywaita: folds
 Uncalled bet (32330) returned to ramune
 ramune: doesn't show hand
+ramune collected 54000 from pot
 *** SUMMARY ***
 Total pot 54000 | Rake 0
 Board [Kh 3d Jh Ks 6d]
@@ -3812,6 +3916,7 @@ whywaita: raises to 9000
 ramune: folds
 Uncalled bet (6000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 7500 from pot
 *** SUMMARY ***
 Total pot 7500 | Rake 0
 Seat 1: ramune (big blind) folded before Flop (didn't bet)
@@ -3846,6 +3951,7 @@ whywaita: checks
 *** SHOW DOWN ***
 ANN: shows [9d 8s]
 whywaita: shows [Ah 4c]
+whywaita collected 27000 from pot
 *** SUMMARY ***
 Total pot 27000 | Rake 0
 Board [4s 3s Ad 6s 7d]
@@ -3872,6 +3978,7 @@ whywaita: calls 14402
 *** SHOW DOWN ***
 ANN: shows [As Jd]
 whywaita: shows [9h Kd]
+ANN collected 37470 from pot
 *** SUMMARY ***
 Total pot 37470 | Rake 0
 Board [Qc 6c 6s 5d 5s]
@@ -3897,6 +4004,7 @@ whywaita: raises to 12000
 ramune: folds
 Uncalled bet (8000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 9998 from pot
 *** SUMMARY ***
 Total pot 9998 | Rake 0
 Seat 1: ramune (big blind) folded before Flop (didn't bet)
@@ -3927,6 +4035,7 @@ whywaita: calls 20804
 *** SHOW DOWN ***
 ANN: shows [Qs 5d]
 whywaita: shows [Qc 7c]
+whywaita collected 76274 from pot
 *** SUMMARY ***
 Total pot 76274 | Rake 0
 Board [Ac 4h Qh 4s 7d]
@@ -3959,6 +4068,7 @@ ramune: raises to 24000
 whywaita: folds
 Uncalled bet (20000) returned to ramune
 ramune: doesn't show hand
+ramune collected 17332 from pot
 *** SUMMARY ***
 Total pot 17332 | Rake 0
 Board [Qh Kc 4s 8c Ts]
@@ -3981,6 +4091,7 @@ ramune: raises to 26000
 whywaita: folds
 Uncalled bet (18000) returned to ramune
 ramune: doesn't show hand
+ramune collected 17332 from pot
 *** SUMMARY ***
 Total pot 17332 | Rake 0
 Seat 1: ramune (big blind) collected (17332)
@@ -4000,6 +4111,7 @@ whywaita: posts big blind 4000
 ramune: folds
 Uncalled bet (2000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 5332 from pot
 *** SUMMARY ***
 Total pot 5332 | Rake 0
 Seat 1: ramune (small blind) folded before Flop (didn't bet)
@@ -4029,6 +4141,7 @@ ramune: bets 14000
 whywaita: calls 14000
 *** SHOW DOWN ***
 ramune: shows [Ks 7c]
+ramune collected 45332 from pot
 *** SUMMARY ***
 Total pot 45332 | Rake 0
 Board [9c 4c Ts 7h Kc]
@@ -4049,6 +4162,7 @@ whywaita: posts big blind 4000
 ramune: folds
 Uncalled bet (2000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 5332 from pot
 *** SUMMARY ***
 Total pot 5332 | Rake 0
 Seat 1: ramune (small blind) folded before Flop (didn't bet)
@@ -4080,6 +4194,7 @@ ramune: bets 82832 and is all-in
 whywaita: folds
 Uncalled bet (82832) returned to ramune
 ramune: doesn't show hand
+ramune collected 49332 from pot
 *** SUMMARY ***
 Total pot 49332 | Rake 0
 Board [Qh 9d 7h 5s Jh]
@@ -4111,6 +4226,7 @@ whywaita: bets 225170 and is all-in
 ramune: folds
 Uncalled bet (225170) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 185332 from pot
 *** SUMMARY ***
 Total pot 185332 | Rake 0
 Board [Th 7h Jh 8c 4h]
@@ -4132,6 +4248,7 @@ whywaita: raises to 8000
 ramune: folds
 Uncalled bet (4000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 9332 from pot
 *** SUMMARY ***
 Total pot 9332 | Rake 0
 Seat 1: ramune (big blind) folded before Flop (didn't bet)
@@ -4153,6 +4270,7 @@ whywaita: calls 30832
 *** SHOW DOWN ***
 ramune: shows [5h Qd]
 whywaita: shows [Kh As]
+ramune collected 69664 from pot
 *** SUMMARY ***
 Total pot 69664 | Rake 0
 Board [8c 5c Qs Jc 2d]
@@ -4178,6 +4296,7 @@ whywaita: bets 8000
 ramune: folds
 Uncalled bet (8000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 17332 from pot
 *** SUMMARY ***
 Total pot 17332 | Rake 0
 Board [Qc 5s 9h]
@@ -4198,6 +4317,7 @@ whywaita: posts big blind 4000
 ramune: folds
 Uncalled bet (2000) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 5332 from pot
 *** SUMMARY ***
 Total pot 5332 | Rake 0
 Seat 1: ramune (small blind) folded before Flop (didn't bet)
@@ -4224,6 +4344,7 @@ ramune: bets 10000
 whywaita: folds
 Uncalled bet (10000) returned to ramune
 ramune: doesn't show hand
+ramune collected 17332 from pot
 *** SUMMARY ***
 Total pot 17332 | Rake 0
 Board [5c 9d Th Js]
@@ -4251,6 +4372,7 @@ whywaita: bets 362336 and is all-in
 ramune: folds
 Uncalled bet (362336) returned to whywaita
 whywaita: doesn't show hand
+whywaita collected 41332 from pot
 *** SUMMARY ***
 Total pot 41332 | Rake 0
 Board [5h 9h 7s Td]
@@ -4274,6 +4396,7 @@ whywaita: calls 38332
 *** SHOW DOWN ***
 ramune: shows [Qs Js]
 whywaita: shows [Ah 4d]
+whywaita collected 92664 from pot
 *** SUMMARY ***
 Total pot 92664 | Rake 0
 Board [4h 6d 9h Qh Th]
