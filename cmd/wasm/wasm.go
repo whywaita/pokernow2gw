@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"strings"
 	"time"
 	"unsafe"
@@ -41,8 +42,11 @@ func getString(ptr, length uint32) string {
 //lint:ignore U1000 This variable is used by WASM exported functions to prevent GC
 var lastResult []byte // Keep reference to prevent GC
 
+//lint:ignore U1000 This variable is used by WASM exported functions to store skipped hands detail JSON
+var lastSkippedDetail []byte // Keep reference to prevent GC
+
 //lint:ignore U1000 This variable is used by WASM exported functions to store result info
-var lastResultInfo [12]byte // Store result info: [ptr(4), len(4), skippedHands(4)]
+var lastResultInfo [20]byte // Store result info: [ptr(4), len(4), skippedHands(4), skippedDetailPtr(4), skippedDetailLen(4)]
 
 //lint:ignore U1000 This function is exported to WASM and called from JavaScript
 //go:wasmexport parseCSV
@@ -53,15 +57,17 @@ func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32) uint32 {
 	if csvText == "" {
 		errMsg := "CSV text is empty"
 		lastResult = []byte(errMsg)
+		lastSkippedDetail = nil
 		// Write error result: ptr, len, skippedHands=0
-		writeResultInfo(uint32(uintptr(unsafe.Pointer(&lastResult[0]))), uint32(len(lastResult)), 0, 1)
+		writeResultInfo(uint32(uintptr(unsafe.Pointer(&lastResult[0]))), uint32(len(lastResult)), 0, 1, 0, 0)
 		return uint32(uintptr(unsafe.Pointer(&lastResultInfo[0])))
 	}
 
 	if heroName == "" {
 		errMsg := "Hero name is required"
 		lastResult = []byte(errMsg)
-		writeResultInfo(uint32(uintptr(unsafe.Pointer(&lastResult[0]))), uint32(len(lastResult)), 0, 1)
+		lastSkippedDetail = nil
+		writeResultInfo(uint32(uintptr(unsafe.Pointer(&lastResult[0]))), uint32(len(lastResult)), 0, 1, 0, 0)
 		return uint32(uintptr(unsafe.Pointer(&lastResultInfo[0])))
 	}
 
@@ -87,21 +93,38 @@ func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32) uint32 {
 	if err != nil {
 		errMsg := err.Error()
 		lastResult = []byte(errMsg)
-		writeResultInfo(uint32(uintptr(unsafe.Pointer(&lastResult[0]))), uint32(len(lastResult)), 0, 1)
+		lastSkippedDetail = nil
+		writeResultInfo(uint32(uintptr(unsafe.Pointer(&lastResult[0]))), uint32(len(lastResult)), 0, 1, 0, 0)
 		return uint32(uintptr(unsafe.Pointer(&lastResultInfo[0])))
 	}
 
 	lastResult = result.HH
-	writeResultInfo(uint32(uintptr(unsafe.Pointer(&lastResult[0]))), uint32(len(lastResult)), uint32(result.SkippedHands), 0)
+
+	// Encode skipped hands info as JSON
+	var skippedDetailPtr, skippedDetailLen uint32
+	if len(result.SkippedHandsInfo) > 0 {
+		jsonData, err := json.Marshal(result.SkippedHandsInfo)
+		if err == nil {
+			lastSkippedDetail = jsonData
+			skippedDetailPtr = uint32(uintptr(unsafe.Pointer(&lastSkippedDetail[0])))
+			skippedDetailLen = uint32(len(lastSkippedDetail))
+		}
+	} else {
+		lastSkippedDetail = nil
+	}
+
+	writeResultInfo(uint32(uintptr(unsafe.Pointer(&lastResult[0]))), uint32(len(lastResult)), uint32(result.SkippedHands), 0, skippedDetailPtr, skippedDetailLen)
 	return uint32(uintptr(unsafe.Pointer(&lastResultInfo[0])))
 }
 
 //lint:ignore U1000 This function is used by WASM exported functions
-func writeResultInfo(ptr, length, skippedHands, hasError uint32) {
-	// Write 4 uint32 values to lastResultInfo
+func writeResultInfo(ptr, length, skippedHands, hasError, skippedDetailPtr, skippedDetailLen uint32) {
+	// Write 5 uint32 values to lastResultInfo
 	*(*uint32)(unsafe.Pointer(&lastResultInfo[0])) = ptr
 	*(*uint32)(unsafe.Pointer(&lastResultInfo[4])) = length
 	*(*uint32)(unsafe.Pointer(&lastResultInfo[8])) = skippedHands
+	*(*uint32)(unsafe.Pointer(&lastResultInfo[12])) = skippedDetailPtr
+	*(*uint32)(unsafe.Pointer(&lastResultInfo[16])) = skippedDetailLen
 	// Store hasError as a separate field
 	// For simplicity, we'll use skippedHands = 0xFFFFFFFF to indicate error
 	if hasError == 1 {

@@ -433,7 +433,7 @@ func TestParseHands_WithPlayerCountFilter(t *testing.T) {
 				PlayerCountFilter: tt.filter,
 			}
 
-			gotHands, gotSkip, err := ParseHands(tt.entries, opts)
+			gotHands, gotSkip, _, err := ParseHands(tt.entries, opts)
 			if err != nil {
 				t.Errorf("ParseHands() unexpected error: %v", err)
 				return

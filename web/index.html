@@ -77,6 +77,80 @@
         #resultContainer {
             display: none;
         }
+
+        /* Error detail styles */
+        .error-detail-toggle {
+            display: inline-block;
+            margin-top: 8px;
+            color: #842029;
+            text-decoration: none;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+
+        .error-detail-toggle:hover {
+            color: #5c1217;
+            text-decoration: underline;
+        }
+
+        .error-detail-container {
+            margin-top: 10px;
+            padding: 12px;
+            background-color: #f8d7da;
+            border: 1px solid #f1aeb5;
+            border-radius: 6px;
+        }
+
+        .error-detail {
+            margin: 0;
+            padding: 10px;
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        /* Skipped detail styles */
+        .skipped-detail-toggle {
+            display: inline-block;
+            margin-top: 8px;
+            color: #0a3622;
+            text-decoration: none;
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+
+        .skipped-detail-toggle:hover {
+            color: #052c16;
+            text-decoration: underline;
+        }
+
+        .skipped-detail-container {
+            margin-top: 10px;
+            padding: 12px;
+            background-color: #d1e7dd;
+            border: 1px solid #a3cfbb;
+            border-radius: 6px;
+        }
+
+        .skipped-detail {
+            margin: 0;
+            padding: 10px;
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-height: 300px;
+            overflow-y: auto;
+        }
     </style>
 </head>
 <body>
@@ -148,13 +222,43 @@ Example:
                 </div>
 
                 <div class="alert alert-danger alert-dismissible fade show" role="alert" id="error">
-                    <strong>Error!</strong> <span id="errorMessage"></span>
-                    <button type="button" class="btn-close" onclick="hideMessages()"></button>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="flex-grow-1">
+                            <strong>Error!</strong> <span id="errorMessage"></span>
+                            <div id="errorDetailWrapper" style="display: none;">
+                                <a href="#" id="errorDetailToggle" class="error-detail-toggle" onclick="toggleErrorDetail(event)">
+                                    ▶ Show details for developers
+                                </a>
+                                <div id="errorDetailContainer" class="error-detail-container" style="display: none;">
+                                    <pre id="errorDetail" class="error-detail"></pre>
+                                    <button type="button" class="btn btn-sm btn-outline-danger mt-2" onclick="copyErrorDetail()">
+                                        📋 Copy error details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-close" onclick="hideMessages()"></button>
+                    </div>
                 </div>
 
                 <div class="alert alert-success alert-dismissible fade show" role="alert" id="success">
-                    <strong>Success!</strong> <span id="successMessage"></span>
-                    <button type="button" class="btn-close" onclick="hideMessages()"></button>
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="flex-grow-1">
+                            <strong>Success!</strong> <span id="successMessage"></span>
+                            <div id="skippedDetailWrapper" style="display: none;">
+                                <a href="#" id="skippedDetailToggle" class="skipped-detail-toggle" onclick="toggleSkippedDetail(event)">
+                                    ▶ Show skipped hands details
+                                </a>
+                                <div id="skippedDetailContainer" class="skipped-detail-container" style="display: none;">
+                                    <pre id="skippedDetail" class="skipped-detail"></pre>
+                                    <button type="button" class="btn btn-sm btn-outline-success mt-2" onclick="copySkippedDetail()">
+                                        📋 Copy skipped details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-close" onclick="hideMessages()"></button>
+                    </div>
                 </div>
 
                 <div class="card shadow-sm" id="resultContainer">
@@ -229,20 +333,216 @@ Example:
             wasmReady = true;
             console.log("WASM module loaded successfully (using go:wasmexport with Go runtime)");
         }).catch((err) => {
-            showError("Failed to load WASM module: " + err);
+            const errorDetail = `Error: ${err.toString()}
+Stack: ${err.stack || 'N/A'}
+User Agent: ${navigator.userAgent}
+Time: ${new Date().toISOString()}`;
+            showError("Failed to load WASM module. Click below for details.", errorDetail);
             console.error(err);
         });
 
-        function showError(message) {
+        function showError(message, detail = null) {
             document.getElementById('errorMessage').textContent = message;
             document.getElementById('error').style.display = 'block';
             document.getElementById('success').style.display = 'none';
+
+            // Handle error detail
+            const detailWrapper = document.getElementById('errorDetailWrapper');
+            const detailContainer = document.getElementById('errorDetailContainer');
+            const detailElement = document.getElementById('errorDetail');
+            const toggleElement = document.getElementById('errorDetailToggle');
+
+            if (detail) {
+                detailElement.textContent = detail;
+                detailWrapper.style.display = 'block';
+                detailContainer.style.display = 'none';
+                toggleElement.innerHTML = '▶ Show details for developers';
+            } else {
+                detailWrapper.style.display = 'none';
+            }
         }
 
-        function showSuccess(message) {
+        function toggleErrorDetail(event) {
+            event.preventDefault();
+            const container = document.getElementById('errorDetailContainer');
+            const toggle = document.getElementById('errorDetailToggle');
+
+            if (container.style.display === 'none') {
+                container.style.display = 'block';
+                toggle.innerHTML = '▼ Hide details';
+            } else {
+                container.style.display = 'none';
+                toggle.innerHTML = '▶ Show details for developers';
+            }
+        }
+
+        function copyErrorDetail() {
+            const detail = document.getElementById('errorDetail').textContent;
+            navigator.clipboard.writeText(detail).then(() => {
+                showCopySuccess();
+            }).catch((err) => {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = detail;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showCopySuccess();
+            });
+        }
+
+        function showCopySuccess() {
+            const btn = document.querySelector('#errorDetailContainer button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✓ Copied!';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 2000);
+        }
+
+        function buildErrorDetail(errorMessage, heroName, filterFlags, stack = null) {
+            const filters = [];
+            if (filterFlags & (1 << 0)) filters.push('HU');
+            if (filterFlags & (1 << 1)) filters.push('SpinAndGo');
+            if (filterFlags & (1 << 2)) filters.push('MTT');
+            const filterStr = filters.length > 0 ? filters.join(', ') : 'None (all players)';
+
+            let detail = `=== Error Report ===
+Time: ${new Date().toISOString()}
+User Agent: ${navigator.userAgent}
+
+=== Settings ===
+Hero Name: ${heroName || '(not set)'}
+Filters: ${filterStr}
+
+=== Error Message ===
+${errorMessage}`;
+
+            if (stack) {
+                detail += `
+
+=== Stack Trace ===
+${stack}`;
+            }
+
+            return detail;
+        }
+
+        function showSuccess(message, skippedHandsInfo = null) {
             document.getElementById('successMessage').textContent = message;
             document.getElementById('success').style.display = 'block';
             document.getElementById('error').style.display = 'none';
+
+            // Handle skipped hands detail
+            const detailWrapper = document.getElementById('skippedDetailWrapper');
+            const detailContainer = document.getElementById('skippedDetailContainer');
+            const detailElement = document.getElementById('skippedDetail');
+            const toggleElement = document.getElementById('skippedDetailToggle');
+
+            if (skippedHandsInfo && skippedHandsInfo.length > 0) {
+                const detailText = formatSkippedHandsInfo(skippedHandsInfo);
+                detailElement.textContent = detailText;
+                detailWrapper.style.display = 'block';
+                detailContainer.style.display = 'none';
+                toggleElement.innerHTML = '▶ Show skipped hands details';
+            } else {
+                detailWrapper.style.display = 'none';
+            }
+        }
+
+        function formatSkippedHandsInfo(skippedHandsInfo) {
+            const reasonLabels = {
+                'incomplete_hand': 'Incomplete hand (not properly closed)',
+                'too_many_players': 'Too many players (> 10)',
+                'filtered_out': 'Filtered out by player count filter'
+            };
+
+            // Count by reason for summary
+            const reasonCounts = {};
+            skippedHandsInfo.forEach(info => {
+                const reason = info.reason;
+                reasonCounts[reason] = (reasonCounts[reason] || 0) + 1;
+            });
+
+            let text = `=== Skipped Hands Report ===
+Total skipped: ${skippedHandsInfo.length} hands
+Time: ${new Date().toISOString()}
+
+=== Summary by Reason ===
+`;
+            for (const [reason, count] of Object.entries(reasonCounts)) {
+                text += `${reasonLabels[reason] || reason}: ${count} hands\n`;
+            }
+
+            text += `
+=== Details ===
+`;
+            skippedHandsInfo.forEach((info, index) => {
+                text += `--- Hand #${index + 1} ---
+Hand Number: #${info.hand_number}
+Hand ID: ${info.hand_id}
+Reason: ${reasonLabels[info.reason] || info.reason}
+Detail: ${info.detail}`;
+                if (info.player_count) {
+                    text += `
+Player Count: ${info.player_count}`;
+                }
+                if (info.raw_input && info.raw_input.length > 0) {
+                    text += `
+
+Raw Input (${info.raw_input.length} lines):
+----------------------------------------
+${info.raw_input.join('\n')}
+----------------------------------------`;
+                }
+                text += '\n\n';
+            });
+
+            return text.trim();
+        }
+
+        function toggleSkippedDetail(event) {
+            event.preventDefault();
+            const container = document.getElementById('skippedDetailContainer');
+            const toggle = document.getElementById('skippedDetailToggle');
+
+            if (container.style.display === 'none') {
+                container.style.display = 'block';
+                toggle.innerHTML = '▼ Hide skipped hands details';
+            } else {
+                container.style.display = 'none';
+                toggle.innerHTML = '▶ Show skipped hands details';
+            }
+        }
+
+        function copySkippedDetail() {
+            const detail = document.getElementById('skippedDetail').textContent;
+            navigator.clipboard.writeText(detail).then(() => {
+                showSkippedCopySuccess();
+            }).catch((err) => {
+                // Fallback for older browsers
+                const textarea = document.createElement('textarea');
+                textarea.value = detail;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showSkippedCopySuccess();
+            });
+        }
+
+        function showSkippedCopySuccess() {
+            const btn = document.querySelector('#skippedDetailContainer button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✓ Copied!';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 2000);
         }
 
         function hideMessages() {
@@ -302,16 +602,29 @@ Example:
                     filterFlags
                 );
 
-                // Read result info from memory (3 uint32 values: ptr, len, skippedHands)
+                // Read result info from memory (5 uint32 values: ptr, len, skippedHands, skippedDetailPtr, skippedDetailLen)
                 const mem = new Uint8Array(wasmMemory.buffer);
                 const view = new DataView(wasmMemory.buffer);
 
                 const resultPtr = view.getUint32(resultInfoPtr, true);     // little-endian
                 const resultLen = view.getUint32(resultInfoPtr + 4, true);
                 const skippedHands = view.getUint32(resultInfoPtr + 8, true);
+                const skippedDetailPtr = view.getUint32(resultInfoPtr + 12, true);
+                const skippedDetailLen = view.getUint32(resultInfoPtr + 16, true);
 
                 // Read the result string
                 const resultText = readString(resultPtr, resultLen);
+
+                // Read skipped hands detail JSON if available
+                let skippedHandsInfo = null;
+                if (skippedDetailPtr > 0 && skippedDetailLen > 0) {
+                    const skippedDetailJson = readString(skippedDetailPtr, skippedDetailLen);
+                    try {
+                        skippedHandsInfo = JSON.parse(skippedDetailJson);
+                    } catch (e) {
+                        console.error("Failed to parse skipped hands info:", e);
+                    }
+                }
 
                 // Hide loading
                 document.getElementById('loading').style.display = 'none';
@@ -319,7 +632,8 @@ Example:
 
                 // Check if this is an error (skippedHands = 0xFFFFFFFF indicates error)
                 if (skippedHands === 0xFFFFFFFF) {
-                    showError("Conversion failed: " + resultText);
+                    const errorDetail = buildErrorDetail(resultText, heroName, filterFlags);
+                    showError("Conversion failed. Click below for details.", errorDetail);
                     return;
                 }
 
@@ -329,16 +643,17 @@ Example:
 
                 let message = "Conversion successful!";
                 if (skippedHands > 0) {
-                    message += ` (${skippedHands} hands were skipped due to parse errors)`;
+                    message += ` (${skippedHands} hands were skipped)`;
                 }
-                showSuccess(message);
+                showSuccess(message, skippedHandsInfo);
 
                 // Scroll to result
                 document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth' });
             } catch (err) {
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('convertBtn').disabled = false;
-                showError("Unexpected error: " + err);
+                const errorDetail = buildErrorDetail(err.toString(), heroName, filterFlags, err.stack);
+                showError("An unexpected error occurred. Click below for details.", errorDetail);
                 console.error(err);
             }
         }

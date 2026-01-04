@@ -475,7 +475,7 @@ func TestParseHands(t *testing.T) {
 			opts := ConvertOptions{
 				PlayerCountFilter: PlayerCountAll,
 			}
-			gotHands, gotSkip, err := ParseHands(tt.entries, opts)
+			gotHands, gotSkip, _, err := ParseHands(tt.entries, opts)
 			if err != nil {
 				t.Errorf("ParseHands() unexpected error: %v", err)
 				return
@@ -559,7 +559,7 @@ func TestParseHands_SpectatorLog(t *testing.T) {
 			opts := ConvertOptions{
 				PlayerCountFilter: PlayerCountAll,
 			}
-			_, _, err := ParseHands(tt.entries, opts)
+			_, _, _, err := ParseHands(tt.entries, opts)
 
 			if tt.wantErr != nil {
 				if err == nil {
