@@ -25,10 +25,30 @@ type ConvertOptions struct {
 	PlayerCountFilter PlayerCountFilter // Player count filter for GTO Wizard plans (default: PlayerCountAll)
 }
 
+// SkipReason represents why a hand was skipped
+type SkipReason string
+
+const (
+	SkipReasonIncomplete     SkipReason = "incomplete_hand"
+	SkipReasonTooManyPlayers SkipReason = "too_many_players"
+	SkipReasonFilteredOut    SkipReason = "filtered_out"
+)
+
+// SkippedHandInfo contains details about a skipped hand
+type SkippedHandInfo struct {
+	HandID      string     `json:"hand_id"`
+	HandNumber  string     `json:"hand_number"`
+	Reason      SkipReason `json:"reason"`
+	Detail      string     `json:"detail"`
+	PlayerCount int        `json:"player_count,omitempty"`
+	RawInput    []string   `json:"raw_input,omitempty"` // 元のCSVエントリ
+}
+
 // ConvertResult contains the result of conversion
 type ConvertResult struct {
-	HH           []byte // GTO Wizard HH text
-	SkippedHands int    // パースに失敗したハンド数
+	HH               []byte            // GTO Wizard HH text
+	SkippedHands     int               // パースに失敗したハンド数
+	SkippedHandsInfo []SkippedHandInfo // スキップされたハンドの詳細情報
 }
 
 // Hand represents a parsed poker hand

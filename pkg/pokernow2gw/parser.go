@@ -40,11 +40,28 @@ var (
 
 // ParseHands parses LogEntry slice into Hand slice
 // Returns ErrSpectatorLog if no hero cards are found in any hand (spectator log)
-func ParseHands(entries []LogEntry, opts ConvertOptions) ([]Hand, int, error) {
+func ParseHands(entries []LogEntry, opts ConvertOptions) ([]Hand, int, []SkippedHandInfo, error) {
 	var hands []Hand
 	var currentHand *Hand
 	var currentStreet Street
 	skippedHands := 0
+	var skippedHandsInfo []SkippedHandInfo
+	handStartIndex := -1 // Track the start index of current hand
+
+	// Helper function to extract raw input entries for a hand
+	extractRawInput := func(startIdx, endIdx int) []string {
+		if startIdx < 0 || startIdx >= len(entries) {
+			return nil
+		}
+		if endIdx > len(entries) {
+			endIdx = len(entries)
+		}
+		rawInput := make([]string, 0, endIdx-startIdx)
+		for j := startIdx; j < endIdx; j++ {
+			rawInput = append(rawInput, entries[j].Entry)
+		}
+		return rawInput
+	}
 
 	for i := 0; i < len(entries); i++ {
 		entry := entries[i].Entry
@@ -54,6 +71,13 @@ func ParseHands(entries []LogEntry, opts ConvertOptions) ([]Hand, int, error) {
 			if currentHand != nil {
 				// Previous hand was not properly closed
 				skippedHands++
+				skippedHandsInfo = append(skippedHandsInfo, SkippedHandInfo{
+					HandID:     currentHand.HandID,
+					HandNumber: currentHand.HandNumber,
+					Reason:     SkipReasonIncomplete,
+					Detail:     fmt.Sprintf("Hand #%s was not properly closed before hand #%s started", currentHand.HandNumber, matches[1]),
+					RawInput:   extractRawInput(handStartIndex, i),
+				})
 			}
 			handNum := matches[1]
 			handID := matches[2]
@@ -71,6 +95,7 @@ func ParseHands(entries []LogEntry, opts ConvertOptions) ([]Hand, int, error) {
 				Dealer:     dealer,
 				StartTime:  entries[i].At,
 			}
+			handStartIndex = i // Record the start index
 			currentStreet = StreetPreflop
 			continue
 		}
@@ -81,6 +106,7 @@ func ParseHands(entries []LogEntry, opts ConvertOptions) ([]Hand, int, error) {
 				hands = append(hands, *currentHand)
 				currentHand = nil
 			}
+			handStartIndex = -1 // Reset start index
 			continue
 		}
 
@@ -98,15 +124,37 @@ func ParseHands(entries []LogEntry, opts ConvertOptions) ([]Hand, int, error) {
 			// Check if player count exceeds 10-max limit
 			if playerCount > 10 {
 				// Skip this hand as it exceeds 10-max limit
+				// Find the ending hand to collect all raw input
+				endIdx := findEndingHandIndex(entries, i, currentHand.HandNumber)
 				skippedHands++
+				skippedHandsInfo = append(skippedHandsInfo, SkippedHandInfo{
+					HandID:      currentHand.HandID,
+					HandNumber:  currentHand.HandNumber,
+					Reason:      SkipReasonTooManyPlayers,
+					Detail:      fmt.Sprintf("Hand #%s has %d players, but GTO Wizard only supports up to 10 players", currentHand.HandNumber, playerCount),
+					PlayerCount: playerCount,
+					RawInput:    extractRawInput(handStartIndex, endIdx),
+				})
 				currentHand = nil
+				handStartIndex = -1
 				continue
 			}
 
 			// Apply player count filter based on GTO Wizard plan
 			if !opts.PlayerCountFilter.isPlayerCountAllowed(playerCount) {
+				// Find the ending hand to collect all raw input
+				endIdx := findEndingHandIndex(entries, i, currentHand.HandNumber)
 				skippedHands++
+				skippedHandsInfo = append(skippedHandsInfo, SkippedHandInfo{
+					HandID:      currentHand.HandID,
+					HandNumber:  currentHand.HandNumber,
+					Reason:      SkipReasonFilteredOut,
+					Detail:      fmt.Sprintf("Hand #%s has %d players, which does not match the selected filter", currentHand.HandNumber, playerCount),
+					PlayerCount: playerCount,
+					RawInput:    extractRawInput(handStartIndex, endIdx),
+				})
 				currentHand = nil
+				handStartIndex = -1
 				continue
 			}
 
@@ -369,11 +417,23 @@ func ParseHands(entries []LogEntry, opts ConvertOptions) ([]Hand, int, error) {
 			}
 		}
 		if !hasAnyHeroCards {
-			return nil, 0, ErrSpectatorLog
+			return nil, 0, nil, ErrSpectatorLog
 		}
 	}
 
-	return hands, skippedHands, nil
+	return hands, skippedHands, skippedHandsInfo, nil
+}
+
+// findEndingHandIndex finds the index of the ending hand marker for a given hand number
+// Returns the index after the ending hand marker, or len(entries) if not found
+func findEndingHandIndex(entries []LogEntry, startIdx int, handNumber string) int {
+	endPattern := fmt.Sprintf("-- ending hand #%s --", handNumber)
+	for j := startIdx; j < len(entries); j++ {
+		if entries[j].Entry == endPattern {
+			return j + 1 // Include the ending hand marker
+		}
+	}
+	return len(entries) // Not found, return end of entries
 }
 
 // extractDisplayName extracts display name from PokerNow player string
@@ -498,7 +558,7 @@ func ConvertEntries(entries []LogEntry, opts ConvertOptions) (*ConvertResult, er
 	}
 
 	// Parse hands
-	hands, skippedHands, err := ParseHands(entries, opts)
+	hands, skippedHands, skippedHandsInfo, err := ParseHands(entries, opts)
 	if err != nil {
 		return nil, err
 	}
@@ -507,8 +567,9 @@ func ConvertEntries(entries []LogEntry, opts ConvertOptions) (*ConvertResult, er
 	hh := convertHandsToHH(hands, opts)
 
 	return &ConvertResult{
-		HH:           []byte(hh),
-		SkippedHands: skippedHands,
+		HH:               []byte(hh),
+		SkippedHands:     skippedHands,
+		SkippedHandsInfo: skippedHandsInfo,
 	}, nil
 }
 
