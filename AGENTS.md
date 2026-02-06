@@ -111,7 +111,11 @@ cat input.json | ./pokernow2gw --hero-name "YourName" > output.txt
 
 For detailed information about the OHH JSON format, see [docs/OHH_FORMAT.md](./docs/OHH_FORMAT.md).
 
+The tool supports both simplified OHH format and the official OHH spec format from [hh-specs.handhistory.org](https://hh-specs.handhistory.org/).
+
 Sample OHH files are available in:
-- `sample/input/sample_ohh.json` - Basic hand example
+- `sample/input/sample_ohh.json` - Basic hand example (simplified format)
+- `sample/input/sample_ohh_showdown.json` - Complete hand with showdown (simplified format)
+- `sample/input/sample_ohh_spec.json` - Official OHH spec format example
 - `sample/input/sample_ohh_showdown.json` - Complete hand with showdown
 ```

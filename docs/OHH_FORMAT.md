@@ -1,12 +1,18 @@
 # OHH (Open Hand History) Format
 
-This document describes the OHH (Open Hand History) JSON format supported by pokernow2gw.
+This document describes the OHH (Open Hand History) JSON formats supported by pokernow2gw.
 
 ## Overview
 
 OHH is a JSON-based format for representing poker hand histories. It provides a structured, machine-readable way to store and exchange poker hand data.
 
-## Format Specification
+pokernow2gw supports two OHH formats:
+1. **Simplified OHH Format** - A straightforward format for basic hand histories
+2. **Official OHH Spec Format** - The official format from [hh-specs.handhistory.org](https://hh-specs.handhistory.org/)
+
+The tool automatically detects which format is being used.
+
+## Format 1: Simplified OHH Format
 
 ### Root Object
 
@@ -173,3 +179,125 @@ Or via stdin:
 ```bash
 cat input.json | ./pokernow2gw --hero-name "YourName" > output.txt
 ```
+
+## Format 2: Official OHH Spec Format
+
+The official OHH specification format from [hh-specs.handhistory.org](https://hh-specs.handhistory.org/) is also fully supported.
+
+### Root Object
+
+```json
+{
+  "id": "unique_id",
+  "ohh": {...},
+  "_profits": {...},
+  "_ev_profits": {...},
+  "_format": "ohh",
+  "createdAt": "2026-02-02T20:17:51.979Z"
+}
+```
+
+### OHH Spec Object
+
+The `ohh` field contains the main hand history data:
+
+```json
+{
+  "spec_version": "1.4.6",
+  "internal_version": "1.0.0",
+  "network_name": "Network Name",
+  "site_name": "Site Name",
+  "game_type": "Holdem",
+  "table_name": "table-name",
+  "table_size": 6,
+  "game_number": "",
+  "start_date_utc": "2026-02-02T20:17:51.970Z",
+  "currency": "Chips",
+  "ante_amount": 0,
+  "small_blind_amount": 0.5,
+  "big_blind_amount": 1,
+  "bet_limit": {
+    "bet_cap": 0,
+    "bet_type": "NL"
+  },
+  "dealer_seat": 3,
+  "hero_player_id": 1,
+  "players": [...],
+  "rounds": [...],
+  "pots": [...]
+}
+```
+
+### Player Object (OHH Spec)
+
+```json
+{
+  "id": 1,
+  "name": "PlayerName",
+  "seat": 1,
+  "starting_stack": 100,
+  "cards": ["Ah", "Kh"],
+  "_uid": "optional_uid"
+}
+```
+
+### Round Object
+
+Rounds represent betting streets (Preflop, Flop, Turn, River):
+
+```json
+{
+  "id": 0,
+  "street": "Preflop",
+  "cards": [],
+  "actions": [
+    {
+      "action_number": 1,
+      "player_id": 1,
+      "action": "Post SB",
+      "amount": 0.5
+    }
+  ]
+}
+```
+
+**Action Types:**
+- `Post SB` - Post small blind
+- `Post BB` - Post big blind
+- `Fold` - Fold
+- `Check` - Check
+- `Call` - Call
+- `Bet` - Bet
+- `Raise` - Raise
+
+**Streets:**
+- `Preflop` - Before the flop
+- `Flop` - Flop betting round (3 cards)
+- `Turn` - Turn betting round (1 card)
+- `River` - River betting round (1 card)
+
+### Pot Object
+
+```json
+{
+  "number": 0,
+  "amount": 150,
+  "rake": 4,
+  "player_wins": [
+    {
+      "player_id": 1,
+      "win_amount": 146
+    }
+  ]
+}
+```
+
+### Example
+
+See `sample/input/sample_ohh_spec.json` for a complete example of the official OHH spec format.
+
+## Format Detection
+
+pokernow2gw automatically detects which OHH format is being used:
+- If the JSON has an `ohh` field at the root level, it's treated as the official OHH spec format
+- Otherwise, it's treated as the simplified OHH format
