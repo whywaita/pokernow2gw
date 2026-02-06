@@ -327,3 +327,149 @@ func TestParse_AutoDetectFormat(t *testing.T) {
 		}
 	})
 }
+
+func TestReadOHHSpec(t *testing.T) {
+// Test with actual OHH spec format
+input := `{
+  "id": "test123",
+  "ohh": {
+    "spec_version": "1.4.6",
+    "internal_version": "1.0.0",
+    "network_name": "Test",
+    "site_name": "Test Site",
+    "game_type": "Holdem",
+    "table_name": "test-table",
+    "table_size": 4,
+    "game_number": "42",
+    "start_date_utc": "2026-02-02T20:17:51.970Z",
+    "currency": "Chips",
+    "ante_amount": 0,
+    "small_blind_amount": 0.5,
+    "big_blind_amount": 1,
+    "bet_limit": {
+      "bet_cap": 0,
+      "bet_type": "NL"
+    },
+    "dealer_seat": 2,
+    "hero_player_id": 1,
+    "players": [
+      {
+        "id": 1,
+        "name": "Hero",
+        "seat": 1,
+        "starting_stack": 100,
+        "cards": ["Ah", "Kh"]
+      },
+      {
+        "id": 2,
+        "name": "Villain",
+        "seat": 2,
+        "starting_stack": 100,
+        "cards": ["Qh", "Jh"]
+      }
+    ],
+    "rounds": [
+      {
+        "id": 0,
+        "street": "Preflop",
+        "cards": [],
+        "actions": [
+          {
+            "action_number": 1,
+            "player_id": 1,
+            "action": "Post SB",
+            "amount": 0.5
+          },
+          {
+            "action_number": 2,
+            "player_id": 2,
+            "action": "Post BB",
+            "amount": 1
+          },
+          {
+            "action_number": 3,
+            "player_id": 1,
+            "action": "Raise",
+            "amount": 3
+          },
+          {
+            "action_number": 4,
+            "player_id": 2,
+            "action": "Call",
+            "amount": 2
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "street": "Flop",
+        "cards": ["Tc", "9c", "8c"],
+        "actions": [
+          {
+            "action_number": 5,
+            "player_id": 2,
+            "action": "Check"
+          },
+          {
+            "action_number": 6,
+            "player_id": 1,
+            "action": "Bet",
+            "amount": 5
+          },
+          {
+            "action_number": 7,
+            "player_id": 2,
+            "action": "Fold"
+          }
+        ]
+      }
+    ],
+    "pots": [
+      {
+        "number": 0,
+        "amount": 6,
+        "rake": 0,
+        "player_wins": [
+          {
+            "player_id": 1,
+            "win_amount": 6
+          }
+        ]
+      }
+    ]
+  }
+}`
+
+opts := ConvertOptions{
+HeroName: "Hero",
+SiteName: "PokerStars",
+}
+
+result, err := ReadOHH(strings.NewReader(input), opts)
+if err != nil {
+t.Fatalf("ReadOHH() error = %v", err)
+}
+
+if result == nil {
+t.Error("ReadOHH() returned nil result for valid OHH spec input")
+}
+
+if len(result.HH) == 0 {
+t.Error("ReadOHH() returned empty HH output")
+}
+
+// Verify the output contains expected elements
+output := string(result.HH)
+if !strings.Contains(output, "Hero") {
+t.Error("Output should contain hero name 'Hero'")
+}
+if !strings.Contains(output, "Villain") {
+t.Error("Output should contain player name 'Villain'")
+}
+if !strings.Contains(output, "Ah Kh") {
+t.Error("Output should contain hero cards 'Ah Kh'")
+}
+if !strings.Contains(output, "Tc 9c 8c") {
+t.Error("Output should contain flop cards 'Tc 9c 8c'")
+}
+}

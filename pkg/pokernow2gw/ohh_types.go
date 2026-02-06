@@ -66,3 +66,83 @@ type OHHWinner struct {
 	Amount    int      `json:"amount"`
 	HandCards []string `json:"handCards,omitempty"`
 }
+
+// OHHSpecFormat represents the official OHH specification format from hh-specs.handhistory.org
+type OHHSpecFormat struct {
+	ID        string       `json:"id"`
+	OHH       OHHSpec      `json:"ohh"`
+	Profits   map[string]float64 `json:"_profits,omitempty"`
+	EVProfits map[string]float64 `json:"_ev_profits,omitempty"`
+	Format    string       `json:"_format,omitempty"`
+	CreatedAt time.Time    `json:"createdAt,omitempty"`
+}
+
+// OHHSpec represents the OHH specification structure
+type OHHSpec struct {
+	SpecVersion      string        `json:"spec_version"`
+	InternalVersion  string        `json:"internal_version"`
+	NetworkName      string        `json:"network_name"`
+	SiteName         string        `json:"site_name"`
+	GameType         string        `json:"game_type"`
+	TableName        string        `json:"table_name"`
+	TableSize        int           `json:"table_size"`
+	GameNumber       string        `json:"game_number"`
+	StartDateUTC     time.Time     `json:"start_date_utc"`
+	Currency         string        `json:"currency"`
+	AnteAmount       float64       `json:"ante_amount"`
+	SmallBlindAmount float64       `json:"small_blind_amount"`
+	BigBlindAmount   float64       `json:"big_blind_amount"`
+	BetLimit         OHHBetLimit   `json:"bet_limit"`
+	DealerSeat       int           `json:"dealer_seat"`
+	HeroPlayerID     int           `json:"hero_player_id"`
+	Players          []OHHSpecPlayer `json:"players"`
+	Rounds           []OHHRound    `json:"rounds"`
+	Pots             []OHHPot      `json:"pots"`
+}
+
+// OHHBetLimit represents bet limit information
+type OHHBetLimit struct {
+	BetCap  float64 `json:"bet_cap"`
+	BetType string  `json:"bet_type"` // NL, PL, FL
+}
+
+// OHHSpecPlayer represents a player in the OHH spec format
+type OHHSpecPlayer struct {
+	ID            int      `json:"id"`
+	Name          string   `json:"name"`
+	Seat          int      `json:"seat"`
+	StartingStack float64  `json:"starting_stack"`
+	Cards         []string `json:"cards,omitempty"`
+	UID           string   `json:"_uid,omitempty"`
+}
+
+// OHHRound represents a betting round
+type OHHRound struct {
+	ID      int              `json:"id"`
+	Street  string           `json:"street"` // Preflop, Flop, Turn, River
+	Cards   []string         `json:"cards"`
+	Actions []OHHRoundAction `json:"actions"`
+}
+
+// OHHRoundAction represents an action in a round
+type OHHRoundAction struct {
+	ActionNumber int     `json:"action_number"`
+	PlayerID     int     `json:"player_id"`
+	Action       string  `json:"action"` // Post SB, Post BB, Fold, Check, Call, Bet, Raise
+	Amount       float64 `json:"amount,omitempty"`
+	IsAllIn      bool    `json:"is_allin,omitempty"`
+}
+
+// OHHPot represents a pot in the hand
+type OHHPot struct {
+	Number     int             `json:"number"`
+	Amount     float64         `json:"amount"`
+	Rake       float64         `json:"rake"`
+	PlayerWins []OHHPlayerWin  `json:"player_wins"`
+}
+
+// OHHPlayerWin represents a player's win in a pot
+type OHHPlayerWin struct {
+	PlayerID  int     `json:"player_id"`
+	WinAmount float64 `json:"win_amount"`
+}
