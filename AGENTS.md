@@ -117,5 +117,4 @@ Sample OHH files are available in:
 - `sample/input/sample_ohh.json` - Basic hand example (simplified format)
 - `sample/input/sample_ohh_showdown.json` - Complete hand with showdown (simplified format)
 - `sample/input/sample_ohh_spec.json` - Official OHH spec format example
-- `sample/input/sample_ohh_showdown.json` - Complete hand with showdown
 ```
