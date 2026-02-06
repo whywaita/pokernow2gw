@@ -69,11 +69,12 @@ go build -o pokernow2gw cmd/pokernow2gw/main.go
 
 ### Input Formats
 
-The tool supports two input formats:
+The tool supports three input formats:
 - **PokerNow CSV**: The standard export format from PokerNow
 - **OHH JSON**: Open Hand History format (JSON-based)
+- **JSONL (JSON Lines)**: Multiple hands in JSON Lines format, one per line
 
-The format is automatically detected, so you can use the same command for both.
+The format is automatically detected, so you can use the same command for all formats.
 
 ### Running the Converter
 
@@ -101,20 +102,30 @@ The format is automatically detected, so you can use the same command for both.
 ./pokernow2gw -i input.json -o output.txt --hero-name "YourName"
 ```
 
+#### Convert JSONL (multiple hands)
+```bash
+./pokernow2gw -i hands.jsonl -o output.txt --hero-name "YourName"
+```
+
 #### Using stdin/stdout
 ```bash
 cat input.csv | ./pokernow2gw --hero-name "YourName" > output.txt
 cat input.json | ./pokernow2gw --hero-name "YourName" > output.txt
+cat hands.jsonl | ./pokernow2gw --hero-name "YourName" > output.txt
 ```
 
 ### OHH Format Documentation
 
 For detailed information about the OHH JSON format, see [docs/OHH_FORMAT.md](./docs/OHH_FORMAT.md).
 
-The tool supports both simplified OHH format and the official OHH spec format from [hh-specs.handhistory.org](https://hh-specs.handhistory.org/).
+The tool supports:
+- Simplified OHH format
+- Official OHH spec format from [hh-specs.handhistory.org](https://hh-specs.handhistory.org/)
+- JSONL (JSON Lines) format for processing multiple hands
 
 Sample OHH files are available in:
 - `sample/input/sample_ohh.json` - Basic hand example (simplified format)
 - `sample/input/sample_ohh_showdown.json` - Complete hand with showdown (simplified format)
 - `sample/input/sample_ohh_spec.json` - Official OHH spec format example
+- `sample/input/sample_ohh_spec.jsonl` - JSONL format with multiple hands
 ```

@@ -6,9 +6,10 @@ This document describes the OHH (Open Hand History) JSON formats supported by po
 
 OHH is a JSON-based format for representing poker hand histories. It provides a structured, machine-readable way to store and exchange poker hand data.
 
-pokernow2gw supports two OHH formats:
+pokernow2gw supports three OHH input formats:
 1. **Simplified OHH Format** - A straightforward format for basic hand histories
 2. **Official OHH Spec Format** - The official format from [hh-specs.handhistory.org](https://hh-specs.handhistory.org/)
+3. **JSONL (JSON Lines)** - Multiple hands in JSON Lines format, one hand per line
 
 The tool automatically detects which format is being used.
 
@@ -301,3 +302,50 @@ See `sample/input/sample_ohh_spec.json` for a complete example of the official O
 pokernow2gw automatically detects which OHH format is being used:
 - If the JSON has an `ohh` field at the root level, it's treated as the official OHH spec format
 - Otherwise, it's treated as the simplified OHH format
+
+## Format 3: JSONL (JSON Lines) Format
+
+JSONL (JSON Lines) is a convenient format for processing multiple hands. Each line contains a complete JSON object representing a single hand.
+
+### Structure
+
+Each line should contain either:
+- A complete OHH spec format object (with `ohh` field)
+- A complete simplified OHH hand object
+
+### Example
+
+```jsonl
+{"id":"hand1","ohh":{"spec_version":"1.4.6","network_name":"Test","site_name":"Test",...}}
+{"id":"hand2","ohh":{"spec_version":"1.4.6","network_name":"Test","site_name":"Test",...}}
+{"id":"hand3","ohh":{"spec_version":"1.4.6","network_name":"Test","site_name":"Test",...}}
+```
+
+### Benefits
+
+- **Streaming**: Process large numbers of hands without loading all into memory
+- **Appending**: Easily append new hands to existing files
+- **Line-based processing**: Each line is independent, making it easy to parallelize or filter
+
+### Usage
+
+```bash
+./pokernow2gw -i hands.jsonl --hero-name "YourName" -o output.txt
+```
+
+Or via stdin:
+
+```bash
+cat hands.jsonl | ./pokernow2gw --hero-name "YourName" > output.txt
+```
+
+### Sample File
+
+See `sample/input/sample_ohh_spec.jsonl` for a complete example with multiple hands.
+
+### Limitations
+
+- Maximum 10,000 lines per file (to prevent excessive memory usage)
+- Each line must be valid JSON
+- Empty lines are ignored
+- Invalid lines are skipped and counted in skipped hands

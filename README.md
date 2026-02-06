@@ -17,6 +17,7 @@ This software is not intended to promote or direct users to any online casino si
 - Supports multiple input formats:
   - PokerNow CSV log format
   - OHH (Open Hand History) JSON format
+  - JSONL (JSON Lines) for multi-hand processing
 - Automatic format detection
 - Outputs GTO Wizard-compatible Hand History format
 
