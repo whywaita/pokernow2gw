@@ -1,0 +1,151 @@
+{
+  "version": "1.0",
+  "hands": [
+    {
+      "handId": "9876543210",
+      "handNumber": "42",
+      "gameType": "No Limit Texas Hold'em",
+      "tableName": "Final Table",
+      "startTime": "2025-12-01T20:30:00.000Z",
+      "blinds": {
+        "smallBlind": 100,
+        "bigBlind": 200
+      },
+      "ante": 25,
+      "players": [
+        {
+          "seatNumber": 1,
+          "name": "Alice",
+          "stack": 5000
+        },
+        {
+          "seatNumber": 2,
+          "name": "Bob",
+          "stack": 4500
+        },
+        {
+          "seatNumber": 3,
+          "name": "Charlie",
+          "stack": 3000
+        }
+      ],
+      "dealer": {
+        "seatNumber": 3
+      },
+      "heroCards": ["As", "Ks"],
+      "board": {
+        "flop": ["Ac", "Kh", "2d"],
+        "turn": "7s",
+        "river": "Qh"
+      },
+      "actions": [
+        {
+          "player": "Alice",
+          "actionType": "postAnte",
+          "amount": 25,
+          "street": "preflop"
+        },
+        {
+          "player": "Bob",
+          "actionType": "postAnte",
+          "amount": 25,
+          "street": "preflop"
+        },
+        {
+          "player": "Charlie",
+          "actionType": "postAnte",
+          "amount": 25,
+          "street": "preflop"
+        },
+        {
+          "player": "Alice",
+          "actionType": "postSB",
+          "amount": 100,
+          "street": "preflop"
+        },
+        {
+          "player": "Bob",
+          "actionType": "postBB",
+          "amount": 200,
+          "street": "preflop"
+        },
+        {
+          "player": "Charlie",
+          "actionType": "raise",
+          "amount": 600,
+          "street": "preflop"
+        },
+        {
+          "player": "Alice",
+          "actionType": "call",
+          "amount": 500,
+          "street": "preflop"
+        },
+        {
+          "player": "Bob",
+          "actionType": "fold",
+          "street": "preflop"
+        },
+        {
+          "player": "Alice",
+          "actionType": "check",
+          "street": "flop"
+        },
+        {
+          "player": "Charlie",
+          "actionType": "bet",
+          "amount": 800,
+          "street": "flop"
+        },
+        {
+          "player": "Alice",
+          "actionType": "raise",
+          "amount": 2000,
+          "street": "flop"
+        },
+        {
+          "player": "Charlie",
+          "actionType": "call",
+          "amount": 1200,
+          "street": "flop"
+        },
+        {
+          "player": "Alice",
+          "actionType": "bet",
+          "amount": 1000,
+          "street": "turn"
+        },
+        {
+          "player": "Charlie",
+          "actionType": "call",
+          "amount": 1000,
+          "street": "turn",
+          "isAllIn": true
+        },
+        {
+          "player": "Alice",
+          "actionType": "show",
+          "street": "showdown"
+        },
+        {
+          "player": "Charlie",
+          "actionType": "show",
+          "street": "showdown"
+        },
+        {
+          "player": "Alice",
+          "actionType": "collect",
+          "amount": 6475,
+          "street": "showdown"
+        }
+      ],
+      "winners": [
+        {
+          "player": "Alice",
+          "amount": 6475,
+          "handCards": ["As", "Ks"]
+        }
+      ]
+    }
+  ]
+}

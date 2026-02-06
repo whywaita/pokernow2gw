@@ -7,7 +7,7 @@
 
     <!-- Open Graph Protocol (OGP) -->
     <meta property="og:title" content="PokerNow to GTO Wizard Hand History Converter">
-    <meta property="og:description" content="Convert PokerNow CSV logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, and more">
+    <meta property="og:description" content="Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, and more">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://whywaita.github.io/pokernow2gw/">
     <meta property="og:site_name" content="PokerNow to GTO Wizard Hand History Converter">
@@ -15,10 +15,10 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PokerNow to GTO Wizard Hand History Converter">
-    <meta name="twitter:description" content="Convert PokerNow CSV logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, and more">
+    <meta name="twitter:description" content="Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, and more">
 
     <!-- Additional meta tags -->
-    <meta name="description" content="Convert PokerNow CSV logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, and more">
+    <meta name="description" content="Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, and more">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -157,7 +157,7 @@
     <div class="main-container">
         <div class="text-center mb-4">
             <h1 class="page-title display-4">🃏 PokerNow to GTO Wizard Converter</h1>
-            <p class="subtitle lead">Convert PokerNow CSV logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, anymore </p>
+            <p class="subtitle lead">Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, and more</p>
         </div>
 
         <div class="row">
@@ -195,15 +195,19 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="csvInput" class="form-label fw-bold">PokerNow CSV Log</label>
+                            <label for="csvInput" class="form-label fw-bold">PokerNow Log (CSV or OHH JSON)</label>
                             <textarea class="form-control" id="csvInput" rows="10"
-                                      placeholder='Paste your PokerNow CSV here...
+                                      placeholder='Paste your PokerNow CSV or OHH JSON here...
 
-Example:
+CSV Example:
 "entry","at","order"
 "-- starting hand #1 (id: abc123) (No Limit Texas Hold&#39;em) (dealer: ""Player1 @ XYZ"") --","2024-01-01T00:00:00.000Z",1
-...'></textarea>
-                            <div class="form-text">Paste the entire CSV content from PokerNow log export</div>
+...
+
+JSON Example:
+{"version":"1.0","hands":[...]}
+'></textarea>
+                            <div class="form-text">Paste the entire CSV or JSON content from PokerNow log export or OHH format</div>
                         </div>
 
                         <div class="d-grid gap-2">
@@ -567,7 +571,7 @@ ${info.raw_input.join('\n')}
             }
 
             if (!csvInput) {
-                showError("Please paste CSV content");
+                showError("Please paste CSV or JSON content");
                 return;
             }
 
