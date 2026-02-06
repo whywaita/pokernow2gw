@@ -7,6 +7,12 @@ import (
 	"strings"
 )
 
+const (
+	// maxJSONLLines is the maximum number of lines to process in a JSONL file
+	// to prevent excessive memory usage
+	maxJSONLLines = 10000
+)
+
 // ReadOHH reads Open Hand History JSON from reader and converts to internal Hand format
 // Supports both simplified OHH format and official OHH spec format
 func ReadOHH(r io.Reader, opts ConvertOptions) (*ConvertResult, error) {
@@ -497,7 +503,7 @@ allHands = append(allHands, hand)
 }
 
 // Limit the number of lines processed to avoid excessive memory usage
-if lineNum > 10000 {
+if lineNum > maxJSONLLines {
 break
 }
 }
