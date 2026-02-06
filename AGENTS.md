@@ -57,7 +57,7 @@ go build -o pokernow2gw cmd/pokernow2gw/main.go
 
 3. Open http://localhost:8080 in your browser
 
-4. Paste your PokerNow CSV log and your hero name, then click "Convert"
+4. Paste your PokerNow CSV log or OHH JSON and your hero name, then click "Convert"
 
 ## Command Line Interface (CLI)
 
@@ -67,6 +67,14 @@ go build -o pokernow2gw cmd/pokernow2gw/main.go
 go build -o pokernow2gw cmd/pokernow2gw/main.go
 ```
 
+### Input Formats
+
+The tool supports two input formats:
+- **PokerNow CSV**: The standard export format from PokerNow
+- **OHH JSON**: Open Hand History format (JSON-based)
+
+The format is automatically detected, so you can use the same command for both.
+
 ### Running the Converter
 
 ```bash
@@ -75,14 +83,35 @@ go build -o pokernow2gw cmd/pokernow2gw/main.go
 
 ### Options
 
-- `-i, --input`: Input CSV file (or use stdin)
+- `-i, --input`: Input file (CSV or JSON format, or use stdin)
 - `-o, --output`: Output file (or use stdout)
 - `--hero-name`: Your display name in the game (required)
 - `--timezone`: Timezone for output (default: "UTC")
 - `--tournament-name`: Tournament name (optional)
 
-### Example with stdin/stdout
+### Examples
 
+#### Convert PokerNow CSV
+```bash
+./pokernow2gw -i input.csv -o output.txt --hero-name "YourName"
+```
+
+#### Convert OHH JSON
+```bash
+./pokernow2gw -i input.json -o output.txt --hero-name "YourName"
+```
+
+#### Using stdin/stdout
 ```bash
 cat input.csv | ./pokernow2gw --hero-name "YourName" > output.txt
+cat input.json | ./pokernow2gw --hero-name "YourName" > output.txt
+```
+
+### OHH Format Documentation
+
+For detailed information about the OHH JSON format, see [docs/OHH_FORMAT.md](./docs/OHH_FORMAT.md).
+
+Sample OHH files are available in:
+- `sample/input/sample_ohh.json` - Basic hand example
+- `sample/input/sample_ohh_showdown.json` - Complete hand with showdown
 ```
