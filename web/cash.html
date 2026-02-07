@@ -230,6 +230,8 @@ ${stack}`;
             try {
                 // For cash games, we don't use player count filter (set to 0 = all players)
                 const filterFlags = 0;
+                // gameType: 1 = cash game, 0 = tournament
+                const gameType = 1;
 
                 const { resultText, skippedHands, skippedHandsInfo } = callWasmParseCSV(csvInput, heroName, filterFlags, rakePercent, rakeCapBB);
 

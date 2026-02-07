@@ -8,6 +8,16 @@ import (
 // ErrSpectatorLog is returned when the log is from a spectator (no "Your hand is" entries)
 var ErrSpectatorLog = errors.New("spectator log detected: no hero cards found in any hand")
 
+// GameType represents the game type (cash or tournament)
+type GameType int
+
+const (
+	// GameTypeTournament is the default for backward compatibility
+	GameTypeTournament GameType = iota
+	// GameTypeCash represents cash game format
+	GameTypeCash
+)
+
 // LogEntry represents a single row from the PokerNow CSV log
 type LogEntry struct {
 	Entry string    // ログ内容
@@ -25,6 +35,7 @@ type ConvertOptions struct {
 	PlayerCountFilter PlayerCountFilter // Player count filter for GTO Wizard plans (default: PlayerCountAll)
 	RakePercent       float64           // Rake percentage for cash games (e.g., 5.0 for 5%)
 	RakeCapBB         float64           // Rake cap in big blinds (e.g., 4.0 for 4BB)
+	GameType          GameType          // Cash or Tournament (default: Tournament for backward compatibility)
 }
 
 // SkipReason represents why a hand was skipped

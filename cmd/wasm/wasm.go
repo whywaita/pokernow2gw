@@ -58,7 +58,7 @@ var lastResultInfo [20]byte // Store result info: [ptr(4), len(4), skippedHands(
 
 //lint:ignore U1000 This function is exported to WASM and called from JavaScript
 //go:wasmexport parseCSV
-func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32, rakePercent, rakeCapBB float32) uint32 {
+func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags, gameType uint32, rakePercent, rakeCapBB float32) uint32 {
 	csvText := getString(csvPtr, csvLen)
 	heroName := getString(heroPtr, heroLen)
 
@@ -88,6 +88,14 @@ func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32, rakePercent,
 		playerCountFilter = pokernow2gw.PlayerCountFilter(filterFlags)
 	}
 
+	// Determine game type (0 = tournament, 1 = cash)
+	var gt pokernow2gw.GameType
+	if gameType == 1 {
+		gt = pokernow2gw.GameTypeCash
+	} else {
+		gt = pokernow2gw.GameTypeTournament
+	}
+
 	// Parse CSV
 	reader := strings.NewReader(csvText)
 	opts := pokernow2gw.ConvertOptions{
@@ -97,6 +105,7 @@ func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32, rakePercent,
 		PlayerCountFilter: playerCountFilter,
 		RakePercent:       float64(rakePercent),
 		RakeCapBB:         float64(rakeCapBB),
+		GameType:          gt,
 	}
 
 	result, err := pokernow2gw.Parse(reader, opts)
