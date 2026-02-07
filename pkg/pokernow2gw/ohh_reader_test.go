@@ -329,8 +329,8 @@ func TestParse_AutoDetectFormat(t *testing.T) {
 }
 
 func TestReadOHHSpec(t *testing.T) {
-// Test with actual OHH spec format
-input := `{
+	// Test with actual OHH spec format
+	input := `{
   "id": "test123",
   "ohh": {
     "spec_version": "1.4.6",
@@ -440,136 +440,136 @@ input := `{
   }
 }`
 
-opts := ConvertOptions{
-HeroName: "Hero",
-SiteName: "PokerStars",
-}
+	opts := ConvertOptions{
+		HeroName: "Hero",
+		SiteName: "PokerStars",
+	}
 
-result, err := ReadOHH(strings.NewReader(input), opts)
-if err != nil {
-t.Fatalf("ReadOHH() error = %v", err)
-}
+	result, err := ReadOHH(strings.NewReader(input), opts)
+	if err != nil {
+		t.Fatalf("ReadOHH() error = %v", err)
+	}
 
-if result == nil {
-t.Error("ReadOHH() returned nil result for valid OHH spec input")
-}
+	if result == nil {
+		t.Error("ReadOHH() returned nil result for valid OHH spec input")
+	}
 
-if len(result.HH) == 0 {
-t.Error("ReadOHH() returned empty HH output")
-}
+	if len(result.HH) == 0 {
+		t.Error("ReadOHH() returned empty HH output")
+	}
 
-// Verify the output contains expected elements
-output := string(result.HH)
-if !strings.Contains(output, "Hero") {
-t.Error("Output should contain hero name 'Hero'")
-}
-if !strings.Contains(output, "Villain") {
-t.Error("Output should contain player name 'Villain'")
-}
-if !strings.Contains(output, "Ah Kh") {
-t.Error("Output should contain hero cards 'Ah Kh'")
-}
-if !strings.Contains(output, "Tc 9c 8c") {
-t.Error("Output should contain flop cards 'Tc 9c 8c'")
-}
+	// Verify the output contains expected elements
+	output := string(result.HH)
+	if !strings.Contains(output, "Hero") {
+		t.Error("Output should contain hero name 'Hero'")
+	}
+	if !strings.Contains(output, "Villain") {
+		t.Error("Output should contain player name 'Villain'")
+	}
+	if !strings.Contains(output, "Ah Kh") {
+		t.Error("Output should contain hero cards 'Ah Kh'")
+	}
+	if !strings.Contains(output, "Tc 9c 8c") {
+		t.Error("Output should contain flop cards 'Tc 9c 8c'")
+	}
 }
 
 func TestReadJSONL(t *testing.T) {
-// Test with JSONL format (multiple OHH spec objects, one per line)
-input := `{"id":"hand1","ohh":{"spec_version":"1.4.6","internal_version":"1.0.0","network_name":"Test","site_name":"Test Site","game_type":"Holdem","table_name":"test-table","table_size":2,"game_number":"1","start_date_utc":"2026-02-02T20:00:00.000Z","currency":"Chips","ante_amount":0,"small_blind_amount":0.5,"big_blind_amount":1,"bet_limit":{"bet_cap":0,"bet_type":"NL"},"dealer_seat":2,"hero_player_id":1,"players":[{"id":1,"name":"Hero","seat":1,"starting_stack":100,"cards":["Ah","Kh"]},{"id":2,"name":"Villain","seat":2,"starting_stack":100,"cards":["Qh","Jh"]}],"rounds":[{"id":0,"street":"Preflop","cards":[],"actions":[{"action_number":1,"player_id":1,"action":"Post SB","amount":0.5},{"action_number":2,"player_id":2,"action":"Post BB","amount":1},{"action_number":3,"player_id":1,"action":"Raise","amount":3},{"action_number":4,"player_id":2,"action":"Fold"}]}],"pots":[{"number":0,"amount":3.5,"rake":0,"player_wins":[{"player_id":1,"win_amount":3.5}]}]}}
+	// Test with JSONL format (multiple OHH spec objects, one per line)
+	input := `{"id":"hand1","ohh":{"spec_version":"1.4.6","internal_version":"1.0.0","network_name":"Test","site_name":"Test Site","game_type":"Holdem","table_name":"test-table","table_size":2,"game_number":"1","start_date_utc":"2026-02-02T20:00:00.000Z","currency":"Chips","ante_amount":0,"small_blind_amount":0.5,"big_blind_amount":1,"bet_limit":{"bet_cap":0,"bet_type":"NL"},"dealer_seat":2,"hero_player_id":1,"players":[{"id":1,"name":"Hero","seat":1,"starting_stack":100,"cards":["Ah","Kh"]},{"id":2,"name":"Villain","seat":2,"starting_stack":100,"cards":["Qh","Jh"]}],"rounds":[{"id":0,"street":"Preflop","cards":[],"actions":[{"action_number":1,"player_id":1,"action":"Post SB","amount":0.5},{"action_number":2,"player_id":2,"action":"Post BB","amount":1},{"action_number":3,"player_id":1,"action":"Raise","amount":3},{"action_number":4,"player_id":2,"action":"Fold"}]}],"pots":[{"number":0,"amount":3.5,"rake":0,"player_wins":[{"player_id":1,"win_amount":3.5}]}]}}
 {"id":"hand2","ohh":{"spec_version":"1.4.6","internal_version":"1.0.0","network_name":"Test","site_name":"Test Site","game_type":"Holdem","table_name":"test-table","table_size":2,"game_number":"2","start_date_utc":"2026-02-02T20:01:00.000Z","currency":"Chips","ante_amount":0,"small_blind_amount":0.5,"big_blind_amount":1,"bet_limit":{"bet_cap":0,"bet_type":"NL"},"dealer_seat":1,"hero_player_id":1,"players":[{"id":1,"name":"Hero","seat":1,"starting_stack":103,"cards":["As","Ks"]},{"id":2,"name":"Villain","seat":2,"starting_stack":97,"cards":["Qd","Jd"]}],"rounds":[{"id":0,"street":"Preflop","cards":[],"actions":[{"action_number":1,"player_id":2,"action":"Post SB","amount":0.5},{"action_number":2,"player_id":1,"action":"Post BB","amount":1},{"action_number":3,"player_id":2,"action":"Call","amount":0.5},{"action_number":4,"player_id":1,"action":"Check"}]},{"id":1,"street":"Flop","cards":["Ad","Kd","2h"],"actions":[{"action_number":5,"player_id":1,"action":"Bet","amount":2},{"action_number":6,"player_id":2,"action":"Fold"}]}],"pots":[{"number":0,"amount":2,"rake":0,"player_wins":[{"player_id":1,"win_amount":2}]}]}}`
 
-opts := ConvertOptions{
-HeroName: "Hero",
-SiteName: "PokerStars",
-}
+	opts := ConvertOptions{
+		HeroName: "Hero",
+		SiteName: "PokerStars",
+	}
 
-result, err := ReadJSONL(strings.NewReader(input), opts)
-if err != nil {
-t.Fatalf("ReadJSONL() error = %v", err)
-}
+	result, err := ReadJSONL(strings.NewReader(input), opts)
+	if err != nil {
+		t.Fatalf("ReadJSONL() error = %v", err)
+	}
 
-if result == nil {
-t.Error("ReadJSONL() returned nil result for valid JSONL input")
-}
+	if result == nil {
+		t.Error("ReadJSONL() returned nil result for valid JSONL input")
+	}
 
-if len(result.HH) == 0 {
-t.Error("ReadJSONL() returned empty HH output")
-}
+	if len(result.HH) == 0 {
+		t.Error("ReadJSONL() returned empty HH output")
+	}
 
-// Verify the output contains expected elements from both hands
-output := string(result.HH)
+	// Verify the output contains expected elements from both hands
+	output := string(result.HH)
 
-// Check for first hand
-if !strings.Contains(output, "Hand #1") {
-t.Error("Output should contain 'Hand #1'")
-}
+	// Check for first hand
+	if !strings.Contains(output, "Hand #1") {
+		t.Error("Output should contain 'Hand #1'")
+	}
 
-// Check for second hand
-if !strings.Contains(output, "Hand #2") {
-t.Error("Output should contain 'Hand #2'")
-}
+	// Check for second hand
+	if !strings.Contains(output, "Hand #2") {
+		t.Error("Output should contain 'Hand #2'")
+	}
 
-// Check hero cards from both hands
-if !strings.Contains(output, "Ah Kh") {
-t.Error("Output should contain first hand hero cards 'Ah Kh'")
-}
-if !strings.Contains(output, "As Ks") {
-t.Error("Output should contain second hand hero cards 'As Ks'")
-}
+	// Check hero cards from both hands
+	if !strings.Contains(output, "Ah Kh") {
+		t.Error("Output should contain first hand hero cards 'Ah Kh'")
+	}
+	if !strings.Contains(output, "As Ks") {
+		t.Error("Output should contain second hand hero cards 'As Ks'")
+	}
 
-// Verify we processed multiple hands
-handCount := strings.Count(output, "*** HOLE CARDS ***")
-if handCount != 2 {
-t.Errorf("Expected 2 hands, got %d", handCount)
-}
+	// Verify we processed multiple hands
+	handCount := strings.Count(output, "*** HOLE CARDS ***")
+	if handCount != 2 {
+		t.Errorf("Expected 2 hands, got %d", handCount)
+	}
 }
 
 func TestIsJSONLFormat(t *testing.T) {
-tests := []struct {
-name  string
-input string
-want  bool
-}{
-{
-name:  "valid JSONL with 2 lines",
-input: `{"id":"1","name":"test"}` + "\n" + `{"id":"2","name":"test2"}`,
-want:  true,
-},
-{
-name:  "single JSON object (not JSONL)",
-input: `{"id":"1","name":"test"}`,
-want:  false,
-},
-{
-name:  "empty input",
-input: "",
-want:  false,
-},
-{
-name:  "CSV format",
-input: "entry,at,order\ntest,2024-01-01,1",
-want:  false,
-},
-}
+	tests := []struct {
+		name  string
+		input string
+		want  bool
+	}{
+		{
+			name:  "valid JSONL with 2 lines",
+			input: `{"id":"1","name":"test"}` + "\n" + `{"id":"2","name":"test2"}`,
+			want:  true,
+		},
+		{
+			name:  "single JSON object (not JSONL)",
+			input: `{"id":"1","name":"test"}`,
+			want:  false,
+		},
+		{
+			name:  "empty input",
+			input: "",
+			want:  false,
+		},
+		{
+			name:  "CSV format",
+			input: "entry,at,order\ntest,2024-01-01,1",
+			want:  false,
+		},
+	}
 
-for _, tt := range tests {
-t.Run(tt.name, func(t *testing.T) {
-// We need to import the function from converter.go
-// For now, we'll test through the Parse function
-_ = []byte(tt.input) // Just to avoid unused variable error
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			// We need to import the function from converter.go
+			// For now, we'll test through the Parse function
+			_ = []byte(tt.input) // Just to avoid unused variable error
 
-// Check if starts with { (basic requirement)
-trimmed := strings.TrimSpace(tt.input)
-if len(trimmed) == 0 {
-return
-}
+			// Check if starts with { (basic requirement)
+			trimmed := strings.TrimSpace(tt.input)
+			if len(trimmed) == 0 {
+				return
+			}
 
-startsWithBrace := trimmed[0] == '{'
+			startsWithBrace := trimmed[0] == '{'
 
-if tt.want && !startsWithBrace {
-t.Error("JSONL format should start with '{'")
-}
-})
-}
+			if tt.want && !startsWithBrace {
+				t.Error("JSONL format should start with '{'")
+			}
+		})
+	}
 }

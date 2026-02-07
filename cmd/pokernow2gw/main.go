@@ -33,6 +33,8 @@ func main() {
 	filterHU := flag.Bool("filter-hu", false, "Include heads-up hands (2 players)")
 	filterSpinAndGo := flag.Bool("filter-spinandgo", false, "Include Spin-and-Go hands (3 players)")
 	filterMTT := flag.Bool("filter-mtt", false, "Include MTT hands (4-9 players)")
+	rakePercent := flag.Float64("rake-percent", 0.0, "Rake percentage for cash games (e.g., 5.0 for 5%)")
+	rakeCapBB := flag.Float64("rake-cap-bb", 0.0, "Rake cap in big blinds (e.g., 4.0 for 4BB)")
 
 	flag.Parse()
 
@@ -108,6 +110,8 @@ func main() {
 		TimeLocation:      loc,
 		TournamentName:    *tournamentName,
 		PlayerCountFilter: playerCountFilter,
+		RakePercent:       *rakePercent,
+		RakeCapBB:         *rakeCapBB,
 	}
 
 	result, err := pokernow2gw.ParseCSV(inputReader, opts)

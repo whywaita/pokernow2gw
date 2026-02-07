@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokerNow to GTO Wizard Hand History Converter</title>
+    <title>PokerNow to GTO Wizard Hand History Converter (Cash Game)</title>
 
     <!-- Open Graph Protocol (OGP) -->
-    <meta property="og:title" content="PokerNow to GTO Wizard Hand History Converter">
-    <meta property="og:description" content="Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, and more">
+    <meta property="og:title" content="PokerNow to GTO Wizard Hand History Converter (Cash Game)">
+    <meta property="og:description" content="Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for cash games with customizable rake settings">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://whywaita.github.io/pokernow2gw/">
-    <meta property="og:site_name" content="PokerNow to GTO Wizard Hand History Converter">
+    <meta property="og:url" content="https://whywaita.github.io/pokernow2gw/cash.html">
+    <meta property="og:site_name" content="PokerNow to GTO Wizard Hand History Converter (Cash Game)">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PokerNow to GTO Wizard Hand History Converter">
-    <meta name="twitter:description" content="Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, and more">
+    <meta name="twitter:title" content="PokerNow to GTO Wizard Hand History Converter (Cash Game)">
+    <meta name="twitter:description" content="Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for cash games with customizable rake settings">
 
     <!-- Additional meta tags -->
-    <meta name="description" content="Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, and more">
+    <meta name="description" content="Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for cash games with customizable rake settings">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -156,8 +156,8 @@
 <body>
     <div class="main-container">
         <div class="text-center mb-4">
-            <h1 class="page-title display-4">🃏 PokerNow to GTO Wizard Converter</h1>
-            <p class="subtitle lead">Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for analysis tools like GTO Wizard, PokerTracker, and more</p>
+            <h1 class="page-title display-4">🃏 PokerNow to GTO Wizard Converter (Cash Game)</h1>
+            <p class="subtitle lead">Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for cash games with customizable rake settings</p>
         </div>
 
         <div class="row">
@@ -172,25 +172,20 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label fw-bold">Player Count Filter (GTO Wizard Plans)</label>
-                            <div class="form-text mb-2">Select which hand types to include (all checked = 2-9 players, all unchecked = 2-10 players)</div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="filterHU">
-                                <label class="form-check-label" for="filterHU">
-                                    Heads-Up (2 players)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="filterSpinAndGo">
-                                <label class="form-check-label" for="filterSpinAndGo">
-                                    Spin-and-Go (3 players)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="filterMTT" checked>
-                                <label class="form-check-label" for="filterMTT">
-                                    MTT (4-9 players)
-                                </label>
+                            <label class="form-label fw-bold">Rake Settings (Cash Game)</label>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="rakePercent" class="form-label">Rake Percentage (%)</label>
+                                    <input type="number" class="form-control" id="rakePercent"
+                                           value="5.0" min="0" max="100" step="0.1">
+                                    <div class="form-text">Percentage of pot taken as rake (e.g., 5 for 5%)</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="rakeCapBB" class="form-label">Rake Cap (Big Blinds)</label>
+                                    <input type="number" class="form-control" id="rakeCapBB"
+                                           value="4.0" min="0" step="0.1">
+                                    <div class="form-text">Maximum rake in big blinds (e.g., 4 for 4BB cap)</div>
+                                </div>
                             </div>
                         </div>
 
@@ -293,7 +288,7 @@ JSON Example:
             </p>
             <p class="text-muted small">
                 <a href="https://github.com/whywaita/pokernow2gw" class="text-decoration-none" target="_blank">GitHub</a> |
-                <a href="cash.html" class="text-decoration-none">Cash Game Version</a>
+                <a href="index.html" class="text-decoration-none">Tournament Version</a>
             </p>
         </footer>
     </div>
@@ -408,20 +403,15 @@ Time: ${new Date().toISOString()}`;
             }, 2000);
         }
 
-        function buildErrorDetail(errorMessage, heroName, filterFlags, stack = null) {
-            const filters = [];
-            if (filterFlags & (1 << 0)) filters.push('HU');
-            if (filterFlags & (1 << 1)) filters.push('SpinAndGo');
-            if (filterFlags & (1 << 2)) filters.push('MTT');
-            const filterStr = filters.length > 0 ? filters.join(', ') : 'None (all players)';
-
+        function buildErrorDetail(errorMessage, heroName, rakePercent, rakeCapBB, stack = null) {
             let detail = `=== Error Report ===
 Time: ${new Date().toISOString()}
 User Agent: ${navigator.userAgent}
 
 === Settings ===
 Hero Name: ${heroName || '(not set)'}
-Filters: ${filterStr}
+Rake Percent: ${rakePercent}%
+Rake Cap: ${rakeCapBB} BB
 
 === Error Message ===
 ${errorMessage}`;
@@ -565,6 +555,8 @@ ${info.raw_input.join('\n')}
 
             const heroName = document.getElementById('heroName').value.trim();
             const csvInput = document.getElementById('csvInput').value.trim();
+            const rakePercent = parseFloat(document.getElementById('rakePercent').value);
+            const rakeCapBB = parseFloat(document.getElementById('rakeCapBB').value);
 
             if (!heroName) {
                 showError("Please enter your Hero name");
@@ -576,17 +568,14 @@ ${info.raw_input.join('\n')}
                 return;
             }
 
-            // Build filter flags from checkboxes
-            // bit 0 = HU, bit 1 = SpinAndGo, bit 2 = MTT
-            let filterFlags = 0;
-            if (document.getElementById('filterHU').checked) {
-                filterFlags |= (1 << 0); // HU
+            if (isNaN(rakePercent) || rakePercent < 0) {
+                showError("Please enter a valid rake percentage");
+                return;
             }
-            if (document.getElementById('filterSpinAndGo').checked) {
-                filterFlags |= (1 << 1); // SpinAndGo
-            }
-            if (document.getElementById('filterMTT').checked) {
-                filterFlags |= (1 << 2); // MTT
+
+            if (isNaN(rakeCapBB) || rakeCapBB < 0) {
+                showError("Please enter a valid rake cap");
+                return;
             }
 
             // Show loading
@@ -600,11 +589,16 @@ ${info.raw_input.join('\n')}
                 const csvData = allocateString(csvInput);
                 const heroData = allocateString(heroName);
 
-                // Call parseCSV - returns pointer to result info struct
+                // For cash games, we don't use player count filter (set to 0 = all players)
+                const filterFlags = 0;
+
+                // Call parseCSV with rake parameters
                 const resultInfoPtr = wasmInstance.exports.parseCSV(
                     csvData.ptr, csvData.length,
                     heroData.ptr, heroData.length,
-                    filterFlags
+                    filterFlags,
+                    rakePercent,
+                    rakeCapBB
                 );
 
                 // Read result info from memory (5 uint32 values: ptr, len, skippedHands, skippedDetailPtr, skippedDetailLen)
@@ -637,7 +631,7 @@ ${info.raw_input.join('\n')}
 
                 // Check if this is an error (skippedHands = 0xFFFFFFFF indicates error)
                 if (skippedHands === 0xFFFFFFFF) {
-                    const errorDetail = buildErrorDetail(resultText, heroName, filterFlags);
+                    const errorDetail = buildErrorDetail(resultText, heroName, rakePercent, rakeCapBB);
                     showError("Conversion failed. Click below for details.", errorDetail);
                     return;
                 }
@@ -657,7 +651,7 @@ ${info.raw_input.join('\n')}
             } catch (err) {
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('convertBtn').disabled = false;
-                const errorDetail = buildErrorDetail(err.toString(), heroName, filterFlags, err.stack);
+                const errorDetail = buildErrorDetail(err.toString(), heroName, rakePercent, rakeCapBB, err.stack);
                 showError("An unexpected error occurred. Click below for details.", errorDetail);
                 console.error(err);
             }
@@ -673,6 +667,8 @@ ${info.raw_input.join('\n')}
         function downloadResult() {
             const hhOutput = document.getElementById('hhOutput').value;
             const heroName = document.getElementById('heroName').value.trim();
+            const rakePercent = parseFloat(document.getElementById('rakePercent').value);
+            const rakeCapBB = parseFloat(document.getElementById('rakeCapBB').value);
 
             // Extract day and time played from the hand history (format: YYYY/MM/DD HH:MM:SS)
             const dateMatch = hhOutput.match(/(\d{4})\/(\d{2})\/(\d{2}) (\d{2}):(\d{2}):(\d{2})/);
@@ -682,25 +678,13 @@ ${info.raw_input.join('\n')}
             } else {
                 // Fallback to current date/time if not found
                 const now = new Date();
-                dayPlayed = now.toISOString().slice(0, 19).replace(/[T:]/g, '-').replace(/-/g, (m, i) => i < 10 ? '-' : '-');
                 dayPlayed = now.toISOString().slice(0, 10) + '_' + now.toISOString().slice(11, 19).replace(/:/g, '-');
             }
 
-            // Build filter suffix from selected checkboxes
-            const filters = [];
-            if (document.getElementById('filterHU').checked) {
-                filters.push('HU');
-            }
-            if (document.getElementById('filterSpinAndGo').checked) {
-                filters.push('SnG');
-            }
-            if (document.getElementById('filterMTT').checked) {
-                filters.push('MTT');
-            }
-            const filterSuffix = filters.length > 0 ? filters.join('-') : 'All';
-
-            // Generate filename: gtowizard_hh_<Day played>_<hero name>_<filter>.txt
-            const filename = `gtowizard_hh_${dayPlayed}_${heroName}_${filterSuffix}.txt`;
+            // Generate filename: gtowizard_hh_cash_<Day played>_<hero name>_<rake>pc_<cap>bb.txt
+            const rakeStr = rakePercent.toFixed(1).replace('.', 'p');
+            const capStr = rakeCapBB.toFixed(1).replace('.', 'p');
+            const filename = `gtowizard_hh_cash_${dayPlayed}_${heroName}_${rakeStr}pc_${capStr}bb.txt`;
 
             // Create blob and download
             const blob = new Blob([hhOutput], { type: 'text/plain' });

@@ -50,7 +50,7 @@ var lastResultInfo [20]byte // Store result info: [ptr(4), len(4), skippedHands(
 
 //lint:ignore U1000 This function is exported to WASM and called from JavaScript
 //go:wasmexport parseCSV
-func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32) uint32 {
+func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32, rakePercent, rakeCapBB float32) uint32 {
 	csvText := getString(csvPtr, csvLen)
 	heroName := getString(heroPtr, heroLen)
 
@@ -87,6 +87,8 @@ func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32) uint32 {
 		SiteName:          "PokerStars",
 		TimeLocation:      time.UTC,
 		PlayerCountFilter: playerCountFilter,
+		RakePercent:       float64(rakePercent),
+		RakeCapBB:         float64(rakeCapBB),
 	}
 
 	result, err := pokernow2gw.ParseCSV(reader, opts)

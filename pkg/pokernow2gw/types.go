@@ -23,6 +23,8 @@ type ConvertOptions struct {
 	TournamentName    string            // optional
 	TournamentID      string            // optional (will use first hand's ID if not specified)
 	PlayerCountFilter PlayerCountFilter // Player count filter for GTO Wizard plans (default: PlayerCountAll)
+	RakePercent       float64           // Rake percentage for cash games (e.g., 5.0 for 5%)
+	RakeCapBB         float64           // Rake cap in big blinds (e.g., 4.0 for 4BB)
 }
 
 // SkipReason represents why a hand was skipped

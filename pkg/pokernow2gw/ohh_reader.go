@@ -319,7 +319,7 @@ func convertOHHHandToHand(ohhHand OHHHand) (Hand, error) {
 func convertOHHSpecActionType(actionType string) ActionType {
 	// Normalize to lowercase for comparison
 	action := strings.ToLower(actionType)
-	
+
 	switch action {
 	case "fold":
 		return ActionFold
@@ -352,7 +352,7 @@ func convertOHHSpecActionType(actionType string) ActionType {
 func convertOHHSpecStreet(street string) Street {
 	// Normalize to lowercase for comparison
 	s := strings.ToLower(street)
-	
+
 	switch s {
 	case "preflop":
 		return StreetPreflop
@@ -420,103 +420,103 @@ func convertOHHStreet(street string) Street {
 // ReadJSONL reads JSONL (JSON Lines) format with multiple OHH spec hands
 // Each line should contain a complete OHH spec format JSON object
 func ReadJSONL(r io.Reader, opts ConvertOptions) (*ConvertResult, error) {
-data, err := io.ReadAll(r)
-if err != nil {
-return nil, fmt.Errorf("failed to read JSONL: %w", err)
-}
+	data, err := io.ReadAll(r)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read JSONL: %w", err)
+	}
 
-// Set defaults
-if opts.SiteName == "" {
-opts.SiteName = "PokerStars"
-}
+	// Set defaults
+	if opts.SiteName == "" {
+		opts.SiteName = "PokerStars"
+	}
 
-lines := strings.Split(string(data), "\n")
-var allHands []Hand
-totalSkipped := 0
+	lines := strings.Split(string(data), "\n")
+	var allHands []Hand
+	totalSkipped := 0
 
-for lineNum, line := range lines {
-line = strings.TrimSpace(line)
-if line == "" {
-continue
-}
+	for lineNum, line := range lines {
+		line = strings.TrimSpace(line)
+		if line == "" {
+			continue
+		}
 
-// Try to parse each line as OHH spec format
-var formatCheck map[string]interface{}
-if err := json.Unmarshal([]byte(line), &formatCheck); err != nil {
-// Skip invalid JSON lines
-totalSkipped++
-continue
-}
+		// Try to parse each line as OHH spec format
+		var formatCheck map[string]interface{}
+		if err := json.Unmarshal([]byte(line), &formatCheck); err != nil {
+			// Skip invalid JSON lines
+			totalSkipped++
+			continue
+		}
 
-// Check if this is the official OHH spec format (has "ohh" field)
-if _, hasOHH := formatCheck["ohh"]; hasOHH {
-var specFormat OHHSpecFormat
-if err := json.Unmarshal([]byte(line), &specFormat); err != nil {
-totalSkipped++
-continue
-}
+		// Check if this is the official OHH spec format (has "ohh" field)
+		if _, hasOHH := formatCheck["ohh"]; hasOHH {
+			var specFormat OHHSpecFormat
+			if err := json.Unmarshal([]byte(line), &specFormat); err != nil {
+				totalSkipped++
+				continue
+			}
 
-// Set time location from first hand
-if opts.TimeLocation == nil {
-opts.TimeLocation = specFormat.OHH.StartDateUTC.Location()
-}
+			// Set time location from first hand
+			if opts.TimeLocation == nil {
+				opts.TimeLocation = specFormat.OHH.StartDateUTC.Location()
+			}
 
-hand, err := convertOHHSpecToHand(specFormat.OHH, opts)
-if err != nil {
-totalSkipped++
-continue
-}
+			hand, err := convertOHHSpecToHand(specFormat.OHH, opts)
+			if err != nil {
+				totalSkipped++
+				continue
+			}
 
-// Check if this hand has hero cards
-if len(hand.HeroCards) == 0 {
-// Skip spectator hands in JSONL
-totalSkipped++
-continue
-}
+			// Check if this hand has hero cards
+			if len(hand.HeroCards) == 0 {
+				// Skip spectator hands in JSONL
+				totalSkipped++
+				continue
+			}
 
-allHands = append(allHands, hand)
-} else {
-// Try simplified format
-var ohhHand OHHHand
-if err := json.Unmarshal([]byte(line), &ohhHand); err != nil {
-totalSkipped++
-continue
-}
+			allHands = append(allHands, hand)
+		} else {
+			// Try simplified format
+			var ohhHand OHHHand
+			if err := json.Unmarshal([]byte(line), &ohhHand); err != nil {
+				totalSkipped++
+				continue
+			}
 
-if opts.TimeLocation == nil {
-opts.TimeLocation = ohhHand.StartTime.Location()
-}
+			if opts.TimeLocation == nil {
+				opts.TimeLocation = ohhHand.StartTime.Location()
+			}
 
-hand, err := convertOHHHandToHand(ohhHand)
-if err != nil {
-totalSkipped++
-continue
-}
+			hand, err := convertOHHHandToHand(ohhHand)
+			if err != nil {
+				totalSkipped++
+				continue
+			}
 
-// Check if this hand has hero cards
-if len(hand.HeroCards) == 0 {
-totalSkipped++
-continue
-}
+			// Check if this hand has hero cards
+			if len(hand.HeroCards) == 0 {
+				totalSkipped++
+				continue
+			}
 
-allHands = append(allHands, hand)
-}
+			allHands = append(allHands, hand)
+		}
 
-// Limit the number of lines processed to avoid excessive memory usage
-if lineNum > maxJSONLLines {
-break
-}
-}
+		// Limit the number of lines processed to avoid excessive memory usage
+		if lineNum > maxJSONLLines {
+			break
+		}
+	}
 
-if len(allHands) == 0 {
-return nil, ErrSpectatorLog
-}
+	if len(allHands) == 0 {
+		return nil, ErrSpectatorLog
+	}
 
-// Convert to HH format
-hh := convertHandsToHH(allHands, opts)
+	// Convert to HH format
+	hh := convertHandsToHH(allHands, opts)
 
-return &ConvertResult{
-HH:           []byte(hh),
-SkippedHands: totalSkipped,
-}, nil
+	return &ConvertResult{
+		HH:           []byte(hh),
+		SkippedHands: totalSkipped,
+	}, nil
 }

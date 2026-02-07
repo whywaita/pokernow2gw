@@ -677,7 +677,9 @@ func convertHandToHH(hand Hand, opts ConvertOptions, tournamentID string) string
 
 	// Summary
 	sb.WriteString("*** SUMMARY ***\n")
-	sb.WriteString(fmt.Sprintf("Total pot %d | Rake 0\n", calculateTotalPot(hand)))
+	totalPot := calculateTotalPot(hand)
+	rake := calculateRake(totalPot, hand.BigBlind, opts.RakePercent, opts.RakeCapBB)
+	sb.WriteString(fmt.Sprintf("Total pot %d | Rake %d\n", totalPot, rake))
 	if len(hand.Board.Flop) > 0 {
 		boardCards := append([]string{}, hand.Board.Flop...)
 		if hand.Board.Turn != "" {
@@ -798,6 +800,27 @@ func calculateTotalPot(hand Hand) int {
 	// Uncalled bets should NOT be added to the pot
 	// because they were returned to the player
 	return total
+}
+
+// calculateRake calculates the rake for a hand based on rake settings
+func calculateRake(totalPot int, bigBlind int, rakePercent float64, rakeCapBB float64) int {
+	if rakePercent <= 0 {
+		return 0
+	}
+
+	// Calculate rake as percentage of pot
+	rakeFromPercent := float64(totalPot) * rakePercent / 100.0
+
+	// Calculate rake cap in chips
+	rakeCap := float64(bigBlind) * rakeCapBB
+
+	// Take minimum of calculated rake and cap
+	rake := rakeFromPercent
+	if rakeCap > 0 && rake > rakeCap {
+		rake = rakeCap
+	}
+
+	return int(rake)
 }
 
 // formatPlayerSummary formats a player's summary line
