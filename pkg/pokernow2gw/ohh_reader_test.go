@@ -451,7 +451,7 @@ func TestReadOHHSpec(t *testing.T) {
 	}
 
 	if result == nil {
-		t.Error("ReadOHH() returned nil result for valid OHH spec input")
+		t.Fatal("ReadOHH() returned nil result for valid OHH spec input")
 	}
 
 	if len(result.HH) == 0 {
@@ -490,7 +490,7 @@ func TestReadJSONL(t *testing.T) {
 	}
 
 	if result == nil {
-		t.Error("ReadJSONL() returned nil result for valid JSONL input")
+		t.Fatal("ReadJSONL() returned nil result for valid JSONL input")
 	}
 
 	if len(result.HH) == 0 {
