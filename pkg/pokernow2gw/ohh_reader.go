@@ -213,7 +213,7 @@ func convertOHHSpecToHand(spec OHHSpec, opts ConvertOptions) (Hand, error) {
 
 			// Find player's cards if they won
 			var handCards []string
-			if player.Cards != nil && len(player.Cards) > 0 {
+			if len(player.Cards) > 0 {
 				handCards = player.Cards
 			}
 
