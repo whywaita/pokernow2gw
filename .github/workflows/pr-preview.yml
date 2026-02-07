@@ -37,8 +37,10 @@ jobs:
         with:
           script: |
             const prNumber = context.payload.pull_request.number;
-            const previewUrl = `https://whywaita.github.io/pokernow2gw/pr${prNumber}/`;
-            const cashUrl = `https://whywaita.github.io/pokernow2gw/pr${prNumber}/cash.html`;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const previewUrl = `https://${owner}.github.io/${repo}/pr${prNumber}/`;
+            const cashUrl = `https://${owner}.github.io/${repo}/pr${prNumber}/cash.html`;
             const body = `## 🚀 Preview deployed!\n\n` +
               `- **Tournament**: ${previewUrl}\n` +
               `- **Cash Game**: ${cashUrl}\n\n` +
