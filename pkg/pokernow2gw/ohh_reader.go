@@ -63,17 +63,8 @@ func readSimplifiedOHHFormat(data []byte, opts ConvertOptions) (*ConvertResult, 
 	}
 
 	// Check if this is a spectator log (no hero cards in any hand)
-	if len(hands) > 0 {
-		hasAnyHeroCards := false
-		for _, hand := range hands {
-			if len(hand.HeroCards) > 0 {
-				hasAnyHeroCards = true
-				break
-			}
-		}
-		if !hasAnyHeroCards {
-			return nil, ErrSpectatorLog
-		}
+	if isSpectatorLog(hands) {
+		return nil, ErrSpectatorLog
 	}
 
 	// Convert to HH format
@@ -112,7 +103,7 @@ func readOHHSpecFormat(data []byte, opts ConvertOptions) (*ConvertResult, error)
 	hands := []Hand{hand}
 
 	// Check if this is a spectator log (no hero cards)
-	if len(hand.HeroCards) == 0 {
+	if isSpectatorLog(hands) {
 		return nil, ErrSpectatorLog
 	}
 
@@ -184,16 +175,21 @@ func convertOHHSpecToHand(spec OHHSpec, opts ConvertOptions) (Hand, error) {
 	// Convert actions from rounds
 	var actions []Action
 	for _, round := range spec.Rounds {
-		street := convertOHHSpecStreet(round.Street)
+		street := convertOHHStreet(round.Street)
 		for _, a := range round.Actions {
 			player, ok := playerMap[a.PlayerID]
 			if !ok {
 				continue
 			}
 
+			actionType, err := convertOHHActionType(a.Action)
+			if err != nil {
+				return Hand{}, fmt.Errorf("in round %q action #%d: %w", round.Street, a.ActionNumber, err)
+			}
+
 			action := Action{
 				Player:     player.Name,
-				ActionType: convertOHHSpecActionType(a.Action),
+				ActionType: actionType,
 				Amount:     int(a.Amount),
 				Street:     street,
 				IsAllIn:    a.IsAllIn,
@@ -279,9 +275,13 @@ func convertOHHHandToHand(ohhHand OHHHand) (Hand, error) {
 	// Convert actions
 	actions := make([]Action, 0, len(ohhHand.Actions))
 	for _, a := range ohhHand.Actions {
+		actionType, err := convertOHHActionType(a.ActionType)
+		if err != nil {
+			return Hand{}, fmt.Errorf("in hand %s action for player %q: %w", ohhHand.HandID, a.Player, err)
+		}
 		action := Action{
 			Player:     a.Player,
-			ActionType: convertOHHActionType(a.ActionType),
+			ActionType: actionType,
 			Amount:     a.Amount,
 			Street:     convertOHHStreet(a.Street),
 			IsAllIn:    a.IsAllIn,
@@ -315,42 +315,45 @@ func convertOHHHandToHand(ohhHand OHHHand) (Hand, error) {
 	}, nil
 }
 
-// convertOHHSpecActionType converts OHH spec action type string to ActionType
-func convertOHHSpecActionType(actionType string) ActionType {
-	// Normalize to lowercase for comparison
+// convertOHHActionType converts OHH action type string to ActionType.
+// Handles both simplified format (e.g. "postSB") and spec format (e.g. "Post SB")
+// by normalizing to lowercase before matching.
+// Returns an error for unknown action types to prevent silent data corruption.
+func convertOHHActionType(actionType string) (ActionType, error) {
 	action := strings.ToLower(actionType)
 
 	switch action {
 	case "fold":
-		return ActionFold
+		return ActionFold, nil
 	case "check":
-		return ActionCheck
+		return ActionCheck, nil
 	case "call":
-		return ActionCall
+		return ActionCall, nil
 	case "bet":
-		return ActionBet
+		return ActionBet, nil
 	case "raise":
-		return ActionRaise
+		return ActionRaise, nil
 	case "post sb", "postsb":
-		return ActionPostSB
+		return ActionPostSB, nil
 	case "post bb", "postbb":
-		return ActionPostBB
+		return ActionPostBB, nil
 	case "post ante", "postante":
-		return ActionPostAnte
+		return ActionPostAnte, nil
 	case "show":
-		return ActionShow
+		return ActionShow, nil
 	case "collect":
-		return ActionCollect
+		return ActionCollect, nil
 	case "uncalled":
-		return ActionUncalled
+		return ActionUncalled, nil
 	default:
-		return ActionFold // Default to fold for unknown actions
+		return ActionFold, fmt.Errorf("unknown OHH action type: %q", actionType)
 	}
 }
 
-// convertOHHSpecStreet converts OHH spec street string to Street
-func convertOHHSpecStreet(street string) Street {
-	// Normalize to lowercase for comparison
+// convertOHHStreet converts OHH street string to Street.
+// Handles both simplified format (e.g. "preflop") and spec format (e.g. "Preflop")
+// by normalizing to lowercase before matching.
+func convertOHHStreet(street string) Street {
 	s := strings.ToLower(street)
 
 	switch s {
@@ -369,52 +372,18 @@ func convertOHHSpecStreet(street string) Street {
 	}
 }
 
-// convertOHHActionType converts OHH action type string to ActionType
-func convertOHHActionType(actionType string) ActionType {
-	switch actionType {
-	case "fold":
-		return ActionFold
-	case "check":
-		return ActionCheck
-	case "call":
-		return ActionCall
-	case "bet":
-		return ActionBet
-	case "raise":
-		return ActionRaise
-	case "postSB":
-		return ActionPostSB
-	case "postBB":
-		return ActionPostBB
-	case "postAnte":
-		return ActionPostAnte
-	case "show":
-		return ActionShow
-	case "collect":
-		return ActionCollect
-	case "uncalled":
-		return ActionUncalled
-	default:
-		return ActionFold // Default to fold for unknown actions
+// isSpectatorLog checks if the given hands represent a spectator log
+// (i.e., no hand contains hero cards).
+func isSpectatorLog(hands []Hand) bool {
+	if len(hands) == 0 {
+		return false
 	}
-}
-
-// convertOHHStreet converts OHH street string to Street
-func convertOHHStreet(street string) Street {
-	switch street {
-	case "preflop":
-		return StreetPreflop
-	case "flop":
-		return StreetFlop
-	case "turn":
-		return StreetTurn
-	case "river":
-		return StreetRiver
-	case "showdown":
-		return StreetShowdown
-	default:
-		return StreetPreflop // Default to preflop
+	for _, hand := range hands {
+		if len(hand.HeroCards) > 0 {
+			return false
+		}
 	}
+	return true
 }
 
 // ReadJSONL reads JSONL (JSON Lines) format with multiple OHH spec hands

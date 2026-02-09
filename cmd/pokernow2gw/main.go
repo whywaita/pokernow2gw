@@ -19,8 +19,6 @@ func isStdinPiped() bool {
 	return (stat.Mode() & os.ModeCharDevice) == 0
 }
 
-var siteName = "PokerStars"
-
 func main() {
 	// Define flags
 	input := flag.String("input", "", "Input CSV file (optional, stdin if not specified)")
@@ -33,6 +31,7 @@ func main() {
 	filterHU := flag.Bool("filter-hu", false, "Include heads-up hands (2 players)")
 	filterSpinAndGo := flag.Bool("filter-spinandgo", false, "Include Spin-and-Go hands (3 players)")
 	filterMTT := flag.Bool("filter-mtt", false, "Include MTT hands (4-9 players)")
+	siteName := flag.String("site-name", "PokerStars", "Site name for output (default: PokerStars)")
 	rakePercent := flag.Float64("rake-percent", 0.0, "Rake percentage for cash games (e.g., 5.0 for 5%)")
 	rakeCapBB := flag.Float64("rake-cap-bb", 0.0, "Rake cap in big blinds (e.g., 4.0 for 4BB)")
 
@@ -106,7 +105,7 @@ func main() {
 	// Convert
 	opts := pokernow2gw.ConvertOptions{
 		HeroName:          *heroName,
-		SiteName:          siteName,
+		SiteName:          *siteName,
 		TimeLocation:      loc,
 		TournamentName:    *tournamentName,
 		PlayerCountFilter: playerCountFilter,
@@ -114,7 +113,7 @@ func main() {
 		RakeCapBB:         *rakeCapBB,
 	}
 
-	result, err := pokernow2gw.ParseCSV(inputReader, opts)
+	result, err := pokernow2gw.Parse(inputReader, opts)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error: conversion failed: %v\n", err)
 		os.Exit(1)

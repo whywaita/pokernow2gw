@@ -9,6 +9,14 @@ import (
 	"github.com/whywaita/pokernow2gw/pkg/pokernow2gw"
 )
 
+const (
+	// wasmErrorSentinel is written to the skippedHands field of the result info
+	// to signal an error to JavaScript. When JavaScript reads this value from
+	// the skippedHands position, it should treat the result as an error and
+	// interpret the ptr/len fields as an error message instead of HH output.
+	wasmErrorSentinel = 0xFFFFFFFF
+)
+
 // Memory management for passing strings between Go and JavaScript
 
 //lint:ignore U1000 This function is exported to WASM and called from JavaScript
@@ -91,7 +99,7 @@ func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32, rakePercent,
 		RakeCapBB:         float64(rakeCapBB),
 	}
 
-	result, err := pokernow2gw.ParseCSV(reader, opts)
+	result, err := pokernow2gw.Parse(reader, opts)
 	if err != nil {
 		errMsg := err.Error()
 		lastResult = []byte(errMsg)
@@ -127,10 +135,10 @@ func writeResultInfo(ptr, length, skippedHands, hasError, skippedDetailPtr, skip
 	*(*uint32)(unsafe.Pointer(&lastResultInfo[8])) = skippedHands
 	*(*uint32)(unsafe.Pointer(&lastResultInfo[12])) = skippedDetailPtr
 	*(*uint32)(unsafe.Pointer(&lastResultInfo[16])) = skippedDetailLen
-	// Store hasError as a separate field
-	// For simplicity, we'll use skippedHands = 0xFFFFFFFF to indicate error
+	// When hasError is set, overwrite skippedHands with the error sentinel value.
+	// JavaScript checks for this sentinel to distinguish errors from normal results.
 	if hasError == 1 {
-		*(*uint32)(unsafe.Pointer(&lastResultInfo[8])) = 0xFFFFFFFF
+		*(*uint32)(unsafe.Pointer(&lastResultInfo[8])) = wasmErrorSentinel
 	}
 }
 

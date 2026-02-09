@@ -213,26 +213,31 @@ func TestConvertOHHHandToHand(t *testing.T) {
 
 func TestConvertOHHActionType(t *testing.T) {
 	tests := []struct {
-		input string
-		want  ActionType
+		input   string
+		want    ActionType
+		wantErr bool
 	}{
-		{"fold", ActionFold},
-		{"check", ActionCheck},
-		{"call", ActionCall},
-		{"bet", ActionBet},
-		{"raise", ActionRaise},
-		{"postSB", ActionPostSB},
-		{"postBB", ActionPostBB},
-		{"postAnte", ActionPostAnte},
-		{"show", ActionShow},
-		{"collect", ActionCollect},
-		{"uncalled", ActionUncalled},
-		{"unknown", ActionFold}, // Default to fold
+		{"fold", ActionFold, false},
+		{"check", ActionCheck, false},
+		{"call", ActionCall, false},
+		{"bet", ActionBet, false},
+		{"raise", ActionRaise, false},
+		{"postSB", ActionPostSB, false},
+		{"postBB", ActionPostBB, false},
+		{"postAnte", ActionPostAnte, false},
+		{"show", ActionShow, false},
+		{"collect", ActionCollect, false},
+		{"uncalled", ActionUncalled, false},
+		{"unknown", ActionFold, true}, // Unknown action returns error
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.input, func(t *testing.T) {
-			got := convertOHHActionType(tt.input)
+			got, err := convertOHHActionType(tt.input)
+			if (err != nil) != tt.wantErr {
+				t.Errorf("convertOHHActionType(%v) error = %v, wantErr %v", tt.input, err, tt.wantErr)
+				return
+			}
 			if got != tt.want {
 				t.Errorf("convertOHHActionType(%v) = %v, want %v", tt.input, got, tt.want)
 			}
