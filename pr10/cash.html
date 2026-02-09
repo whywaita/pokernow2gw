@@ -20,138 +20,7 @@
     <!-- Additional meta tags -->
     <meta name="description" content="Convert PokerNow CSV or OHH JSON logs to GTO Wizard Hand History format for cash games with customizable rake settings">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #d1d8e3;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .main-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            padding: 40px;
-        }
-
-        .page-title {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #6c757d;
-            margin-bottom: 30px;
-        }
-
-        textarea {
-            font-family: 'Courier New', monospace;
-            resize: vertical;
-        }
-
-        .btn-gradient {
-            background-color: primary;
-            border: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-gradient:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn-gradient:active {
-            transform: translateY(0);
-        }
-
-        #loading {
-            display: none;
-        }
-
-        #error, #success {
-            display: none;
-        }
-
-        #resultContainer {
-            display: none;
-        }
-
-        /* Error detail styles */
-        .error-detail-toggle {
-            display: inline-block;
-            margin-top: 8px;
-            color: #842029;
-            text-decoration: none;
-            font-size: 0.9em;
-            cursor: pointer;
-        }
-
-        .error-detail-toggle:hover {
-            color: #5c1217;
-            text-decoration: underline;
-        }
-
-        .error-detail-container {
-            margin-top: 10px;
-            padding: 12px;
-            background-color: #f8d7da;
-            border: 1px solid #f1aeb5;
-            border-radius: 6px;
-        }
-
-        .error-detail {
-            margin: 0;
-            padding: 10px;
-            background-color: #2d2d2d;
-            color: #f8f8f2;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.85em;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            max-height: 300px;
-            overflow-y: auto;
-        }
-
-        /* Skipped detail styles */
-        .skipped-detail-toggle {
-            display: inline-block;
-            margin-top: 8px;
-            color: #0a3622;
-            text-decoration: none;
-            font-size: 0.9em;
-            cursor: pointer;
-        }
-
-        .skipped-detail-toggle:hover {
-            color: #052c16;
-            text-decoration: underline;
-        }
-
-        .skipped-detail-container {
-            margin-top: 10px;
-            padding: 12px;
-            background-color: #d1e7dd;
-            border: 1px solid #a3cfbb;
-            border-radius: 6px;
-        }
-
-        .skipped-detail {
-            margin: 0;
-            padding: 10px;
-            background-color: #2d2d2d;
-            color: #f8f8f2;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.85em;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            max-height: 300px;
-            overflow-y: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="common.css">
 </head>
 <body>
     <div class="main-container">
@@ -294,115 +163,8 @@ JSON Example:
     </div>
 
     <script src="wasm_exec.js"></script>
+    <script src="common.js"></script>
     <script>
-        let wasmInstance = null;
-        let wasmMemory = null;
-        let wasmReady = false;
-
-        // Text encoder/decoder for string conversion
-        const encoder = new TextEncoder();
-        const decoder = new TextDecoder();
-
-        // Helper functions for WASM memory management
-        function allocateString(str) {
-            const bytes = encoder.encode(str);
-            const ptr = wasmInstance.exports.malloc(bytes.length);
-            const mem = new Uint8Array(wasmMemory.buffer);
-            mem.set(bytes, ptr);
-            return { ptr, length: bytes.length };
-        }
-
-        function readString(ptr, length) {
-            const mem = new Uint8Array(wasmMemory.buffer);
-            const bytes = mem.slice(ptr, ptr + length);
-            return decoder.decode(bytes);
-        }
-
-        // Initialize WASM with Go runtime + go:wasmexport
-        const go = new Go();
-        WebAssembly.instantiateStreaming(fetch("pokernow2gw.wasm"), go.importObject).then(async (result) => {
-            wasmInstance = result.instance;
-            // In Go 1.24+, memory is exported as "mem" not "memory"
-            wasmMemory = wasmInstance.exports.mem;
-
-            // Start Go runtime in background
-            // It will run forever because main() contains select{}
-            go.run(result.instance);
-
-            // Mark as ready
-            wasmReady = true;
-            console.log("WASM module loaded successfully (using go:wasmexport with Go runtime)");
-        }).catch((err) => {
-            const errorDetail = `Error: ${err.toString()}
-Stack: ${err.stack || 'N/A'}
-User Agent: ${navigator.userAgent}
-Time: ${new Date().toISOString()}`;
-            showError("Failed to load WASM module. Click below for details.", errorDetail);
-            console.error(err);
-        });
-
-        function showError(message, detail = null) {
-            document.getElementById('errorMessage').textContent = message;
-            document.getElementById('error').style.display = 'block';
-            document.getElementById('success').style.display = 'none';
-
-            // Handle error detail
-            const detailWrapper = document.getElementById('errorDetailWrapper');
-            const detailContainer = document.getElementById('errorDetailContainer');
-            const detailElement = document.getElementById('errorDetail');
-            const toggleElement = document.getElementById('errorDetailToggle');
-
-            if (detail) {
-                detailElement.textContent = detail;
-                detailWrapper.style.display = 'block';
-                detailContainer.style.display = 'none';
-                toggleElement.innerHTML = '▶ Show details for developers';
-            } else {
-                detailWrapper.style.display = 'none';
-            }
-        }
-
-        function toggleErrorDetail(event) {
-            event.preventDefault();
-            const container = document.getElementById('errorDetailContainer');
-            const toggle = document.getElementById('errorDetailToggle');
-
-            if (container.style.display === 'none') {
-                container.style.display = 'block';
-                toggle.innerHTML = '▼ Hide details';
-            } else {
-                container.style.display = 'none';
-                toggle.innerHTML = '▶ Show details for developers';
-            }
-        }
-
-        function copyErrorDetail() {
-            const detail = document.getElementById('errorDetail').textContent;
-            navigator.clipboard.writeText(detail).then(() => {
-                showCopySuccess();
-            }).catch((err) => {
-                // Fallback for older browsers
-                const textarea = document.createElement('textarea');
-                textarea.value = detail;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-                showCopySuccess();
-            });
-        }
-
-        function showCopySuccess() {
-            const btn = document.querySelector('#errorDetailContainer button');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '✓ Copied!';
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }, 2000);
-        }
-
         function buildErrorDetail(errorMessage, heroName, rakePercent, rakeCapBB, stack = null) {
             let detail = `=== Error Report ===
 Time: ${new Date().toISOString()}
@@ -424,125 +186,6 @@ ${stack}`;
             }
 
             return detail;
-        }
-
-        function showSuccess(message, skippedHandsInfo = null) {
-            document.getElementById('successMessage').textContent = message;
-            document.getElementById('success').style.display = 'block';
-            document.getElementById('error').style.display = 'none';
-
-            // Handle skipped hands detail
-            const detailWrapper = document.getElementById('skippedDetailWrapper');
-            const detailContainer = document.getElementById('skippedDetailContainer');
-            const detailElement = document.getElementById('skippedDetail');
-            const toggleElement = document.getElementById('skippedDetailToggle');
-
-            if (skippedHandsInfo && skippedHandsInfo.length > 0) {
-                const detailText = formatSkippedHandsInfo(skippedHandsInfo);
-                detailElement.textContent = detailText;
-                detailWrapper.style.display = 'block';
-                detailContainer.style.display = 'none';
-                toggleElement.innerHTML = '▶ Show skipped hands details';
-            } else {
-                detailWrapper.style.display = 'none';
-            }
-        }
-
-        function formatSkippedHandsInfo(skippedHandsInfo) {
-            const reasonLabels = {
-                'incomplete_hand': 'Incomplete hand (not properly closed)',
-                'too_many_players': 'Too many players (> 10)',
-                'filtered_out': 'Filtered out by player count filter'
-            };
-
-            // Count by reason for summary
-            const reasonCounts = {};
-            skippedHandsInfo.forEach(info => {
-                const reason = info.reason;
-                reasonCounts[reason] = (reasonCounts[reason] || 0) + 1;
-            });
-
-            let text = `=== Skipped Hands Report ===
-Total skipped: ${skippedHandsInfo.length} hands
-Time: ${new Date().toISOString()}
-
-=== Summary by Reason ===
-`;
-            for (const [reason, count] of Object.entries(reasonCounts)) {
-                text += `${reasonLabels[reason] || reason}: ${count} hands\n`;
-            }
-
-            text += `
-=== Details ===
-`;
-            skippedHandsInfo.forEach((info, index) => {
-                text += `--- Hand #${index + 1} ---
-Hand Number: #${info.hand_number}
-Hand ID: ${info.hand_id}
-Reason: ${reasonLabels[info.reason] || info.reason}
-Detail: ${info.detail}`;
-                if (info.player_count) {
-                    text += `
-Player Count: ${info.player_count}`;
-                }
-                if (info.raw_input && info.raw_input.length > 0) {
-                    text += `
-
-Raw Input (${info.raw_input.length} lines):
-----------------------------------------
-${info.raw_input.join('\n')}
-----------------------------------------`;
-                }
-                text += '\n\n';
-            });
-
-            return text.trim();
-        }
-
-        function toggleSkippedDetail(event) {
-            event.preventDefault();
-            const container = document.getElementById('skippedDetailContainer');
-            const toggle = document.getElementById('skippedDetailToggle');
-
-            if (container.style.display === 'none') {
-                container.style.display = 'block';
-                toggle.innerHTML = '▼ Hide skipped hands details';
-            } else {
-                container.style.display = 'none';
-                toggle.innerHTML = '▶ Show skipped hands details';
-            }
-        }
-
-        function copySkippedDetail() {
-            const detail = document.getElementById('skippedDetail').textContent;
-            navigator.clipboard.writeText(detail).then(() => {
-                showSkippedCopySuccess();
-            }).catch((err) => {
-                // Fallback for older browsers
-                const textarea = document.createElement('textarea');
-                textarea.value = detail;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textarea);
-                showSkippedCopySuccess();
-            });
-        }
-
-        function showSkippedCopySuccess() {
-            const btn = document.querySelector('#skippedDetailContainer button');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '✓ Copied!';
-            btn.disabled = true;
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            }, 2000);
-        }
-
-        function hideMessages() {
-            document.getElementById('error').style.display = 'none';
-            document.getElementById('success').style.display = 'none';
         }
 
         function convertCSV() {
@@ -585,69 +228,13 @@ ${info.raw_input.join('\n')}
 
             // Call WASM function
             try {
-                // Allocate memory for input strings
-                const csvData = allocateString(csvInput);
-                const heroData = allocateString(heroName);
-
                 // For cash games, we don't use player count filter (set to 0 = all players)
                 const filterFlags = 0;
 
-                // Call parseCSV with rake parameters
-                const resultInfoPtr = wasmInstance.exports.parseCSV(
-                    csvData.ptr, csvData.length,
-                    heroData.ptr, heroData.length,
-                    filterFlags,
-                    rakePercent,
-                    rakeCapBB
-                );
+                const { resultText, skippedHands, skippedHandsInfo } = callWasmParseCSV(csvInput, heroName, filterFlags, rakePercent, rakeCapBB);
 
-                // Read result info from memory (5 uint32 values: ptr, len, skippedHands, skippedDetailPtr, skippedDetailLen)
-                const mem = new Uint8Array(wasmMemory.buffer);
-                const view = new DataView(wasmMemory.buffer);
-
-                const resultPtr = view.getUint32(resultInfoPtr, true);     // little-endian
-                const resultLen = view.getUint32(resultInfoPtr + 4, true);
-                const skippedHands = view.getUint32(resultInfoPtr + 8, true);
-                const skippedDetailPtr = view.getUint32(resultInfoPtr + 12, true);
-                const skippedDetailLen = view.getUint32(resultInfoPtr + 16, true);
-
-                // Read the result string
-                const resultText = readString(resultPtr, resultLen);
-
-                // Read skipped hands detail JSON if available
-                let skippedHandsInfo = null;
-                if (skippedDetailPtr > 0 && skippedDetailLen > 0) {
-                    const skippedDetailJson = readString(skippedDetailPtr, skippedDetailLen);
-                    try {
-                        skippedHandsInfo = JSON.parse(skippedDetailJson);
-                    } catch (e) {
-                        console.error("Failed to parse skipped hands info:", e);
-                    }
-                }
-
-                // Hide loading
-                document.getElementById('loading').style.display = 'none';
-                document.getElementById('convertBtn').disabled = false;
-
-                // Check if this is an error (skippedHands = 0xFFFFFFFF indicates error)
-                if (skippedHands === 0xFFFFFFFF) {
-                    const errorDetail = buildErrorDetail(resultText, heroName, rakePercent, rakeCapBB);
-                    showError("Conversion failed. Click below for details.", errorDetail);
-                    return;
-                }
-
-                // Show result
-                document.getElementById('hhOutput').value = resultText;
-                document.getElementById('resultContainer').style.display = 'block';
-
-                let message = "Conversion successful!";
-                if (skippedHands > 0) {
-                    message += ` (${skippedHands} hands were skipped)`;
-                }
-                showSuccess(message, skippedHandsInfo);
-
-                // Scroll to result
-                document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth' });
+                const errorDetail = buildErrorDetail(resultText, heroName, rakePercent, rakeCapBB);
+                handleConversionResult(resultText, skippedHands, skippedHandsInfo, errorDetail);
             } catch (err) {
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('convertBtn').disabled = false;
@@ -657,55 +244,22 @@ ${info.raw_input.join('\n')}
             }
         }
 
-        function copyToClipboard() {
-            const hhOutput = document.getElementById('hhOutput');
-            hhOutput.select();
-            document.execCommand('copy');
-            showSuccess("Copied to clipboard!");
-        }
-
         function downloadResult() {
             const hhOutput = document.getElementById('hhOutput').value;
             const heroName = document.getElementById('heroName').value.trim();
             const rakePercent = parseFloat(document.getElementById('rakePercent').value);
             const rakeCapBB = parseFloat(document.getElementById('rakeCapBB').value);
 
-            // Extract day and time played from the hand history (format: YYYY/MM/DD HH:MM:SS)
-            const dateMatch = hhOutput.match(/(\d{4})\/(\d{2})\/(\d{2}) (\d{2}):(\d{2}):(\d{2})/);
-            let dayPlayed;
-            if (dateMatch) {
-                dayPlayed = `${dateMatch[1]}-${dateMatch[2]}-${dateMatch[3]}_${dateMatch[4]}-${dateMatch[5]}-${dateMatch[6]}`;
-            } else {
-                // Fallback to current date/time if not found
-                const now = new Date();
-                dayPlayed = now.toISOString().slice(0, 10) + '_' + now.toISOString().slice(11, 19).replace(/:/g, '-');
-            }
+            const dayPlayed = extractDayPlayed(hhOutput);
 
             // Generate filename: gtowizard_hh_cash_<Day played>_<hero name>_<rake>pc_<cap>bb.txt
             const rakeStr = rakePercent.toFixed(1).replace('.', 'p');
             const capStr = rakeCapBB.toFixed(1).replace('.', 'p');
             const filename = `gtowizard_hh_cash_${dayPlayed}_${heroName}_${rakeStr}pc_${capStr}bb.txt`;
 
-            // Create blob and download
-            const blob = new Blob([hhOutput], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = filename;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-
+            downloadFile(hhOutput, filename);
             showSuccess(`Downloaded as ${filename}`);
         }
-
-        // Enter key to submit
-        document.getElementById('csvInput').addEventListener('keydown', function(e) {
-            if (e.ctrlKey && e.key === 'Enter') {
-                convertCSV();
-            }
-        });
     </script>
 </body>
 </html>
