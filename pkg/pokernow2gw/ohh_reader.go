@@ -136,7 +136,7 @@ func convertOHHSpecToHand(spec OHHSpec, opts ConvertOptions) (Hand, error) {
 			SeatNumber:  p.Seat,
 			Name:        p.Name,
 			DisplayName: p.Name,
-			Stack:       int(p.StartingStack),
+			Stack:       p.StartingStack,
 		})
 	}
 
@@ -195,7 +195,7 @@ func convertOHHSpecToHand(spec OHHSpec, opts ConvertOptions) (Hand, error) {
 			action := Action{
 				Player:     player.Name,
 				ActionType: actionType,
-				Amount:     int(a.Amount),
+				Amount:     a.Amount,
 				Street:     street,
 				IsAllIn:    a.IsAllIn,
 			}
@@ -220,7 +220,7 @@ func convertOHHSpecToHand(spec OHHSpec, opts ConvertOptions) (Hand, error) {
 
 			winners = append(winners, Winner{
 				Player:    player.Name,
-				Amount:    int(win.WinAmount),
+				Amount:    win.WinAmount,
 				HandCards: handCards,
 			})
 		}
@@ -240,9 +240,9 @@ func convertOHHSpecToHand(spec OHHSpec, opts ConvertOptions) (Hand, error) {
 		Actions:    actions,
 		Board:      board,
 		StartTime:  spec.StartDateUTC,
-		SmallBlind: int(spec.SmallBlindAmount),
-		BigBlind:   int(spec.BigBlindAmount),
-		Ante:       int(spec.AnteAmount),
+		SmallBlind: spec.SmallBlindAmount,
+		BigBlind:   spec.BigBlindAmount,
+		Ante:       spec.AnteAmount,
 		Winners:    winners,
 		HeroCards:  heroCards,
 		TableName:  spec.TableName,

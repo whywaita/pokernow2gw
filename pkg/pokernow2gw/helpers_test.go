@@ -165,11 +165,11 @@ func TestExtractDisplayName(t *testing.T) {
 func TestCalculateRake(t *testing.T) {
 	tests := []struct {
 		name        string
-		totalPot    int
-		bigBlind    int
+		totalPot    float64
+		bigBlind    float64
 		rakePercent float64
 		rakeCapBB   float64
-		want        int
+		want        float64
 	}{
 		{
 			name:        "no rake (zero percent)",
@@ -225,7 +225,7 @@ func TestCalculateRake(t *testing.T) {
 			bigBlind:    100,
 			rakePercent: 5.0,
 			rakeCapBB:   4.0,
-			want:        0, // 5% of 10 = 0.5, truncated to 0
+			want:        0.5, // 5% of 10 = 0.5
 		},
 		{
 			name:        "zero pot",
@@ -249,7 +249,7 @@ func TestCalculateRake(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			got := calculateRake(tt.totalPot, tt.bigBlind, tt.rakePercent, tt.rakeCapBB)
 			if got != tt.want {
-				t.Errorf("calculateRake(%d, %d, %f, %f) = %d, want %d",
+				t.Errorf("calculateRake(%f, %f, %f, %f) = %f, want %f",
 					tt.totalPot, tt.bigBlind, tt.rakePercent, tt.rakeCapBB, got, tt.want)
 			}
 		})
@@ -260,7 +260,7 @@ func TestCalculateTotalPot(t *testing.T) {
 	tests := []struct {
 		name string
 		hand Hand
-		want int
+		want float64
 	}{
 		{
 			name: "single winner",
@@ -315,7 +315,7 @@ func TestCalculateTotalPot(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			got := calculateTotalPot(tt.hand)
 			if got != tt.want {
-				t.Errorf("calculateTotalPot() = %d, want %d", got, tt.want)
+				t.Errorf("calculateTotalPot() = %f, want %f", got, tt.want)
 			}
 		})
 	}
@@ -741,6 +741,59 @@ func TestConvertOHHActionType_Helpers(t *testing.T) {
 			}
 			if got != tt.want {
 				t.Errorf("convertOHHActionType(%q) = %v, want %v", tt.input, got, tt.want)
+			}
+		})
+	}
+}
+
+func TestFormatNumber(t *testing.T) {
+	tests := []struct {
+		name   string
+		amount float64
+		want   string
+	}{
+		{
+			name:   "integer without decimal",
+			amount: 1.0,
+			want:   "1",
+		},
+		{
+			name:   "integer value",
+			amount: 100,
+			want:   "100",
+		},
+		{
+			name:   "half dollar",
+			amount: 0.5,
+			want:   "0.50",
+		},
+		{
+			name:   "one and half",
+			amount: 1.5,
+			want:   "1.50",
+		},
+		{
+			name:   "zero",
+			amount: 0,
+			want:   "0",
+		},
+		{
+			name:   "large integer",
+			amount: 10000,
+			want:   "10000",
+		},
+		{
+			name:   "small decimal",
+			amount: 0.25,
+			want:   "0.25",
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			got := formatNumber(tt.amount)
+			if got != tt.want {
+				t.Errorf("formatNumber(%f) = %q, want %q", tt.amount, got, tt.want)
 			}
 		})
 	}

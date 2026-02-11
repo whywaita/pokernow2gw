@@ -127,11 +127,11 @@ var logHandlers = []logHandler{
 			if err != nil {
 				return fmt.Errorf("failed to parse ante amount %q in hand #%s: %w", matches[2], hand.HandNumber, err)
 			}
-			hand.Ante = amount
+			hand.Ante = float64(amount)
 			hand.Actions = append(hand.Actions, Action{
 				Player:     player,
 				ActionType: ActionPostAnte,
-				Amount:     amount,
+				Amount:     float64(amount),
 				Street:     *ctx.currentStreet,
 			})
 			return nil
@@ -147,11 +147,11 @@ var logHandlers = []logHandler{
 			if err != nil {
 				return fmt.Errorf("failed to parse small blind amount %q in hand #%s: %w", matches[2], hand.HandNumber, err)
 			}
-			hand.SmallBlind = amount
+			hand.SmallBlind = float64(amount)
 			hand.Actions = append(hand.Actions, Action{
 				Player:     player,
 				ActionType: ActionPostSB,
-				Amount:     amount,
+				Amount:     float64(amount),
 				Street:     *ctx.currentStreet,
 			})
 			return nil
@@ -167,11 +167,11 @@ var logHandlers = []logHandler{
 			if err != nil {
 				return fmt.Errorf("failed to parse big blind amount %q in hand #%s: %w", matches[2], hand.HandNumber, err)
 			}
-			hand.BigBlind = amount
+			hand.BigBlind = float64(amount)
 			hand.Actions = append(hand.Actions, Action{
 				Player:     player,
 				ActionType: ActionPostBB,
-				Amount:     amount,
+				Amount:     float64(amount),
 				Street:     *ctx.currentStreet,
 			})
 			return nil
@@ -247,7 +247,7 @@ var logHandlers = []logHandler{
 			(*ctx.currentHand).Actions = append((*ctx.currentHand).Actions, Action{
 				Player:     player,
 				ActionType: ActionCall,
-				Amount:     amount,
+				Amount:     float64(amount),
 				Street:     *ctx.currentStreet,
 				IsAllIn:    true,
 			})
@@ -266,7 +266,7 @@ var logHandlers = []logHandler{
 			(*ctx.currentHand).Actions = append((*ctx.currentHand).Actions, Action{
 				Player:     player,
 				ActionType: ActionCall,
-				Amount:     amount,
+				Amount:     float64(amount),
 				Street:     *ctx.currentStreet,
 			})
 			return nil
@@ -284,7 +284,7 @@ var logHandlers = []logHandler{
 			(*ctx.currentHand).Actions = append((*ctx.currentHand).Actions, Action{
 				Player:     player,
 				ActionType: ActionBet,
-				Amount:     amount,
+				Amount:     float64(amount),
 				Street:     *ctx.currentStreet,
 				IsAllIn:    true,
 			})
@@ -303,7 +303,7 @@ var logHandlers = []logHandler{
 			(*ctx.currentHand).Actions = append((*ctx.currentHand).Actions, Action{
 				Player:     player,
 				ActionType: ActionBet,
-				Amount:     amount,
+				Amount:     float64(amount),
 				Street:     *ctx.currentStreet,
 			})
 			return nil
@@ -321,7 +321,7 @@ var logHandlers = []logHandler{
 			(*ctx.currentHand).Actions = append((*ctx.currentHand).Actions, Action{
 				Player:     player,
 				ActionType: ActionRaise,
-				Amount:     amount,
+				Amount:     float64(amount),
 				Street:     *ctx.currentStreet,
 				IsAllIn:    true,
 			})
@@ -340,7 +340,7 @@ var logHandlers = []logHandler{
 			(*ctx.currentHand).Actions = append((*ctx.currentHand).Actions, Action{
 				Player:     player,
 				ActionType: ActionRaise,
-				Amount:     amount,
+				Amount:     float64(amount),
 				Street:     *ctx.currentStreet,
 			})
 			return nil
@@ -379,13 +379,13 @@ var logHandlers = []logHandler{
 			hand.Actions = append(hand.Actions, Action{
 				Player:     player,
 				ActionType: ActionCollect,
-				Amount:     amount,
+				Amount:     float64(amount),
 				Street:     StreetShowdown,
 			})
 			// Update winner amount
 			for i := range hand.Winners {
 				if hand.Winners[i].Player == player {
-					hand.Winners[i].Amount = amount
+					hand.Winners[i].Amount = float64(amount)
 					break
 				}
 			}
@@ -400,7 +400,7 @@ var logHandlers = []logHandler{
 			if !found {
 				hand.Winners = append(hand.Winners, Winner{
 					Player: player,
-					Amount: amount,
+					Amount: float64(amount),
 				})
 			}
 			return nil
@@ -418,7 +418,7 @@ var logHandlers = []logHandler{
 			(*ctx.currentHand).Actions = append((*ctx.currentHand).Actions, Action{
 				Player:     player,
 				ActionType: ActionUncalled,
-				Amount:     amount,
+				Amount:     float64(amount),
 				Street:     *ctx.currentStreet,
 			})
 			return nil
@@ -572,7 +572,7 @@ func parsePlayerStacks(stacksStr string) []Player {
 				SeatNumber:  seatNum,
 				Name:        fullName,
 				DisplayName: extractDisplayName(fullName),
-				Stack:       stack,
+				Stack:       float64(stack),
 			})
 		}
 	}

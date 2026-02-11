@@ -73,9 +73,9 @@ type Hand struct {
 	Actions    []Action
 	Board      Board
 	StartTime  time.Time
-	SmallBlind int
-	BigBlind   int
-	Ante       int
+	SmallBlind float64
+	BigBlind   float64
+	Ante       float64
 	Winners    []Winner
 	HeroCards  []string // Heroのハンド（"Your hand is" から取得）
 	TableName  string   // テーブル名（OHH format用）
@@ -87,14 +87,14 @@ type Player struct {
 	SeatNumber  int
 	Name        string
 	DisplayName string // "@" で分割した左側
-	Stack       int
+	Stack       float64
 }
 
 // Action represents a player action
 type Action struct {
 	Player     string
 	ActionType ActionType
-	Amount     int
+	Amount     float64
 	Street     Street
 	IsAllIn    bool
 }
@@ -137,7 +137,7 @@ type Board struct {
 // Winner represents a pot winner
 type Winner struct {
 	Player    string
-	Amount    int
+	Amount    float64
 	HandCards []string // ショウダウンで見せたカード
 	HandName  string   // optional
 }

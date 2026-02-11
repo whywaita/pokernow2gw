@@ -108,8 +108,8 @@ func convertHandIDToNumeric(handID string) string {
 }
 
 // calculateTotalPot calculates the total pot
-func calculateTotalPot(hand Hand) int {
-	total := 0
+func calculateTotalPot(hand Hand) float64 {
+	total := 0.0
 	for _, winner := range hand.Winners {
 		total += winner.Amount
 	}
@@ -119,16 +119,16 @@ func calculateTotalPot(hand Hand) int {
 }
 
 // calculateRake calculates the rake for a hand based on rake settings
-func calculateRake(totalPot int, bigBlind int, rakePercent float64, rakeCapBB float64) int {
+func calculateRake(totalPot float64, bigBlind float64, rakePercent float64, rakeCapBB float64) float64 {
 	if rakePercent <= 0 {
 		return 0
 	}
 
 	// Calculate rake as percentage of pot
-	rakeFromPercent := float64(totalPot) * rakePercent / 100.0
+	rakeFromPercent := totalPot * rakePercent / 100.0
 
 	// Calculate rake cap in chips
-	rakeCap := float64(bigBlind) * rakeCapBB
+	rakeCap := bigBlind * rakeCapBB
 
 	// Take minimum of calculated rake and cap
 	rake := rakeFromPercent
@@ -136,5 +136,5 @@ func calculateRake(totalPot int, bigBlind int, rakePercent float64, rakeCapBB fl
 		rake = rakeCap
 	}
 
-	return int(rake)
+	return rake
 }

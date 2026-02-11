@@ -17,7 +17,7 @@ type OHHHand struct {
 	TableName  string      `json:"tableName"`
 	StartTime  time.Time   `json:"startTime"`
 	Blinds     OHHBlinds   `json:"blinds"`
-	Ante       int         `json:"ante,omitempty"`
+	Ante       float64     `json:"ante,omitempty"`
 	Players    []OHHPlayer `json:"players"`
 	Dealer     OHHSeatRef  `json:"dealer"`
 	HeroCards  []string    `json:"heroCards,omitempty"`
@@ -28,15 +28,15 @@ type OHHHand struct {
 
 // OHHBlinds represents the blind structure
 type OHHBlinds struct {
-	SmallBlind int `json:"smallBlind"`
-	BigBlind   int `json:"bigBlind"`
+	SmallBlind float64 `json:"smallBlind"`
+	BigBlind   float64 `json:"bigBlind"`
 }
 
 // OHHPlayer represents a player at the table
 type OHHPlayer struct {
-	SeatNumber int    `json:"seatNumber"`
-	Name       string `json:"name"`
-	Stack      int    `json:"stack"`
+	SeatNumber int     `json:"seatNumber"`
+	Name       string  `json:"name"`
+	Stack      float64 `json:"stack"`
 }
 
 // OHHSeatRef references a player by seat number
@@ -53,17 +53,17 @@ type OHHBoard struct {
 
 // OHHAction represents a player action
 type OHHAction struct {
-	Player     string `json:"player"`
-	ActionType string `json:"actionType"` // fold, check, call, bet, raise, postSB, postBB, postAnte, show, collect, uncalled
-	Amount     int    `json:"amount,omitempty"`
-	Street     string `json:"street"` // preflop, flop, turn, river, showdown
-	IsAllIn    bool   `json:"isAllIn,omitempty"`
+	Player     string  `json:"player"`
+	ActionType string  `json:"actionType"` // fold, check, call, bet, raise, postSB, postBB, postAnte, show, collect, uncalled
+	Amount     float64 `json:"amount,omitempty"`
+	Street     string  `json:"street"` // preflop, flop, turn, river, showdown
+	IsAllIn    bool    `json:"isAllIn,omitempty"`
 }
 
 // OHHWinner represents a pot winner
 type OHHWinner struct {
 	Player    string   `json:"player"`
-	Amount    int      `json:"amount"`
+	Amount    float64  `json:"amount"`
 	HandCards []string `json:"handCards,omitempty"`
 }
 

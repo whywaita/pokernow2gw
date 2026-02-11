@@ -2,6 +2,8 @@ package pokernow2gw
 
 import (
 	"fmt"
+	"math"
+	"strconv"
 	"strings"
 )
 
@@ -38,12 +40,24 @@ func ConvertEntries(entries []LogEntry, opts ConvertOptions) (*ConvertResult, er
 	}, nil
 }
 
-// formatAmount formats an amount based on game type (adds $ prefix for cash games)
-func formatAmount(amount int, opts ConvertOptions) string {
-	if opts.GameType == GameTypeCash {
-		return fmt.Sprintf("$%d", amount)
+// formatNumber formats a float64 amount as a string
+// Integers are formatted without decimal places (1.0 → "1")
+// Decimals are formatted with 2 decimal places (0.5 → "0.50")
+func formatNumber(amount float64) string {
+	if math.Trunc(amount) == amount {
+		// It's an integer
+		return strconv.FormatFloat(amount, 'f', 0, 64)
 	}
-	return fmt.Sprintf("%d", amount)
+	// It has a decimal part
+	return strconv.FormatFloat(amount, 'f', 2, 64)
+}
+
+// formatAmount formats an amount based on game type (adds $ prefix for cash games)
+func formatAmount(amount float64, opts ConvertOptions) string {
+	if opts.GameType == GameTypeCash {
+		return fmt.Sprintf("$%s", formatNumber(amount))
+	}
+	return formatNumber(amount)
 }
 
 // convertHandsToHH converts Hand slice to GTO Wizard HH text
@@ -77,12 +91,12 @@ func convertHandToHH(hand Hand, opts ConvertOptions, tournamentID string) string
 	timestamp := hand.StartTime.In(opts.TimeLocation).Format("2006/01/02 15:04:05")
 	if opts.GameType == GameTypeCash {
 		// Cash game format: PokerStars Hand #ID: Hold'em No Limit ($SB/$BB USD) - timestamp ET
-		sb.WriteString(fmt.Sprintf("%s Hand #%s: Hold'em No Limit ($%d/$%d USD) - %s ET\n",
-			opts.SiteName, hand.HandID, hand.SmallBlind, hand.BigBlind, timestamp))
+		sb.WriteString(fmt.Sprintf("%s Hand #%s: Hold'em No Limit ($%s/$%s USD) - %s ET\n",
+			opts.SiteName, hand.HandID, formatNumber(hand.SmallBlind), formatNumber(hand.BigBlind), timestamp))
 	} else {
 		// Tournament format
-		sb.WriteString(fmt.Sprintf("%s Hand #%s:  Tournament #%s, $0+$0 Hold'em No Limit - Level 1 (%d/%d) - %s\n",
-			opts.SiteName, hand.HandID, tournamentID, hand.SmallBlind, hand.BigBlind, timestamp))
+		sb.WriteString(fmt.Sprintf("%s Hand #%s:  Tournament #%s, $0+$0 Hold'em No Limit - Level 1 (%s/%s) - %s\n",
+			opts.SiteName, hand.HandID, tournamentID, formatNumber(hand.SmallBlind), formatNumber(hand.BigBlind), timestamp))
 	}
 
 	// Table info
@@ -105,11 +119,11 @@ func convertHandToHH(hand Hand, opts ConvertOptions, tournamentID string) string
 	// Seat info
 	for _, player := range hand.Players {
 		if opts.GameType == GameTypeCash {
-			sb.WriteString(fmt.Sprintf("Seat %d: %s ($%d in chips)\n",
-				player.SeatNumber, player.DisplayName, player.Stack))
+			sb.WriteString(fmt.Sprintf("Seat %d: %s ($%s in chips)\n",
+				player.SeatNumber, player.DisplayName, formatNumber(player.Stack)))
 		} else {
-			sb.WriteString(fmt.Sprintf("Seat %d: %s (%d in chips)\n",
-				player.SeatNumber, player.DisplayName, player.Stack))
+			sb.WriteString(fmt.Sprintf("Seat %d: %s (%s in chips)\n",
+				player.SeatNumber, player.DisplayName, formatNumber(player.Stack)))
 		}
 	}
 
@@ -219,8 +233,8 @@ func formatActionsForStreet(actions []Action, street Street, hand Hand, streetHe
 	}
 
 	// Track current bet amounts for each player and the highest bet in the street
-	playerBets := make(map[string]int)
-	currentBet := 0
+	playerBets := make(map[string]float64)
+	currentBet := 0.0
 
 	for _, action := range streetActions {
 		switch action.ActionType {
@@ -276,9 +290,9 @@ func formatActionsForStreet(actions []Action, street Street, hand Hand, streetHe
 				}
 			} else {
 				if action.IsAllIn {
-					sb.WriteString(fmt.Sprintf("%s: raises to %d and is all-in\n", action.Player, raiseAmount))
+					sb.WriteString(fmt.Sprintf("%s: raises to %s and is all-in\n", action.Player, formatNumber(raiseAmount)))
 				} else {
-					sb.WriteString(fmt.Sprintf("%s: raises to %d\n", action.Player, raiseAmount))
+					sb.WriteString(fmt.Sprintf("%s: raises to %s\n", action.Player, formatNumber(raiseAmount)))
 				}
 			}
 			playerBets[action.Player] = raiseAmount
@@ -352,7 +366,7 @@ func formatPlayerSummary(hand Hand, player Player, opts ConvertOptions) string {
 	}
 
 	// Check if player won
-	wonAmount := 0
+	wonAmount := 0.0
 	for _, winner := range hand.Winners {
 		if winner.Player == player.DisplayName {
 			wonAmount = winner.Amount

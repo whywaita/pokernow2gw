@@ -703,8 +703,8 @@ func TestReadOHHSpec_TableNameAndSiteName(t *testing.T) {
 	}
 
 	// Verify blinds from small_blind_amount and big_blind_amount
-	if !strings.Contains(output, "($0/$1 USD)") {
-		t.Errorf("Output should contain blinds '($0/$1 USD)', got:\n%s", output)
+	if !strings.Contains(output, "($0.50/$1 USD)") {
+		t.Errorf("Output should contain blinds '($0.50/$1 USD)', got:\n%s", output)
 	}
 }
 
