@@ -401,11 +401,6 @@ func ReadJSONL(r io.Reader, opts ConvertOptions) (*ConvertResult, error) {
 		return nil, fmt.Errorf("failed to read JSONL: %w", err)
 	}
 
-	// Set defaults
-	if opts.SiteName == "" {
-		opts.SiteName = "PokerStars"
-	}
-
 	lines := strings.Split(string(data), "\n")
 	var allHands []Hand
 	totalSkipped := 0
@@ -435,6 +430,15 @@ func ReadJSONL(r io.Reader, opts ConvertOptions) (*ConvertResult, error) {
 			// Set time location from first hand
 			if opts.TimeLocation == nil {
 				opts.TimeLocation = specFormat.OHH.StartDateUTC.Location()
+			}
+
+			// Set site name from OHH spec if not already specified
+			if opts.SiteName == "" {
+				if specFormat.OHH.SiteName != "" {
+					opts.SiteName = specFormat.OHH.SiteName
+				} else {
+					opts.SiteName = "PokerStars"
+				}
 			}
 
 			hand, err := convertOHHSpecToHand(specFormat.OHH, opts)

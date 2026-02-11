@@ -279,12 +279,14 @@ function callWasmParseCSV(csvInput, heroName, filterFlags, gameType, rakePercent
             rakeCapBB
         );
     } else {
-        // Tournament mode: no rake parameters
+        // Tournament mode: pass 0 for rake parameters
         resultInfoPtr = wasmInstance.exports.parseCSV(
             csvData.ptr, csvData.length,
             heroData.ptr, heroData.length,
             filterFlags,
-            gameType
+            gameType,
+            0,  // rakePercent
+            0   // rakeCapBB
         );
     }
 
