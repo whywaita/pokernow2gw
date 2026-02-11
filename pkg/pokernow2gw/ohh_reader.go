@@ -118,6 +118,11 @@ func readOHHSpecFormat(data []byte, opts ConvertOptions) (*ConvertResult, error)
 
 // convertOHHSpecToHand converts an OHH spec to internal Hand format
 func convertOHHSpecToHand(spec OHHSpec, opts ConvertOptions) (Hand, error) {
+	// Check bet_type - only NL is supported
+	if spec.BetLimit.BetType != "NL" {
+		return Hand{}, fmt.Errorf("unsupported bet type: %s (only NL is supported)", spec.BetLimit.BetType)
+	}
+
 	// Create player map for quick lookup
 	playerMap := make(map[int]*OHHSpecPlayer)
 	for i := range spec.Players {
@@ -240,6 +245,8 @@ func convertOHHSpecToHand(spec OHHSpec, opts ConvertOptions) (Hand, error) {
 		Ante:       int(spec.AnteAmount),
 		Winners:    winners,
 		HeroCards:  heroCards,
+		TableName:  spec.TableName,
+		SiteName:   spec.SiteName,
 	}, nil
 }
 

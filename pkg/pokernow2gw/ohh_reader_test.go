@@ -530,6 +530,184 @@ func TestReadJSONL(t *testing.T) {
 	}
 }
 
+func TestReadOHHSpec_BetTypeValidation(t *testing.T) {
+	tests := []struct {
+		name    string
+		betType string
+		wantErr bool
+	}{
+		{
+			name:    "NL bet type (valid)",
+			betType: "NL",
+			wantErr: false,
+		},
+		{
+			name:    "PL bet type (invalid)",
+			betType: "PL",
+			wantErr: true,
+		},
+		{
+			name:    "FL bet type (invalid)",
+			betType: "FL",
+			wantErr: true,
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			input := `{
+  "id": "test123",
+  "ohh": {
+    "spec_version": "1.4.6",
+    "internal_version": "1.0.0",
+    "network_name": "Test",
+    "site_name": "Test Site",
+    "game_type": "Holdem",
+    "table_name": "test-table",
+    "table_size": 2,
+    "game_number": "1",
+    "start_date_utc": "2026-02-02T20:00:00.000Z",
+    "currency": "Chips",
+    "ante_amount": 0,
+    "small_blind_amount": 0.5,
+    "big_blind_amount": 1,
+    "bet_limit": {
+      "bet_cap": 0,
+      "bet_type": "` + tt.betType + `"
+    },
+    "dealer_seat": 1,
+    "hero_player_id": 1,
+    "players": [
+      {
+        "id": 1,
+        "name": "Hero",
+        "seat": 1,
+        "starting_stack": 100,
+        "cards": ["Ah", "Kh"]
+      }
+    ],
+    "rounds": [],
+    "pots": []
+  }
+}`
+
+			opts := ConvertOptions{
+				HeroName: "Hero",
+				SiteName: "PokerStars",
+			}
+
+			_, err := ReadOHH(strings.NewReader(input), opts)
+			if (err != nil) != tt.wantErr {
+				t.Errorf("ReadOHH() with bet_type=%s, error = %v, wantErr %v", tt.betType, err, tt.wantErr)
+			}
+		})
+	}
+}
+
+func TestReadOHHSpec_TableNameAndSiteName(t *testing.T) {
+	input := `{
+  "id": "test123",
+  "ohh": {
+    "spec_version": "1.4.6",
+    "internal_version": "1.0.0",
+    "network_name": "Test Network",
+    "site_name": "Ten-Four",
+    "game_type": "Holdem",
+    "table_name": "ff-12345",
+    "table_size": 2,
+    "game_number": "42",
+    "start_date_utc": "2026-02-02T20:00:00.000Z",
+    "currency": "Chips",
+    "ante_amount": 0,
+    "small_blind_amount": 0.5,
+    "big_blind_amount": 1,
+    "bet_limit": {
+      "bet_cap": 0,
+      "bet_type": "NL"
+    },
+    "dealer_seat": 1,
+    "hero_player_id": 1,
+    "players": [
+      {
+        "id": 1,
+        "name": "Hero",
+        "seat": 1,
+        "starting_stack": 100,
+        "cards": ["Ah", "Kh"]
+      },
+      {
+        "id": 2,
+        "name": "Villain",
+        "seat": 2,
+        "starting_stack": 100,
+        "cards": ["Qh", "Jh"]
+      }
+    ],
+    "rounds": [
+      {
+        "id": 0,
+        "street": "Preflop",
+        "cards": [],
+        "actions": [
+          {
+            "action_number": 1,
+            "player_id": 1,
+            "action": "Post SB",
+            "amount": 0.5
+          },
+          {
+            "action_number": 2,
+            "player_id": 2,
+            "action": "Post BB",
+            "amount": 1
+          }
+        ]
+      }
+    ],
+    "pots": [
+      {
+        "number": 0,
+        "amount": 1.5,
+        "rake": 0,
+        "player_wins": [
+          {
+            "player_id": 1,
+            "win_amount": 1.5
+          }
+        ]
+      }
+    ]
+  }
+}`
+
+	opts := ConvertOptions{
+		HeroName: "Hero",
+		SiteName: "PokerStars",
+		GameType: GameTypeCash,
+	}
+
+	result, err := ReadOHH(strings.NewReader(input), opts)
+	if err != nil {
+		t.Fatalf("ReadOHH() error = %v", err)
+	}
+
+	if result == nil {
+		t.Fatal("ReadOHH() returned nil result")
+	}
+
+	output := string(result.HH)
+
+	// Verify table name format: "Ten-Four - ff-12345"
+	if !strings.Contains(output, "Table 'Ten-Four - ff-12345'") {
+		t.Errorf("Output should contain table name 'Ten-Four - ff-12345', got:\n%s", output)
+	}
+
+	// Verify blinds from small_blind_amount and big_blind_amount
+	if !strings.Contains(output, "($0/$1 USD)") {
+		t.Errorf("Output should contain blinds '($0/$1 USD)', got:\n%s", output)
+	}
+}
+
 func TestIsJSONLFormat(t *testing.T) {
 	tests := []struct {
 		name  string

@@ -87,9 +87,16 @@ func convertHandToHH(hand Hand, opts ConvertOptions, tournamentID string) string
 
 	// Table info
 	numPlayers := len(hand.Players)
+	tableName := "Poker Now"
+	if hand.SiteName != "" && hand.TableName != "" {
+		tableName = fmt.Sprintf("%s - %s", hand.SiteName, hand.TableName)
+	} else if hand.TableName != "" {
+		tableName = hand.TableName
+	}
+
 	if opts.GameType == GameTypeCash {
-		sb.WriteString(fmt.Sprintf("Table 'Poker Now' %d-max Seat #%d is the button\n",
-			numPlayers, getDealerSeat(hand)))
+		sb.WriteString(fmt.Sprintf("Table '%s' %d-max Seat #%d is the button\n",
+			tableName, numPlayers, getDealerSeat(hand)))
 	} else {
 		sb.WriteString(fmt.Sprintf("Table 'PokerNow %s' %d-max Seat #%d is the button\n",
 			tournamentID, numPlayers, getDealerSeat(hand)))

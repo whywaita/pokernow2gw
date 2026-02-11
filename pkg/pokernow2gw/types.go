@@ -78,6 +78,8 @@ type Hand struct {
 	Ante       int
 	Winners    []Winner
 	HeroCards  []string // Heroのハンド（"Your hand is" から取得）
+	TableName  string   // テーブル名（OHH format用）
+	SiteName   string   // サイト名（OHH format用）
 }
 
 // Player represents a player in a hand
