@@ -703,8 +703,269 @@ func TestReadOHHSpec_TableNameAndSiteName(t *testing.T) {
 	}
 
 	// Verify blinds from small_blind_amount and big_blind_amount
+	// With currency: "Chips", should NOT contain $ and USD
+	if !strings.Contains(output, "(0.50/1)") {
+		t.Errorf("Output should contain blinds '(0.50/1)' for Chips currency, got:\n%s", output)
+	}
+
+	// Verify no dollar signs or USD in output (Chips currency)
+	if strings.Contains(output, "$") {
+		t.Errorf("Output should NOT contain '$' for Chips currency, got:\n%s", output)
+	}
+	if strings.Contains(output, "USD") {
+		t.Errorf("Output should NOT contain 'USD' for Chips currency, got:\n%s", output)
+	}
+}
+
+func TestReadOHHSpec_ChipsCurrency_NoDollarSign(t *testing.T) {
+	input := `{
+  "id": "test-chips",
+  "ohh": {
+    "spec_version": "1.4.6",
+    "internal_version": "1.0.0",
+    "network_name": "Test Network",
+    "site_name": "Test Site",
+    "game_type": "Holdem",
+    "table_name": "Chips Table",
+    "table_size": 2,
+    "game_number": "100",
+    "start_date_utc": "2026-02-11T10:00:00.000Z",
+    "currency": "Chips",
+    "ante_amount": 0,
+    "small_blind_amount": 10,
+    "big_blind_amount": 20,
+    "bet_limit": {
+      "bet_cap": 0,
+      "bet_type": "NL"
+    },
+    "dealer_seat": 1,
+    "hero_player_id": 1,
+    "players": [
+      {
+        "id": 1,
+        "name": "Hero",
+        "seat": 1,
+        "starting_stack": 1000,
+        "cards": ["As", "Ks"]
+      },
+      {
+        "id": 2,
+        "name": "Villain",
+        "seat": 2,
+        "starting_stack": 1000,
+        "cards": ["Qd", "Jd"]
+      }
+    ],
+    "rounds": [
+      {
+        "id": 0,
+        "street": "Preflop",
+        "cards": [],
+        "actions": [
+          {
+            "action_number": 1,
+            "player_id": 1,
+            "action": "Post SB",
+            "amount": 10
+          },
+          {
+            "action_number": 2,
+            "player_id": 2,
+            "action": "Post BB",
+            "amount": 20
+          },
+          {
+            "action_number": 3,
+            "player_id": 1,
+            "action": "Call",
+            "amount": 20
+          },
+          {
+            "action_number": 4,
+            "player_id": 2,
+            "action": "Check",
+            "amount": 0
+          }
+        ]
+      }
+    ],
+    "pots": [
+      {
+        "number": 0,
+        "amount": 40,
+        "rake": 0,
+        "player_wins": [
+          {
+            "player_id": 1,
+            "win_amount": 40
+          }
+        ]
+      }
+    ]
+  }
+}`
+
+	opts := ConvertOptions{
+		HeroName: "Hero",
+		SiteName: "Test Site",
+		GameType: GameTypeCash,
+	}
+
+	result, err := ReadOHH(strings.NewReader(input), opts)
+	if err != nil {
+		t.Fatalf("ReadOHH() error = %v", err)
+	}
+
+	if result == nil {
+		t.Fatal("ReadOHH() returned nil result")
+	}
+
+	output := string(result.HH)
+
+	// Verify NO dollar signs in output (Chips currency)
+	if strings.Contains(output, "$") {
+		t.Errorf("Output should NOT contain '$' for Chips currency, got:\n%s", output)
+	}
+
+	// Verify NO "USD" in output (Chips currency)
+	if strings.Contains(output, "USD") {
+		t.Errorf("Output should NOT contain 'USD' for Chips currency, got:\n%s", output)
+	}
+
+	// Verify blinds format without $ and USD: (10/20) instead of ($10/$20 USD)
+	if !strings.Contains(output, "(10/20)") {
+		t.Errorf("Output should contain blinds '(10/20)' for Chips currency, got:\n%s", output)
+	}
+
+	// Verify chip amounts in seat info: "(1000 in chips)" not "($1000 in chips)"
+	if !strings.Contains(output, "(1000 in chips)") {
+		t.Errorf("Output should contain '(1000 in chips)' for Chips currency, got:\n%s", output)
+	}
+}
+
+func TestReadOHHSpec_USDCurrency_HasDollarSign(t *testing.T) {
+	input := `{
+  "id": "test-usd",
+  "ohh": {
+    "spec_version": "1.4.6",
+    "internal_version": "1.0.0",
+    "network_name": "Test Network",
+    "site_name": "Test Site",
+    "game_type": "Holdem",
+    "table_name": "USD Table",
+    "table_size": 2,
+    "game_number": "200",
+    "start_date_utc": "2026-02-11T10:00:00.000Z",
+    "currency": "USD",
+    "ante_amount": 0,
+    "small_blind_amount": 0.5,
+    "big_blind_amount": 1,
+    "bet_limit": {
+      "bet_cap": 0,
+      "bet_type": "NL"
+    },
+    "dealer_seat": 1,
+    "hero_player_id": 1,
+    "players": [
+      {
+        "id": 1,
+        "name": "Hero",
+        "seat": 1,
+        "starting_stack": 100,
+        "cards": ["Ah", "Kh"]
+      },
+      {
+        "id": 2,
+        "name": "Villain",
+        "seat": 2,
+        "starting_stack": 100,
+        "cards": ["Qh", "Jh"]
+      }
+    ],
+    "rounds": [
+      {
+        "id": 0,
+        "street": "Preflop",
+        "cards": [],
+        "actions": [
+          {
+            "action_number": 1,
+            "player_id": 1,
+            "action": "Post SB",
+            "amount": 0.5
+          },
+          {
+            "action_number": 2,
+            "player_id": 2,
+            "action": "Post BB",
+            "amount": 1
+          },
+          {
+            "action_number": 3,
+            "player_id": 1,
+            "action": "Call",
+            "amount": 1
+          },
+          {
+            "action_number": 4,
+            "player_id": 2,
+            "action": "Check",
+            "amount": 0
+          }
+        ]
+      }
+    ],
+    "pots": [
+      {
+        "number": 0,
+        "amount": 2,
+        "rake": 0,
+        "player_wins": [
+          {
+            "player_id": 1,
+            "win_amount": 2
+          }
+        ]
+      }
+    ]
+  }
+}`
+
+	opts := ConvertOptions{
+		HeroName: "Hero",
+		SiteName: "Test Site",
+		GameType: GameTypeCash,
+	}
+
+	result, err := ReadOHH(strings.NewReader(input), opts)
+	if err != nil {
+		t.Fatalf("ReadOHH() error = %v", err)
+	}
+
+	if result == nil {
+		t.Fatal("ReadOHH() returned nil result")
+	}
+
+	output := string(result.HH)
+
+	// Verify dollar signs ARE present in output (USD currency)
+	if !strings.Contains(output, "$") {
+		t.Errorf("Output should contain '$' for USD currency, got:\n%s", output)
+	}
+
+	// Verify "USD" is present in output (USD currency)
+	if !strings.Contains(output, "USD") {
+		t.Errorf("Output should contain 'USD' for USD currency, got:\n%s", output)
+	}
+
+	// Verify blinds format with $ and USD: ($0.50/$1 USD)
 	if !strings.Contains(output, "($0.50/$1 USD)") {
-		t.Errorf("Output should contain blinds '($0.50/$1 USD)', got:\n%s", output)
+		t.Errorf("Output should contain blinds '($0.50/$1 USD)' for USD currency, got:\n%s", output)
+	}
+
+	// Verify chip amounts in seat info: "($100 in chips)"
+	if !strings.Contains(output, "($100 in chips)") {
+		t.Errorf("Output should contain '($100 in chips)' for USD currency, got:\n%s", output)
 	}
 }
 

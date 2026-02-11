@@ -247,6 +247,7 @@ func convertOHHSpecToHand(spec OHHSpec, opts ConvertOptions) (Hand, error) {
 		HeroCards:  heroCards,
 		TableName:  spec.TableName,
 		SiteName:   spec.SiteName,
+		Currency:   spec.Currency,
 	}, nil
 }
 

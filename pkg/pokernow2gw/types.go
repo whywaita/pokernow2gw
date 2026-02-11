@@ -80,6 +80,7 @@ type Hand struct {
 	HeroCards  []string // Heroのハンド（"Your hand is" から取得）
 	TableName  string   // テーブル名（OHH format用）
 	SiteName   string   // サイト名（OHH format用）
+	Currency   string   // 通貨（OHH format用、"Chips" の場合は $ を表示しない）
 }
 
 // Player represents a player in a hand
