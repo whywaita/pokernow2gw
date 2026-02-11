@@ -38,14 +38,25 @@ func ConvertEntries(entries []LogEntry, opts ConvertOptions) (*ConvertResult, er
 	}, nil
 }
 
+// formatAmount formats an amount based on game type (adds $ prefix for cash games)
+func formatAmount(amount int, opts ConvertOptions) string {
+	if opts.GameType == GameTypeCash {
+		return fmt.Sprintf("$%d", amount)
+	}
+	return fmt.Sprintf("%d", amount)
+}
+
 // convertHandsToHH converts Hand slice to GTO Wizard HH text
 func convertHandsToHH(hands []Hand, opts ConvertOptions) string {
 	var sb strings.Builder
 
-	// Determine tournament ID: use first hand's ID if not specified
-	tournamentID := opts.TournamentID
-	if tournamentID == "" && len(hands) > 0 {
-		tournamentID = hands[0].HandID
+	// Determine tournament ID: use first hand's ID if not specified (only for tournaments)
+	tournamentID := ""
+	if opts.GameType != GameTypeCash {
+		tournamentID = opts.TournamentID
+		if tournamentID == "" && len(hands) > 0 {
+			tournamentID = hands[0].HandID
+		}
 	}
 
 	for i, hand := range hands {
@@ -64,18 +75,35 @@ func convertHandToHH(hand Hand, opts ConvertOptions, tournamentID string) string
 
 	// Hand header
 	timestamp := hand.StartTime.In(opts.TimeLocation).Format("2006/01/02 15:04:05")
-	sb.WriteString(fmt.Sprintf("%s Hand #%s:  Tournament #%s, $0+$0 Hold'em No Limit - Level 1 (%d/%d) - %s\n",
-		opts.SiteName, hand.HandID, tournamentID, hand.SmallBlind, hand.BigBlind, timestamp))
+	if opts.GameType == GameTypeCash {
+		// Cash game format: PokerStars Hand #ID: Hold'em No Limit ($SB/$BB USD) - timestamp ET
+		sb.WriteString(fmt.Sprintf("%s Hand #%s: Hold'em No Limit ($%d/$%d USD) - %s ET\n",
+			opts.SiteName, hand.HandID, hand.SmallBlind, hand.BigBlind, timestamp))
+	} else {
+		// Tournament format
+		sb.WriteString(fmt.Sprintf("%s Hand #%s:  Tournament #%s, $0+$0 Hold'em No Limit - Level 1 (%d/%d) - %s\n",
+			opts.SiteName, hand.HandID, tournamentID, hand.SmallBlind, hand.BigBlind, timestamp))
+	}
 
 	// Table info
 	numPlayers := len(hand.Players)
-	sb.WriteString(fmt.Sprintf("Table 'PokerNow %s' %d-max Seat #%d is the button\n",
-		tournamentID, numPlayers, getDealerSeat(hand)))
+	if opts.GameType == GameTypeCash {
+		sb.WriteString(fmt.Sprintf("Table 'Poker Now' %d-max Seat #%d is the button\n",
+			numPlayers, getDealerSeat(hand)))
+	} else {
+		sb.WriteString(fmt.Sprintf("Table 'PokerNow %s' %d-max Seat #%d is the button\n",
+			tournamentID, numPlayers, getDealerSeat(hand)))
+	}
 
 	// Seat info
 	for _, player := range hand.Players {
-		sb.WriteString(fmt.Sprintf("Seat %d: %s (%d in chips)\n",
-			player.SeatNumber, player.DisplayName, player.Stack))
+		if opts.GameType == GameTypeCash {
+			sb.WriteString(fmt.Sprintf("Seat %d: %s ($%d in chips)\n",
+				player.SeatNumber, player.DisplayName, player.Stack))
+		} else {
+			sb.WriteString(fmt.Sprintf("Seat %d: %s (%d in chips)\n",
+				player.SeatNumber, player.DisplayName, player.Stack))
+		}
 	}
 
 	// Actions by street
@@ -83,20 +111,20 @@ func convertHandToHH(hand Hand, opts ConvertOptions, tournamentID string) string
 	if len(hand.HeroCards) > 0 {
 		sb.WriteString(fmt.Sprintf("Dealt to %s [%s]\n", opts.HeroName, strings.Join(hand.HeroCards, " ")))
 	}
-	sb.WriteString(formatActionsForStreet(hand.Actions, StreetPreflop, hand, ""))
+	sb.WriteString(formatActionsForStreet(hand.Actions, StreetPreflop, hand, "", opts))
 	if len(hand.Board.Flop) > 0 {
 		flopStr := fmt.Sprintf("*** FLOP *** [%s]", strings.Join(hand.Board.Flop, " "))
-		sb.WriteString(formatActionsForStreet(hand.Actions, StreetFlop, hand, flopStr))
+		sb.WriteString(formatActionsForStreet(hand.Actions, StreetFlop, hand, flopStr, opts))
 	}
 	if hand.Board.Turn != "" {
 		turnStr := fmt.Sprintf("*** TURN *** [%s] [%s]",
 			strings.Join(hand.Board.Flop, " "), hand.Board.Turn)
-		sb.WriteString(formatActionsForStreet(hand.Actions, StreetTurn, hand, turnStr))
+		sb.WriteString(formatActionsForStreet(hand.Actions, StreetTurn, hand, turnStr, opts))
 	}
 	if hand.Board.River != "" {
 		riverStr := fmt.Sprintf("*** RIVER *** [%s %s] [%s]",
 			strings.Join(hand.Board.Flop, " "), hand.Board.Turn, hand.Board.River)
-		sb.WriteString(formatActionsForStreet(hand.Actions, StreetRiver, hand, riverStr))
+		sb.WriteString(formatActionsForStreet(hand.Actions, StreetRiver, hand, riverStr, opts))
 	}
 
 	// Showdown
@@ -136,7 +164,7 @@ func convertHandToHH(hand Hand, opts ConvertOptions, tournamentID string) string
 	// Output "collected from pot" line before SUMMARY
 	for _, winner := range hand.Winners {
 		if winner.Amount > 0 {
-			sb.WriteString(fmt.Sprintf("%s collected %d from pot\n", winner.Player, winner.Amount))
+			sb.WriteString(fmt.Sprintf("%s collected %s from pot\n", winner.Player, formatAmount(winner.Amount, opts)))
 		}
 	}
 
@@ -144,7 +172,7 @@ func convertHandToHH(hand Hand, opts ConvertOptions, tournamentID string) string
 	sb.WriteString("*** SUMMARY ***\n")
 	totalPot := calculateTotalPot(hand)
 	rake := calculateRake(totalPot, hand.BigBlind, opts.RakePercent, opts.RakeCapBB)
-	sb.WriteString(fmt.Sprintf("Total pot %d | Rake %d\n", totalPot, rake))
+	sb.WriteString(fmt.Sprintf("Total pot %s | Rake %s\n", formatAmount(totalPot, opts), formatAmount(rake, opts)))
 	if len(hand.Board.Flop) > 0 {
 		boardCards := append([]string{}, hand.Board.Flop...)
 		if hand.Board.Turn != "" {
@@ -158,14 +186,14 @@ func convertHandToHH(hand Hand, opts ConvertOptions, tournamentID string) string
 
 	// Detailed player summary
 	for _, player := range hand.Players {
-		sb.WriteString(formatPlayerSummary(hand, player))
+		sb.WriteString(formatPlayerSummary(hand, player, opts))
 	}
 
 	return sb.String()
 }
 
 // formatActionsForStreet formats actions for a specific street
-func formatActionsForStreet(actions []Action, street Street, hand Hand, streetHeader string) string {
+func formatActionsForStreet(actions []Action, street Street, hand Hand, streetHeader string, opts ConvertOptions) string {
 	var sb strings.Builder
 	var streetActions []Action
 
@@ -190,19 +218,19 @@ func formatActionsForStreet(actions []Action, street Street, hand Hand, streetHe
 	for _, action := range streetActions {
 		switch action.ActionType {
 		case ActionPostSB:
-			sb.WriteString(fmt.Sprintf("%s: posts small blind %d\n", action.Player, action.Amount))
+			sb.WriteString(fmt.Sprintf("%s: posts small blind %s\n", action.Player, formatAmount(action.Amount, opts)))
 			playerBets[action.Player] = action.Amount
 			if action.Amount > currentBet {
 				currentBet = action.Amount
 			}
 		case ActionPostBB:
-			sb.WriteString(fmt.Sprintf("%s: posts big blind %d\n", action.Player, action.Amount))
+			sb.WriteString(fmt.Sprintf("%s: posts big blind %s\n", action.Player, formatAmount(action.Amount, opts)))
 			playerBets[action.Player] = action.Amount
 			if action.Amount > currentBet {
 				currentBet = action.Amount
 			}
 		case ActionPostAnte:
-			sb.WriteString(fmt.Sprintf("%s: posts an ante of %d\n", action.Player, action.Amount))
+			sb.WriteString(fmt.Sprintf("%s: posts an ante of %s\n", action.Player, formatAmount(action.Amount, opts)))
 		case ActionFold:
 			sb.WriteString(fmt.Sprintf("%s: folds\n", action.Player))
 		case ActionCheck:
@@ -212,16 +240,16 @@ func formatActionsForStreet(actions []Action, street Street, hand Hand, streetHe
 			alreadyBet := playerBets[action.Player]
 			callAmount := currentBet - alreadyBet
 			if action.IsAllIn {
-				sb.WriteString(fmt.Sprintf("%s: calls %d and is all-in\n", action.Player, callAmount))
+				sb.WriteString(fmt.Sprintf("%s: calls %s and is all-in\n", action.Player, formatAmount(callAmount, opts)))
 			} else {
-				sb.WriteString(fmt.Sprintf("%s: calls %d\n", action.Player, callAmount))
+				sb.WriteString(fmt.Sprintf("%s: calls %s\n", action.Player, formatAmount(callAmount, opts)))
 			}
 			playerBets[action.Player] = currentBet
 		case ActionBet:
 			if action.IsAllIn {
-				sb.WriteString(fmt.Sprintf("%s: bets %d and is all-in\n", action.Player, action.Amount))
+				sb.WriteString(fmt.Sprintf("%s: bets %s and is all-in\n", action.Player, formatAmount(action.Amount, opts)))
 			} else {
-				sb.WriteString(fmt.Sprintf("%s: bets %d\n", action.Player, action.Amount))
+				sb.WriteString(fmt.Sprintf("%s: bets %s\n", action.Player, formatAmount(action.Amount, opts)))
 			}
 			playerBets[action.Player] = action.Amount
 			currentBet = action.Amount
@@ -231,15 +259,25 @@ func formatActionsForStreet(actions []Action, street Street, hand Hand, streetHe
 			if action.IsAllIn {
 				raiseAmount = action.Amount + hand.Ante
 			}
-			if action.IsAllIn {
-				sb.WriteString(fmt.Sprintf("%s: raises to %d and is all-in\n", action.Player, raiseAmount))
+			// For cash games, use "raises X to Y" format
+			if opts.GameType == GameTypeCash {
+				raiseDiff := raiseAmount - currentBet
+				if action.IsAllIn {
+					sb.WriteString(fmt.Sprintf("%s: raises %s to %s and is all-in\n", action.Player, formatAmount(raiseDiff, opts), formatAmount(raiseAmount, opts)))
+				} else {
+					sb.WriteString(fmt.Sprintf("%s: raises %s to %s\n", action.Player, formatAmount(raiseDiff, opts), formatAmount(raiseAmount, opts)))
+				}
 			} else {
-				sb.WriteString(fmt.Sprintf("%s: raises to %d\n", action.Player, raiseAmount))
+				if action.IsAllIn {
+					sb.WriteString(fmt.Sprintf("%s: raises to %d and is all-in\n", action.Player, raiseAmount))
+				} else {
+					sb.WriteString(fmt.Sprintf("%s: raises to %d\n", action.Player, raiseAmount))
+				}
 			}
 			playerBets[action.Player] = raiseAmount
 			currentBet = raiseAmount
 		case ActionUncalled:
-			sb.WriteString(fmt.Sprintf("Uncalled bet (%d) returned to %s\n", action.Amount, action.Player))
+			sb.WriteString(fmt.Sprintf("Uncalled bet (%s) returned to %s\n", formatAmount(action.Amount, opts), action.Player))
 		}
 	}
 
@@ -257,7 +295,7 @@ func getDealerSeat(hand Hand) int {
 }
 
 // formatPlayerSummary formats a player's summary line
-func formatPlayerSummary(hand Hand, player Player) string {
+func formatPlayerSummary(hand Hand, player Player, opts ConvertOptions) string {
 	var sb strings.Builder
 
 	// Determine player role
@@ -328,7 +366,7 @@ func formatPlayerSummary(hand Hand, player Player) string {
 	sb.WriteString(fmt.Sprintf("Seat %d: %s%s ", player.SeatNumber, player.DisplayName, role))
 
 	if wonAmount > 0 {
-		sb.WriteString(fmt.Sprintf("collected (%d)", wonAmount))
+		sb.WriteString(fmt.Sprintf("collected (%s)", formatAmount(wonAmount, opts)))
 	} else if showedHand {
 		// Player showed hand but didn't win
 		sb.WriteString("showed and lost")

@@ -34,6 +34,7 @@ func main() {
 	siteName := flag.String("site-name", "PokerStars", "Site name for output (default: PokerStars)")
 	rakePercent := flag.Float64("rake-percent", 0.0, "Rake percentage for cash games (e.g., 5.0 for 5%)")
 	rakeCapBB := flag.Float64("rake-cap-bb", 0.0, "Rake cap in big blinds (e.g., 4.0 for 4BB)")
+	cash := flag.Bool("cash", false, "Output in cash game format (default: tournament)")
 
 	flag.Parse()
 
@@ -102,6 +103,12 @@ func main() {
 		os.Exit(1)
 	}
 
+	// Determine game type
+	gameType := pokernow2gw.GameTypeTournament
+	if *cash {
+		gameType = pokernow2gw.GameTypeCash
+	}
+
 	// Convert
 	opts := pokernow2gw.ConvertOptions{
 		HeroName:          *heroName,
@@ -111,6 +118,7 @@ func main() {
 		PlayerCountFilter: playerCountFilter,
 		RakePercent:       *rakePercent,
 		RakeCapBB:         *rakeCapBB,
+		GameType:          gameType,
 	}
 
 	result, err := pokernow2gw.Parse(inputReader, opts)
