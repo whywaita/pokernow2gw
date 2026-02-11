@@ -263,7 +263,7 @@ function downloadFile(content, filename) {
     URL.revokeObjectURL(url);
 }
 
-function callWasmParseCSV(csvInput, heroName, filterFlags, rakePercent, rakeCapBB) {
+function callWasmParseCSV(csvInput, heroName, filterFlags, gameType, rakePercent, rakeCapBB) {
     const csvData = allocateString(csvInput);
     const heroData = allocateString(heroName);
 
@@ -274,6 +274,7 @@ function callWasmParseCSV(csvInput, heroName, filterFlags, rakePercent, rakeCapB
             csvData.ptr, csvData.length,
             heroData.ptr, heroData.length,
             filterFlags,
+            gameType,
             rakePercent,
             rakeCapBB
         );
@@ -282,7 +283,8 @@ function callWasmParseCSV(csvInput, heroName, filterFlags, rakePercent, rakeCapB
         resultInfoPtr = wasmInstance.exports.parseCSV(
             csvData.ptr, csvData.length,
             heroData.ptr, heroData.length,
-            filterFlags
+            filterFlags,
+            gameType
         );
     }
 

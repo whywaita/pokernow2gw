@@ -239,7 +239,7 @@ ${stack}`;
 
             // Call WASM function
             try {
-                const { resultText, skippedHands, skippedHandsInfo } = callWasmParseCSV(csvInput, heroName, filterFlags);
+                const { resultText, skippedHands, skippedHandsInfo } = callWasmParseCSV(csvInput, heroName, filterFlags, 0);
 
                 const errorDetail = buildErrorDetail(resultText, heroName, filterFlags);
                 handleConversionResult(resultText, skippedHands, skippedHandsInfo, errorDetail);
