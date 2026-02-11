@@ -233,7 +233,7 @@ ${stack}`;
                 // gameType: 1 = cash game, 0 = tournament
                 const gameType = 1;
 
-                const { resultText, skippedHands, skippedHandsInfo } = callWasmParseCSV(csvInput, heroName, filterFlags, rakePercent, rakeCapBB);
+                const { resultText, skippedHands, skippedHandsInfo } = callWasmParseCSV(csvInput, heroName, filterFlags, gameType, rakePercent, rakeCapBB);
 
                 const errorDetail = buildErrorDetail(resultText, heroName, rakePercent, rakeCapBB);
                 handleConversionResult(resultText, skippedHands, skippedHandsInfo, errorDetail);
