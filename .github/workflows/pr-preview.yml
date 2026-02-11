@@ -40,7 +40,7 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const previewUrl = `https://${owner}.github.io/${repo}/pr${prNumber}/`;
-            const cashUrl = `https://${owner}.github.io/${repo}/pr${prNumber}/cash.html`;
+            const cashUrl = `https://${owner}.github.io/${repo}/pr${prNumber}/cash`;
             const body = `## 🚀 Preview deployed!\n\n` +
               `- **Tournament**: ${previewUrl}\n` +
               `- **Cash Game**: ${cashUrl}\n\n` +
