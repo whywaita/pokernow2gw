@@ -8,6 +8,16 @@ import (
 // ErrSpectatorLog is returned when the log is from a spectator (no "Your hand is" entries)
 var ErrSpectatorLog = errors.New("spectator log detected: no hero cards found in any hand")
 
+// GameType represents the game type (cash or tournament)
+type GameType int
+
+const (
+	// GameTypeTournament is the default for backward compatibility
+	GameTypeTournament GameType = iota
+	// GameTypeCash represents cash game format
+	GameTypeCash
+)
+
 // LogEntry represents a single row from the PokerNow CSV log
 type LogEntry struct {
 	Entry string    // ログ内容
@@ -23,6 +33,9 @@ type ConvertOptions struct {
 	TournamentName    string            // optional
 	TournamentID      string            // optional (will use first hand's ID if not specified)
 	PlayerCountFilter PlayerCountFilter // Player count filter for GTO Wizard plans (default: PlayerCountAll)
+	RakePercent       float64           // Rake percentage for cash games (e.g., 5.0 for 5%)
+	RakeCapBB         float64           // Rake cap in big blinds (e.g., 4.0 for 4BB)
+	GameType          GameType          // Cash or Tournament (default: Tournament for backward compatibility)
 }
 
 // SkipReason represents why a hand was skipped
@@ -60,11 +73,14 @@ type Hand struct {
 	Actions    []Action
 	Board      Board
 	StartTime  time.Time
-	SmallBlind int
-	BigBlind   int
-	Ante       int
+	SmallBlind float64
+	BigBlind   float64
+	Ante       float64
 	Winners    []Winner
 	HeroCards  []string // Heroのハンド（"Your hand is" から取得）
+	TableName  string   // テーブル名（OHH format用）
+	SiteName   string   // サイト名（OHH format用）
+	Currency   string   // 通貨（OHH format用、"Chips" の場合は $ を表示しない）
 }
 
 // Player represents a player in a hand
@@ -72,14 +88,14 @@ type Player struct {
 	SeatNumber  int
 	Name        string
 	DisplayName string // "@" で分割した左側
-	Stack       int
+	Stack       float64
 }
 
 // Action represents a player action
 type Action struct {
 	Player     string
 	ActionType ActionType
-	Amount     int
+	Amount     float64
 	Street     Street
 	IsAllIn    bool
 }
@@ -122,7 +138,7 @@ type Board struct {
 // Winner represents a pot winner
 type Winner struct {
 	Player    string
-	Amount    int
+	Amount    float64
 	HandCards []string // ショウダウンで見せたカード
 	HandName  string   // optional
 }

@@ -9,6 +9,14 @@ import (
 	"github.com/whywaita/pokernow2gw/pkg/pokernow2gw"
 )
 
+const (
+	// wasmErrorSentinel is written to the skippedHands field of the result info
+	// to signal an error to JavaScript. When JavaScript reads this value from
+	// the skippedHands position, it should treat the result as an error and
+	// interpret the ptr/len fields as an error message instead of HH output.
+	wasmErrorSentinel = 0xFFFFFFFF
+)
+
 // Memory management for passing strings between Go and JavaScript
 
 //lint:ignore U1000 This function is exported to WASM and called from JavaScript
@@ -50,7 +58,7 @@ var lastResultInfo [20]byte // Store result info: [ptr(4), len(4), skippedHands(
 
 //lint:ignore U1000 This function is exported to WASM and called from JavaScript
 //go:wasmexport parseCSV
-func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32) uint32 {
+func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags, gameType uint32, rakePercent, rakeCapBB float32) uint32 {
 	csvText := getString(csvPtr, csvLen)
 	heroName := getString(heroPtr, heroLen)
 
@@ -80,6 +88,14 @@ func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32) uint32 {
 		playerCountFilter = pokernow2gw.PlayerCountFilter(filterFlags)
 	}
 
+	// Determine game type (0 = tournament, 1 = cash)
+	var gt pokernow2gw.GameType
+	if gameType == 1 {
+		gt = pokernow2gw.GameTypeCash
+	} else {
+		gt = pokernow2gw.GameTypeTournament
+	}
+
 	// Parse CSV
 	reader := strings.NewReader(csvText)
 	opts := pokernow2gw.ConvertOptions{
@@ -87,9 +103,12 @@ func parseCSV(csvPtr, csvLen, heroPtr, heroLen, filterFlags uint32) uint32 {
 		SiteName:          "PokerStars",
 		TimeLocation:      time.UTC,
 		PlayerCountFilter: playerCountFilter,
+		RakePercent:       float64(rakePercent),
+		RakeCapBB:         float64(rakeCapBB),
+		GameType:          gt,
 	}
 
-	result, err := pokernow2gw.ParseCSV(reader, opts)
+	result, err := pokernow2gw.Parse(reader, opts)
 	if err != nil {
 		errMsg := err.Error()
 		lastResult = []byte(errMsg)
@@ -125,10 +144,10 @@ func writeResultInfo(ptr, length, skippedHands, hasError, skippedDetailPtr, skip
 	*(*uint32)(unsafe.Pointer(&lastResultInfo[8])) = skippedHands
 	*(*uint32)(unsafe.Pointer(&lastResultInfo[12])) = skippedDetailPtr
 	*(*uint32)(unsafe.Pointer(&lastResultInfo[16])) = skippedDetailLen
-	// Store hasError as a separate field
-	// For simplicity, we'll use skippedHands = 0xFFFFFFFF to indicate error
+	// When hasError is set, overwrite skippedHands with the error sentinel value.
+	// JavaScript checks for this sentinel to distinguish errors from normal results.
 	if hasError == 1 {
-		*(*uint32)(unsafe.Pointer(&lastResultInfo[8])) = 0xFFFFFFFF
+		*(*uint32)(unsafe.Pointer(&lastResultInfo[8])) = wasmErrorSentinel
 	}
 }
 

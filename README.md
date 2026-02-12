@@ -1,6 +1,6 @@
 # pokernow2gw
 
-Convert PokerNow CSV logs to GTO Wizard Hand History format (MTT).
+Convert poker logs to GTO Wizard Hand History format (MTT).
 
 ## Notice
 
@@ -14,7 +14,11 @@ This software is not intended to promote or direct users to any online casino si
 
 - Web interface (WASM) for browser-based conversion using Go 1.24+ `go:wasmexport`
 - Command-line interface for batch conversion (see [AGENTS.md](./AGENTS.md) for CLI usage)
-- Supports standard PokerNow CSV log format
+- Supports multiple input formats:
+  - PokerNow CSV log format
+  - OHH (Open Hand History) JSON format
+  - JSONL (JSON Lines) for multi-hand processing
+- Automatic format detection
 - Outputs GTO Wizard-compatible Hand History format
 
 ## GTO Wizard Recommendations

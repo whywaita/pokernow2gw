@@ -1,0 +1,221 @@
+{
+  "id": "ynkZ4QLFbmdc02Ox9tD4",
+  "ohh": {
+    "spec_version": "1.4.6",
+    "internal_version": "1.0.0",
+    "network_name": "Ten-Four",
+    "site_name": "Ten-Four",
+    "game_type": "Holdem",
+    "table_name": "ff-26941",
+    "table_size": 6,
+    "game_number": "",
+    "start_date_utc": "2026-02-02T20:17:51.970Z",
+    "currency": "Chips",
+    "ante_amount": 0,
+    "small_blind_amount": 0.5,
+    "big_blind_amount": 1,
+    "bet_limit": {
+      "bet_cap": 0,
+      "bet_type": "NL"
+    },
+    "dealer_seat": 3,
+    "hero_player_id": 1,
+    "players": [
+      {
+        "id": 1,
+        "name": "IsZ***",
+        "seat": 1,
+        "starting_stack": 100,
+        "cards": [
+          "Ks",
+          "9s"
+        ],
+        "_uid": "IsZ8cI3pQ4Bo1gb2BY0snTJDycS0as"
+      },
+      {
+        "id": 2,
+        "name": "KyQ***",
+        "seat": 2,
+        "starting_stack": 100,
+        "cards": [
+          "8c",
+          "4c"
+        ],
+        "_uid": "KyQMqQsbL2U22cUZwbB4fFxUxpnnXz"
+      },
+      {
+        "id": 3,
+        "name": "Ulv***",
+        "seat": 3,
+        "starting_stack": 100,
+        "cards": [
+          "Jc",
+          "7h"
+        ],
+        "_uid": "Ulvq3ugdDwmkaPkLMzWigfAVyNIBgP"
+      },
+      {
+        "id": 4,
+        "name": "adN***",
+        "seat": 4,
+        "starting_stack": 100,
+        "cards": [
+          "Ts",
+          "Jh"
+        ],
+        "_uid": "adNnHabXaZEBOUVCTsWBTiao2pS46G"
+      }
+    ],
+    "rounds": [
+      {
+        "id": 0,
+        "street": "Preflop",
+        "cards": [],
+        "actions": [
+          {
+            "action_number": 1,
+            "player_id": 4,
+            "action": "Post SB",
+            "amount": 0.5
+          },
+          {
+            "action_number": 2,
+            "player_id": 1,
+            "action": "Post BB",
+            "amount": 1
+          },
+          {
+            "action_number": 3,
+            "player_id": 2,
+            "action": "Fold"
+          },
+          {
+            "action_number": 4,
+            "player_id": 3,
+            "action": "Fold"
+          },
+          {
+            "action_number": 5,
+            "player_id": 4,
+            "action": "Raise",
+            "amount": 2.5
+          },
+          {
+            "action_number": 6,
+            "player_id": 1,
+            "action": "Raise",
+            "amount": 10
+          },
+          {
+            "action_number": 7,
+            "player_id": 4,
+            "action": "Call",
+            "amount": 10
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "street": "Flop",
+        "cards": [
+          "9h",
+          "8h",
+          "Kc"
+        ],
+        "actions": [
+          {
+            "action_number": 8,
+            "player_id": 4,
+            "action": "Check"
+          },
+          {
+            "action_number": 9,
+            "player_id": 1,
+            "action": "Bet",
+            "amount": 15
+          },
+          {
+            "action_number": 10,
+            "player_id": 4,
+            "action": "Call",
+            "amount": 15
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "street": "Turn",
+        "cards": [
+          "Ad"
+        ],
+        "actions": [
+          {
+            "action_number": 11,
+            "player_id": 4,
+            "action": "Check"
+          },
+          {
+            "action_number": 12,
+            "player_id": 1,
+            "action": "Bet",
+            "amount": 25
+          },
+          {
+            "action_number": 13,
+            "player_id": 4,
+            "action": "Call",
+            "amount": 25
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "street": "River",
+        "cards": [
+          "Ah"
+        ],
+        "actions": [
+          {
+            "action_number": 14,
+            "player_id": 4,
+            "action": "Raise",
+            "amount": 50,
+            "is_allin": true
+          },
+          {
+            "action_number": 15,
+            "player_id": 1,
+            "action": "Fold"
+          }
+        ]
+      }
+    ],
+    "pots": [
+      {
+        "number": 0,
+        "amount": 150,
+        "rake": 4,
+        "player_wins": [
+          {
+            "player_id": 4,
+            "win_amount": 146
+          }
+        ]
+      }
+    ]
+  },
+  "_profits": {
+    "IsZ8cI3pQ4Bo1gb2BY0snTJDycS0as": -50,
+    "KyQMqQsbL2U22cUZwbB4fFxUxpnnXz": 0,
+    "Ulvq3ugdDwmkaPkLMzWigfAVyNIBgP": 0,
+    "adNnHabXaZEBOUVCTsWBTiao2pS46G": 46
+  },
+  "_ev_profits": {
+    "IsZ8cI3pQ4Bo1gb2BY0snTJDycS0as": -50,
+    "KyQMqQsbL2U22cUZwbB4fFxUxpnnXz": 0,
+    "Ulvq3ugdDwmkaPkLMzWigfAVyNIBgP": 0,
+    "adNnHabXaZEBOUVCTsWBTiao2pS46G": 46
+  },
+  "_format": "ohh",
+  "createdAt": "2026-02-02T20:17:51.979Z"
+}

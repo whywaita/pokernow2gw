@@ -575,3 +575,178 @@ func TestParseHands_SpectatorLog(t *testing.T) {
 		})
 	}
 }
+
+func TestCashGameFormat(t *testing.T) {
+	// Test that cash game format outputs correct header and amount formatting
+	csv := `entry,at,order
+"-- ending hand #1 --",2025-11-15T05:09:14.567Z,10
+"""player1 @ id1"" collected 40 from pot",2025-11-15T05:09:14.567Z,9
+"""player2 @ id2"" folds",2025-11-15T05:09:14.567Z,8
+"""player1 @ id1"" bets 50",2025-11-15T05:09:14.567Z,7
+"""player2 @ id2"" calls with 20",2025-11-15T05:09:14.567Z,6
+"""player2 @ id2"" posts a big blind of 20",2025-11-15T05:09:14.567Z,5
+"""player1 @ id1"" posts a small blind of 10",2025-11-15T05:09:14.567Z,4
+"Your hand is A♥, K♥",2025-11-15T05:09:14.567Z,3
+"Player stacks: #1 ""player1 @ id1"" (1500) | #2 ""player2 @ id2"" (1500)",2025-11-15T05:09:14.567Z,2
+"-- starting hand #1 (id: test123) (No Limit Texas Hold'em) (dealer: ""player1 @ id1"") --",2025-11-15T05:09:14.567Z,1`
+
+	reader := strings.NewReader(csv)
+	opts := ConvertOptions{
+		HeroName:     "player1",
+		SiteName:     "PokerStars",
+		TimeLocation: time.UTC,
+		GameType:     GameTypeCash,
+		RakePercent:  5.0,
+		RakeCapBB:    4.0,
+	}
+
+	result, err := ParseCSV(reader, opts)
+	if err != nil {
+		t.Fatalf("ParseCSV() failed: %v", err)
+	}
+
+	output := string(result.HH)
+
+	// Debug: print the actual output
+	t.Logf("Result HH length: %d", len(result.HH))
+	t.Logf("Skipped hands: %d", result.SkippedHands)
+	t.Logf("Actual output:\n%s", output)
+
+	if len(output) == 0 {
+		t.Fatal("Output is empty")
+	}
+
+	// Check that output does NOT contain tournament format markers
+	if strings.Contains(output, "Tournament #") {
+		t.Error("Cash game output should not contain 'Tournament #'")
+	}
+
+	// Check that output contains cash game format header
+	if !strings.Contains(output, "Hold'em No Limit ($10/$20 USD)") {
+		t.Error("Cash game output should contain '($10/$20 USD)' in header")
+	}
+
+	// Check that output contains $ prefix in amounts
+	if !strings.Contains(output, "posts small blind $10") {
+		t.Error("Cash game output should contain 'posts small blind $10'")
+	}
+
+	if !strings.Contains(output, "posts big blind $20") {
+		t.Error("Cash game output should contain 'posts big blind $20'")
+	}
+
+	// Check that table name is simple for cash games
+	if !strings.Contains(output, "Table 'Poker Now'") {
+		t.Error("Cash game output should contain \"Table 'Poker Now'\"")
+	}
+
+	// Check that stacks have $ prefix
+	if !strings.Contains(output, "($1500 in chips)") {
+		t.Error("Cash game output should contain '($1500 in chips)'")
+	}
+
+	// Check Total pot format
+	if !strings.Contains(output, "Total pot $") {
+		t.Error("Cash game output should contain 'Total pot $'")
+	}
+
+	// Check collected format
+	if !strings.Contains(output, "collected ($") {
+		t.Error("Cash game output should contain 'collected ($' in summary")
+	}
+}
+
+func TestTournamentFormatBackwardCompatibility(t *testing.T) {
+	// Test that tournament format still works (default behavior)
+	csv := `entry,at,order
+"-- ending hand #1 --",2025-11-15T05:09:14.567Z,10
+"""player1 @ id1"" collected 40 from pot",2025-11-15T05:09:14.567Z,9
+"""player2 @ id2"" folds",2025-11-15T05:09:14.567Z,8
+"""player1 @ id1"" bets 50",2025-11-15T05:09:14.567Z,7
+"""player2 @ id2"" calls with 20",2025-11-15T05:09:14.567Z,6
+"""player2 @ id2"" posts a big blind of 20",2025-11-15T05:09:14.567Z,5
+"""player1 @ id1"" posts a small blind of 10",2025-11-15T05:09:14.567Z,4
+"Your hand is A♥, K♥",2025-11-15T05:09:14.567Z,3
+"Player stacks: #1 ""player1 @ id1"" (1500) | #2 ""player2 @ id2"" (1500)",2025-11-15T05:09:14.567Z,2
+"-- starting hand #1 (id: test123) (No Limit Texas Hold'em) (dealer: ""player1 @ id1"") --",2025-11-15T05:09:14.567Z,1`
+
+	reader := strings.NewReader(csv)
+	opts := ConvertOptions{
+		HeroName:     "player1",
+		SiteName:     "PokerStars",
+		TimeLocation: time.UTC,
+		GameType:     GameTypeTournament, // Explicit tournament
+	}
+
+	result, err := ParseCSV(reader, opts)
+	if err != nil {
+		t.Fatalf("ParseCSV() failed: %v", err)
+	}
+
+	output := string(result.HH)
+
+	// Check that output DOES contain tournament format markers
+	if !strings.Contains(output, "Tournament #") {
+		t.Error("Tournament output should contain 'Tournament #'")
+	}
+
+	// Check that output does NOT contain $ prefix in small/big blind
+	if strings.Contains(output, "posts small blind $10") {
+		t.Error("Tournament output should not contain 'posts small blind $10'")
+	}
+
+	// Should contain tournament format (no $ prefix)
+	if !strings.Contains(output, "posts small blind 10") {
+		t.Error("Tournament output should contain 'posts small blind 10' (no $)")
+	}
+
+	// Check that stacks don't have $ prefix
+	if strings.Contains(output, "($1500 in chips)") {
+		t.Error("Tournament output should not contain '($1500 in chips)'")
+	}
+
+	if !strings.Contains(output, "(1500 in chips)") {
+		t.Error("Tournament output should contain '(1500 in chips)' (no $)")
+	}
+}
+
+func TestCashGameRaiseFormat(t *testing.T) {
+	// Test that cash game raise format is "raises X to Y"
+	csv := `entry,at,order
+"-- ending hand #1 --",2025-11-15T05:09:14.567Z,10
+"""player2 @ id2"" collected 120 from pot",2025-11-15T05:09:14.567Z,9
+"""player1 @ id1"" folds",2025-11-15T05:09:14.567Z,8
+"""player2 @ id2"" raises to 180",2025-11-15T05:09:14.567Z,7
+"""player1 @ id1"" raises to 60",2025-11-15T05:09:14.567Z,6
+"""player2 @ id2"" posts a big blind of 20",2025-11-15T05:09:14.567Z,5
+"""player1 @ id1"" posts a small blind of 10",2025-11-15T05:09:14.567Z,4
+"Your hand is A♥, K♥",2025-11-15T05:09:14.567Z,3
+"Player stacks: #1 ""player1 @ id1"" (1500) | #2 ""player2 @ id2"" (1500)",2025-11-15T05:09:14.567Z,2
+"-- starting hand #1 (id: test123) (No Limit Texas Hold'em) (dealer: ""player1 @ id1"") --",2025-11-15T05:09:14.567Z,1`
+
+	reader := strings.NewReader(csv)
+	opts := ConvertOptions{
+		HeroName:     "player1",
+		SiteName:     "PokerStars",
+		TimeLocation: time.UTC,
+		GameType:     GameTypeCash,
+	}
+
+	result, err := ParseCSV(reader, opts)
+	if err != nil {
+		t.Fatalf("ParseCSV() failed: %v", err)
+	}
+
+	output := string(result.HH)
+
+	// Check that raise format is "raises $X to $Y" for cash games
+	// First raise: from 20 (BB) to 60, so raises $40 to $60
+	if !strings.Contains(output, "raises $40 to $60") {
+		t.Error("Cash game output should contain 'raises $40 to $60'")
+	}
+
+	// Second raise: from 60 to 180, so raises $120 to $180
+	if !strings.Contains(output, "raises $120 to $180") {
+		t.Error("Cash game output should contain 'raises $120 to $180'")
+	}
+}
