@@ -5,6 +5,7 @@ import (
 	"math"
 	"strconv"
 	"strings"
+	"time"
 )
 
 // ConvertEntries converts LogEntry slice to GTO Wizard HH format
@@ -57,6 +58,41 @@ func isChipsCurrency(currency string) bool {
 	return strings.EqualFold(currency, "Chips")
 }
 
+// getTimezoneLabel returns a short timezone label for the given location
+// Uses common abbreviations like "ET", "UTC", "JST", etc.
+func getTimezoneLabel(loc *time.Location) string {
+	if loc == nil {
+		return "UTC"
+	}
+
+	// Get the timezone name
+	zoneName := loc.String()
+
+	// Map common timezone names to abbreviations
+	switch zoneName {
+	case "America/New_York", "America/Detroit", "America/Toronto":
+		return "ET"
+	case "America/Chicago", "America/Winnipeg":
+		return "CT"
+	case "America/Denver", "America/Phoenix":
+		return "MT"
+	case "America/Los_Angeles", "America/Vancouver":
+		return "PT"
+	case "UTC", "Etc/UTC":
+		return "UTC"
+	case "Asia/Tokyo":
+		return "JST"
+	case "Europe/London":
+		return "GMT"
+	case "Europe/Paris", "Europe/Berlin":
+		return "CET"
+	default:
+		// For unknown timezones, use the zone name directly
+		// Format: use short form if available, otherwise full name
+		return zoneName
+	}
+}
+
 // formatAmount formats an amount based on game type and currency
 // (adds $ prefix for cash games unless currency is "Chips")
 func formatAmount(amount float64, opts ConvertOptions, currency string) string {
@@ -95,15 +131,17 @@ func convertHandToHH(hand Hand, opts ConvertOptions, tournamentID string) string
 
 	// Hand header
 	timestamp := hand.StartTime.In(opts.TimeLocation).Format("2006/01/02 15:04:05")
+	timezoneLabel := getTimezoneLabel(opts.TimeLocation)
+
 	if opts.GameType == GameTypeCash {
-		// Cash game format: PokerStars Hand #ID: Hold'em No Limit ($SB/$BB USD) - timestamp ET
+		// Cash game format: PokerStars Hand #ID: Hold'em No Limit ($SB/$BB USD) - timestamp TZ
 		// For Chips currency, omit $ and USD
 		if isChipsCurrency(hand.Currency) {
-			sb.WriteString(fmt.Sprintf("%s Hand #%s: Hold'em No Limit (%s/%s) - %s ET\n",
-				opts.SiteName, hand.HandID, formatNumber(hand.SmallBlind), formatNumber(hand.BigBlind), timestamp))
+			sb.WriteString(fmt.Sprintf("%s Hand #%s: Hold'em No Limit (%s/%s) - %s %s\n",
+				opts.SiteName, hand.HandID, formatNumber(hand.SmallBlind), formatNumber(hand.BigBlind), timestamp, timezoneLabel))
 		} else {
-			sb.WriteString(fmt.Sprintf("%s Hand #%s: Hold'em No Limit ($%s/$%s USD) - %s ET\n",
-				opts.SiteName, hand.HandID, formatNumber(hand.SmallBlind), formatNumber(hand.BigBlind), timestamp))
+			sb.WriteString(fmt.Sprintf("%s Hand #%s: Hold'em No Limit ($%s/$%s USD) - %s %s\n",
+				opts.SiteName, hand.HandID, formatNumber(hand.SmallBlind), formatNumber(hand.BigBlind), timestamp, timezoneLabel))
 		}
 	} else {
 		// Tournament format

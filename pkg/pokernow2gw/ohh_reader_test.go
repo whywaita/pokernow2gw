@@ -170,11 +170,14 @@ func TestConvertOHHHandToHand(t *testing.T) {
 		t.Fatalf("convertOHHHandToHand() error = %v", err)
 	}
 
-	if hand.HandID != "test123" {
-		t.Errorf("HandID = %v, want test123", hand.HandID)
+	// HandID and HandNumber should be normalized to numeric strings
+	expectedHandID := convertHandIDToNumeric("test123")
+	expectedHandNumber := convertHandIDToNumeric("1")
+	if hand.HandID != expectedHandID {
+		t.Errorf("HandID = %v, want %v", hand.HandID, expectedHandID)
 	}
-	if hand.HandNumber != "1" {
-		t.Errorf("HandNumber = %v, want 1", hand.HandNumber)
+	if hand.HandNumber != expectedHandNumber {
+		t.Errorf("HandNumber = %v, want %v", hand.HandNumber, expectedHandNumber)
 	}
 	if hand.SmallBlind != 50 {
 		t.Errorf("SmallBlind = %v, want 50", hand.SmallBlind)

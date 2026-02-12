@@ -56,9 +56,17 @@ func readSimplifiedOHHFormat(data []byte, opts ConvertOptions) (*ConvertResult, 
 	for _, ohhHand := range ohhFormat.Hands {
 		hand, err := convertOHHHandToHand(ohhHand)
 		if err != nil {
-			// Skip invalid hands
+			// Skip invalid hands (e.g., too many players, unsupported actions)
 			continue
 		}
+
+		// Apply player count filter based on GTO Wizard plan
+		playerCount := len(hand.Players)
+		if !opts.PlayerCountFilter.isPlayerCountAllowed(playerCount) {
+			// Skip hands that don't match the filter
+			continue
+		}
+
 		hands = append(hands, hand)
 	}
 
@@ -138,6 +146,20 @@ func convertOHHSpecToHand(spec OHHSpec, opts ConvertOptions) (Hand, error) {
 			DisplayName: p.Name,
 			Stack:       p.StartingStack,
 		})
+	}
+
+	// Normalize player seats (renumber from 1 to N)
+	players = normalizePlayerSeats(players)
+
+	// Check player count (GTO Wizard limit: 2-10 players)
+	playerCount := len(players)
+	if playerCount > 10 {
+		return Hand{}, fmt.Errorf("hand has %d players, but GTO Wizard only supports up to 10 players", playerCount)
+	}
+
+	// Apply player count filter based on GTO Wizard plan
+	if !opts.PlayerCountFilter.isPlayerCountAllowed(playerCount) {
+		return Hand{}, fmt.Errorf("hand has %d players, which does not match the selected filter", playerCount)
 	}
 
 	// Find dealer name
@@ -231,6 +253,8 @@ func convertOHHSpecToHand(spec OHHSpec, opts ConvertOptions) (Hand, error) {
 	if handID == "" {
 		handID = "1"
 	}
+	// Normalize to numeric ID for GTO Wizard compatibility
+	handID = convertHandIDToNumeric(handID)
 
 	return Hand{
 		HandNumber: handID,
@@ -262,6 +286,15 @@ func convertOHHHandToHand(ohhHand OHHHand) (Hand, error) {
 			DisplayName: p.Name,
 			Stack:       p.Stack,
 		})
+	}
+
+	// Normalize player seats (renumber from 1 to N)
+	players = normalizePlayerSeats(players)
+
+	// Check player count (GTO Wizard limit: 2-10 players)
+	playerCount := len(players)
+	if playerCount > 10 {
+		return Hand{}, fmt.Errorf("hand %s has %d players, but GTO Wizard only supports up to 10 players", ohhHand.HandID, playerCount)
 	}
 
 	// Find dealer name
@@ -307,9 +340,13 @@ func convertOHHHandToHand(ohhHand OHHHand) (Hand, error) {
 		})
 	}
 
+	// Normalize hand ID to numeric for GTO Wizard compatibility
+	handNumber := convertHandIDToNumeric(ohhHand.HandNumber)
+	handID := convertHandIDToNumeric(ohhHand.HandID)
+
 	return Hand{
-		HandNumber: ohhHand.HandNumber,
-		HandID:     ohhHand.HandID,
+		HandNumber: handNumber,
+		HandID:     handID,
 		Dealer:     dealerName,
 		Players:    players,
 		Actions:    actions,
